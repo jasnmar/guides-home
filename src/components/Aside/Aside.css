@@ -1,0 +1,9 @@
+.aside-text {
+  border: 4px solid brown;
+  border-radius: 10px;
+  margin: 30px;
+  font-size: 1.5em;
+  text-align: center;
+  padding:10px;
+  color: brown;
+}

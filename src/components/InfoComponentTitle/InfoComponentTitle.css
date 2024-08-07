@@ -1,0 +1,15 @@
+.infoTitleBackgound {
+  background-color: midnightblue;
+  padding: 10px;
+}
+
+.infoTitleText {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+.subTitleText {
+  color: white;
+  font-size: 1em;
+}

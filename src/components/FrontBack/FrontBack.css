@@ -1,0 +1,12 @@
+.frontback-next-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  height:100px;
+}
+
+.frontback-prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}

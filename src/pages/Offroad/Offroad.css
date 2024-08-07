@@ -1,0 +1,22 @@
+.data-container {
+  display: flex;
+  padding: 0px 40px;
+}
+
+.offroad-left-half {
+  padding-left: 10px;
+  width: 50%;
+  border-right: 4px solid black;
+}
+.offroad-left-two-thirds {
+  padding-left: 10px;
+  width: 66%;
+}
+.offroad-right-half {
+  padding-left: 10px;
+  width: 50%;
+}
+.offroad-right-one-third {
+  padding-left: 10px;
+  width: 33%;
+}

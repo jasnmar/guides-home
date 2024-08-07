@@ -1,0 +1,15 @@
+.SmallLeadSmall {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+.SmallLeadLarge {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.plus-data-bullet{
+  font-size: 1.5em;
+  list-style-type: "+";
+  margin:.5em;
+  margin-left: 0;
+}
