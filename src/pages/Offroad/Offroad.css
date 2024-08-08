@@ -6,7 +6,7 @@
 .offroad-left-half {
   padding-left: 10px;
   width: 50%;
-  border-right: 4px solid black;
+  
 }
 .offroad-left-two-thirds {
   padding-left: 10px;
@@ -19,4 +19,8 @@
 .offroad-right-one-third {
   padding-left: 10px;
   width: 33%;
+}
+
+.lborder {
+  border-right: 4px solid black;
 }

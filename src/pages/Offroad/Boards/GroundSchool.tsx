@@ -23,7 +23,7 @@ function GroundSchool() {
       <FrontBack nextPage={prevPage} previousPage={nextPage}/>
       <InfoComponentTitle title="Ground School" sub="" />
       <div className="data-container">
-        <div className="offroad-left-half">
+        <div className="offroad-left-half lborder">
           <SmallLeadInfo small="Clearance &" large="Capability" bullets={info1} />
         </div>
         <div className="offroad-right-half">
