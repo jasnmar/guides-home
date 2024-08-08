@@ -5,9 +5,9 @@ import { Link } from "react-router-dom"
 function Home() {
   return (
     <>
-      <Link to="/guides" >
+      {/* <Link to="/guides" >
         <h1>Meet the Off-Roadeo Guides</h1>
-      </Link>
+      </Link> */}
       <Link to="/offroading">
         <h1>Off-roading information</h1>
       </Link>

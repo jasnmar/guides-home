@@ -30,8 +30,8 @@ function HillClimb() {
       <InfoComponentTitle title="Hill Climb" sub="" />
       <div className="data-container">
       <div className="offroad-left-half">
-        <SmallLeadInfo small="Before You Drive..." large="Survey the Hill" bullets={info1}/>
-        <SmallLeadInfo small="As You Drive..." large="Constant & Steady Acceleration" bullets={info2}/>
+        <SmallLeadInfo small="Before You Drive..." intro={undefined} large="Survey the Hill" bullets={info1}/>
+        <SmallLeadInfo small="As You Drive..." intro={undefined} large="Constant & Steady Acceleration" bullets={info2}/>
       </div>
       <div className="offroad-right-half">
         <Aside asideText="What if I can't make it up the hill?" asideBullets={info3}></Aside>

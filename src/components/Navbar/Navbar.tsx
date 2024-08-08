@@ -23,9 +23,9 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <a className="nav-link" href="/guides">Guides</a>
-            </li>
+            </li> */}
             <li className="nav-item active">
               <a className="nav-link" href="/offroading">Offroading</a>
             </li>

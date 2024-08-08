@@ -11,7 +11,13 @@ function Offroad() {
       <Link to="/orientation">Orientation</Link><br></br>
       <Link to="/softsand">Soft Sand</Link><br></br>
       <Link to="/hillclimb">Hill Climb</Link><br></br>
-      <Link to="/crossings">Crossings</Link>
+      <Link to="/crossings">Crossings</Link><br></br>
+      <Link to="/hilldescent">Hill Descent</Link><br></br>
+      <Link to="/basicrockcrawl">Basic Rock Crawl</Link><br></br>
+      <Link to="/sidetilts">Side Tilts</Link><br></br>
+      <Link to="/articulationmounds">Articulation Mounds</Link><br></br>
+      <Link to="/waterfording">Water Fording</Link><br></br>
+      <Link to="/advancedrockcrawl">Advanced Rock Crawl</Link>
     </>
   )
 }

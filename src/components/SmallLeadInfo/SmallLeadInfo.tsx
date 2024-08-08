@@ -1,8 +1,7 @@
 import "./SmallLeadInfo.css"
 
-function SmallLeadInfo(props : {small:string, large:string, bullets:{id:number, data:string}[]}) {
+function SmallLeadInfo(props : {small:string, large:string, intro:string|undefined, bullets:{id:number, data:string}[]}) {
 
-  console.log('bullets:', props.bullets)
   const bulletList = props.bullets.map((item) => {
     return (
       <li className="plus-data-bullet" key={item.id}>
@@ -15,6 +14,7 @@ function SmallLeadInfo(props : {small:string, large:string, bullets:{id:number, 
     <>
       <p className="SmallLeadSmall">{props.small}</p>
       <p className="SmallLeadLarge">{props.large}</p>
+      {props.intro ? <p className="SmallLeadIntro">{props.intro}</p> : <></>}
       <ul>
         {bulletList}
       </ul>

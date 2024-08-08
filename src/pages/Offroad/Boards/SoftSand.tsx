@@ -23,10 +23,10 @@ function SoftSand() {
       <InfoComponentTitle title="Soft Sand" sub="" />
       <div className="data-container">
         <div className="offroad-left-half">
-          <SmallLeadInfo small="Tips for" large="Driving in Sand" bullets={info1} />
+          <SmallLeadInfo small="Tips for" intro={undefined} large="Driving in Sand" bullets={info1} />
         </div>
         <div className="offroad-right-half">
-          <SmallLeadInfo small='Dial in the "SAND"' large="G.O.A.T. Modes" bullets={info2}  />
+          <SmallLeadInfo small='Dial in the "SAND"' intro={undefined} large="G.O.A.T. Modes" bullets={info2}  />
         </div>
       </div>
     </>
