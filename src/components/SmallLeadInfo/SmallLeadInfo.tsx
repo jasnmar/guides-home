@@ -15,7 +15,7 @@ function SmallLeadInfo(props : {small:string, large:string, intro:string|undefin
       <p className="SmallLeadSmall">{props.small}</p>
       <p className="SmallLeadLarge">{props.large}</p>
       {props.intro ? <p className="SmallLeadIntro">{props.intro}</p> : <></>}
-      <ul>
+      <ul className="smallLeadUL">
         {bulletList}
       </ul>
     </>

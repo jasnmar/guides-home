@@ -11,7 +11,7 @@ function Home() {
       <Link to="/offroading">
         <h1>Off-roading information</h1>
       </Link>
-      <h1>Bronco Information</h1>
+      {/* <h1>Bronco Information</h1> */}
     </>
   )
 }

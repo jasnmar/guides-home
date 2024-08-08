@@ -14,7 +14,7 @@ function AdvancedRockCrawl() {
     {id:1304, data:"Release the pedal completely to come to a complete stop"}
   ]
   const info2 = [
-    {id:1401, data:"Stay in $l for max throttle control. Slow and precise wins the day"},
+    {id:1401, data:"Stay in 4L for max throttle control. Slow and precise wins the day"},
     {id:1402, data:"Look and think ahead. Take the time to choose the correct line through the rocks."},
     {id:1403, data:"Modulate the throttle. Too much or too little can make a big difference."},
     {id:1404, data:"Minimize steering inputs. Subtle movements will get you through"},

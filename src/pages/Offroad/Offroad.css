@@ -1,12 +1,12 @@
 .data-container {
   display: flex;
-  padding: 0px 40px;
+  flex-wrap: wrap;
+  padding: 0px 40px 0px 60px;
 }
 
 .offroad-left-half {
   padding-left: 10px;
   width: 50%;
-  
 }
 .offroad-left-two-thirds {
   padding-left: 10px;
@@ -23,4 +23,28 @@
 
 .lborder {
   border-right: 4px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+  .offroad-left-half {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .offroad-right-half {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .lborder {
+    border-right: none;
+    border-bottom: 4px solid black;
+  }
+  .offroad-left-two-thirds {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .offroad-right-one-third {
+    padding-left: 10px;
+    width: 100%;
+  }
+
 }

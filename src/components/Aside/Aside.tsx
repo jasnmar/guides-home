@@ -15,9 +15,9 @@ function Aside(props :{asideText:string, asideBullets:{id:number, data:string}[]
 
   return (
     <>
-      <div className="aside-text">
-      <p className={bulletList ? "aside-header":""}>{props.asideText}</p>
-      <ul>
+      <div className="aside">
+      <p className={bulletList ? "aside-header":"aside-text"}>{props.asideText}</p>
+      <ul className="Aside-UL">
         {bulletList}
       </ul>
       </div>
