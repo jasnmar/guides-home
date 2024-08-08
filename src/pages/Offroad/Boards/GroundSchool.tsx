@@ -24,10 +24,10 @@ function GroundSchool() {
       <InfoComponentTitle title="Ground School" sub="" />
       <div className="data-container">
         <div className="offroad-left-half lborder">
-          <SmallLeadInfo small="Clearance &" large="Capability" bullets={info1} />
+          <SmallLeadInfo small="Clearance &" intro={undefined} large="Capability" bullets={info1} />
         </div>
         <div className="offroad-right-half">
-          <SmallLeadInfo small="Torque &" large="Traction" bullets={info2} />
+          <SmallLeadInfo small="Torque &" intro={undefined} large="Traction" bullets={info2} />
         </div>
       </div>
     </>

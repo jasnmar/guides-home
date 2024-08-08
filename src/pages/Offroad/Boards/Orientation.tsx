@@ -19,7 +19,7 @@ function Orientation() {
       <InfoComponentTitle title="Orientation" sub="ORX Course Start" />
       <div className="data-container">
         <div className="offroad-left-two-thirds">
-          <SmallLeadInfo small="Off-Road Switch Pack with" large="Push-Button Controls" bullets={info1} />
+          <SmallLeadInfo small="Off-Road Switch Pack with" intro={undefined} large="Push-Button Controls" bullets={info1} />
         </div>
         <div className="offroad-right-one-third">
           <Aside asideText="Trail Turn Assist helps manage tight turns on the trail by reducing the turning radius by as much as 40%. It does this by applying the brake to the inside rear wheel as the vehicle turns in low-speed off-road environments" asideBullets={undefined} />
