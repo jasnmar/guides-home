@@ -10,7 +10,8 @@ function Offroad() {
       <Link to="/groundschool">Ground School</Link><br></br>
       <Link to="/orientation">Orientation</Link><br></br>
       <Link to="/softsand">Soft Sand</Link><br></br>
-      <Link to="/hillclimb">Hill Climb</Link>
+      <Link to="/hillclimb">Hill Climb</Link><br></br>
+      <Link to="/crossings">Crossings</Link>
     </>
   )
 }
