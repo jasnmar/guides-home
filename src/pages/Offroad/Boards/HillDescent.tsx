@@ -31,7 +31,7 @@ function HillDescent() {
           <SmallLeadInfo small="As you Drive..." intro={undefined} large="Constant & Steady Acceleration" bullets={info2}/>
         </div>
         <div className="offroad-right-one-third">
-          <Aside asideText="Crossing Tips" asideBullets={info3} />
+          <Aside asideText="Bronco Trail Control & Hill Descent Control" asideBullets={info3} />
         </div>
 
       </div>
