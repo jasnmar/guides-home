@@ -1,16 +1,18 @@
 .SmallLeadSmall {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0px;
+  font-weight: 700;
 }
+
 .SmallLeadLarge {
-  font-size: 4em;
+  font-size: 3em;
   line-height: .8em;
   text-transform: uppercase;
   margin-bottom: .6em;
 }
 
 .plus-data-bullet{
-  font-size: 1.5em;
+  font-size: 1.2em;
   list-style-type: "+";
   margin:.5em;
   margin-left: 0;

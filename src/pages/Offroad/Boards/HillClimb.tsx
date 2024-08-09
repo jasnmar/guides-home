@@ -10,7 +10,7 @@ function HillClimb() {
   const info1 = [
     {id:501, data:"Scout the hill's crest - don't guess what's on the other side!"},
     {id:502, data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down)"},
-    {id:503, data:"Engage HDC or Trail Control in case of a failed hill climb"}
+    {id:503, data:"Engage Hill Descent Control or Trail Control in case of a failed hill climb"}
   ]
   const info2 = [
     {id:504, data:"Point the vehicle up the hill and make sure the wheels are straight"},
