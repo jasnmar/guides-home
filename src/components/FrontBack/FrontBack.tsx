@@ -1,24 +1,28 @@
 import "./FrontBack.css"
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
-function FrontBack(props:{nextPage:string, previousPage:string}) {
+function FrontBack(props: { nextPage: string; previousPage: string }) {
   return (
     <>
-      <div className="frontback-prev-arrow">
-        <Link to={props.nextPage}>
-          <div>
-            <FaChevronLeft size={40}/>  
+      <Link to={props.nextPage}>
+        <div className="fb-arrow-container-prev">
+          <div className="frontback-prev-arrow">
+            <div>
+              <FaChevronLeft size={40} />
+            </div>
           </div>
-        </Link>
-      </div>
-      <div className="frontback-next-arrow">
-        <Link to={props.previousPage}>
-          <div>
-            <FaChevronRight size={40}/>
+        </div>
+      </Link>
+      <Link to={props.previousPage}>
+        <div className="fb-arrow-container-next">
+          <div className="frontback-next-arrow">
+            <div>
+              <FaChevronRight size={40} />
+            </div>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </>
   )
 }
