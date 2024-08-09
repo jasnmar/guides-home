@@ -4,6 +4,17 @@
   bottom: -1rem;
   width: 100%;
   font-size: .5rem;
-  background-color: lightblue;
+  background-color: inherit;
   color: black;
+}
+.footer-right {
+  margin-right: 10px;
+  position: fixed;
+  bottom: -1rem;
+  left: 75%;
+  width: 100%;
+  font-size: .5rem;
+  background-color: inherit;
+  color: black;
+  
 }
