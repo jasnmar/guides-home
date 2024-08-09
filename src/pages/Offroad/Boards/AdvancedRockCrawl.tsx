@@ -28,7 +28,7 @@ function AdvancedRockCrawl() {
       <InfoComponentTitle title="Rock Crawling" sub="Advanced" />
       <div className="data-container">
         <div className="offroad-left-half lborder">
-          <SmallLeadInfo small="(2.7L EcoBoost)" intro="Allows you to speed up and slow down using only the accelerator pedal, so you can stay focused on navigating difficult terrain ahead. Renders two-footed drving obsolete for low-speed, off-road crawling" large="Bronco Trail 1-Pedal Drive" bullets={info1} />
+          <SmallLeadInfo small="2.7L EcoBoost" intro="Allows you to speed up and slow down using only the accelerator pedal, so you can stay focused on navigating difficult terrain ahead. Renders two-footed drving obsolete for low-speed, off-road crawling" large="Bronco Trail 1-Pedal Drive" bullets={info1} />
         </div>
         <div className="offroad-right-half">
           <Aside asideText="Put your off-roading skills to the test and follow these guidelines:" asideBullets={info2} />

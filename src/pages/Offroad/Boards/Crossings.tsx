@@ -10,7 +10,7 @@ function Crossings() {
   const nextPage="/hilldescent"
   const info1 = [
     {id:601, data:"Stop immediately."},
-    {id:602, data:"Slowly come forward. Can be used one-handed with other signams, such as steer left or right"},
+    {id:602, data:"Slowly come forward. Can be used one-handed with other signals, such as steer left or right"},
     {id:603, data:"Steer and Come Forward. Hold this steering input until direct to change"},
     {id:604, data:"Just a Little Bit. Can be added to to other signamls such as steer left or come forward a little bit"},
     {id:605, data:"Slow Down!"},

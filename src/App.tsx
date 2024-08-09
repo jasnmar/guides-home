@@ -24,18 +24,19 @@ import SideTilts from "./pages/Offroad/Boards/SideTilts"
 import ArticulationMounds from "./pages/Offroad/Boards/ArticulationMounds"
 import WaterFording from "./pages/Offroad/Boards/WaterFording"
 import AdvancedRockCrawl from "./pages/Offroad/Boards/AdvancedRockCrawl"
-{/* <Route
-path="guides/:id"
-loader={GuideDetailLoader}
-element={<GuideDetails />}
-/> */}
+import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
+import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<Error />} element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="guides" element={<Guides />} />
-
+      <Route
+        path="guides/:id"
+        loader={(params) => GuideDetailLoader(params)}
+        element={<GuideDetails />}
+      />
       <Route path="offroading" element={<Offroad />}></Route>
       <Route path="groundschool" element={<GroundSchool />} />
       <Route path="orientation" element={<Orientation />} />
