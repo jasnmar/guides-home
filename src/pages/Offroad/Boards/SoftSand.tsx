@@ -22,7 +22,7 @@ function SoftSand() {
       <FrontBack nextPage={prevPage} previousPage={nextPage}/>
       <InfoComponentTitle title="Soft Sand" sub="" />
       <div className="data-container">
-        <div className="offroad-left-half">
+        <div className="offroad-left-half lborder">
           <SmallLeadInfo small="Tips for" intro={undefined} large="Driving in Sand" bullets={info1} />
         </div>
         <div className="offroad-right-half">
