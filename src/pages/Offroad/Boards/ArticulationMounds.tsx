@@ -14,7 +14,7 @@ function ArticulationMounds() {
   const info2 = [
     {id:1004, data:"Use when going over large rocks or very uneven terrain"},
     {id:1005, data:"Allows full articulation to help keep the extended wheel on the ground"},
-    {id:1006, data:"hydraulicly actuated - the stabilizer bar con disconnect under load"},
+    {id:1006, data:"Hydraulically actuated - the stabilizer bar con disconnect under load"},
     {id:1007, data:"Must be in off-road G.O.A.T. Modes to disconnect - Sand, Mud/Ruts, Rock Crawl, Baja or Normal"},
     {id:1008, data:"Must be at speeds below 20 mph"},
     {id:1009, data:"Automatically disconnects when in Rock Crawl mode"},

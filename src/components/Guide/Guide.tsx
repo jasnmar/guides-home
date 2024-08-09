@@ -2,7 +2,6 @@ import "./Guide.css"
 
 
 function Guide( props : {name:string, location: string, bio: string } ) {
-  console.log('props: ', props)
   return (
     <>
       <h1>{props.name}</h1>
