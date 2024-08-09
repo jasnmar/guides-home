@@ -2,11 +2,23 @@
   position: fixed;
   top: 50%;
   right: 0%;
-  height:100px;
 }
 
 .frontback-prev-arrow {
   position: fixed;
   top: 50%;
   left: 0%;
+}
+
+.fb-arrow-container-prev {
+  position: fixed;
+  height: 100vh;
+  width:40px;
+}
+
+.fb-arrow-container-next {
+  position: fixed;
+  height: 100vh;
+  width:40px;
+  right: 0%;
 }
