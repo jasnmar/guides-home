@@ -4,6 +4,8 @@
   margin: 3em .8em;
   padding:10px;
   color: brown;
+  display: flex;
+  flex-direction: column;
 }
 
 .aside-header {
@@ -20,4 +22,11 @@
 
 .Aside-UL {
   padding-left: 1em;
+}
+
+.bronc-logo {
+  filter: invert(19%) sepia(56%) saturate(2907%) hue-rotate(341deg) brightness(95%) contrast(91%);
+  align-self: center;
+  width: 200px;
+  margin-top: 0px;
 }
