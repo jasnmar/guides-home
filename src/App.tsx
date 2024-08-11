@@ -26,6 +26,7 @@ import WaterFording from "./pages/Offroad/Boards/WaterFording"
 import AdvancedRockCrawl from "./pages/Offroad/Boards/AdvancedRockCrawl"
 import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
 import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
+import Recovery from "./pages/Recovery/Recovery"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,6 +50,7 @@ const router = createBrowserRouter(
       <Route path="/articulationmounds" element={<ArticulationMounds />} />
       <Route path="/waterfording" element={<WaterFording />} />
       <Route path="/advancedrockcrawl" element={<AdvancedRockCrawl />} />
+      <Route path="/recovery" element={<Recovery />} />
     </Route>
   )
 )
