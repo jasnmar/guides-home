@@ -11,6 +11,9 @@ function Offroad() {
       <p>These are some of the items that we usually talk about at our ORX (Offroad Adventure) course</p>
       <ul>
         <li>
+          <Link to="/advancedrockcrawlfromdata">Advanced Rock Crawl Testing</Link>
+        </li>
+        <li>
           <Link to="/groundschool">Ground School</Link><br></br>
         </li>
         <li>

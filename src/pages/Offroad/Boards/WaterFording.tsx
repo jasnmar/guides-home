@@ -7,14 +7,14 @@ function WaterFording() {
   const prevPage="/articulationmounds"
   const nextPage="/advancedrockcrawl"
   const info1 = [
-    {id:1101, data:"If you don't know the dept, dont attemt to cross"},
-    {id:1102, data:"Check bottom conditions for traction - is it sand, mud, rocks?"},
-    {id:1103, data:"Plan a line diagonal to the current"}
+    {id:"1101", data:"If you don't know the dept, dont attemt to cross"},
+    {id:"1102", data:"Check bottom conditions for traction - is it sand, mud, rocks?"},
+    {id:"1103", data:"Plan a line diagonal to the current"}
   ]
   const info2 = [
-    {id:1201, data:"Enter smoothly to prevent excessive splashing"},
-    {id:1202, data:"Maintain steady forward momentum - not too fast and not too slow"},
-    {id:1203, data:"Create a bow wave to disperse water away from the engine bay"}
+    {id:"1201", data:"Enter smoothly to prevent excessive splashing"},
+    {id:"1202", data:"Maintain steady forward momentum - not too fast and not too slow"},
+    {id:"1203", data:"Create a bow wave to disperse water away from the engine bay"}
   ]
   return (
     <>

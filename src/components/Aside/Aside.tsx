@@ -1,7 +1,7 @@
 import "./Aside.css"
 import { bronco } from "../../assets/images"
 
-function Aside(props :{asideText:string, asideBullets:{id:number, data:string}[] | undefined}) {
+function Aside(props :{asideText:string, asideBullets:{id:string, data:string}[] | undefined}) {
   let bulletList
   if(props.asideBullets) {
     bulletList = props.asideBullets.map((item) => {

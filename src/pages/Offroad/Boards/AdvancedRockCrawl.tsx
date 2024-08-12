@@ -8,23 +8,23 @@ function AdvancedRockCrawl() {
   const prevPage="/waterfording"
   const nextPage="/groundschool"
   const info1 = [
-    {id:1301, data:"Press the center button on the 4x4 selector to turn on or off"},
-    {id:1302, data:"Depress the accelerator pedal to speed up"},
-    {id:1303, data:"Back off the accelerator with your foot still on the pedal to slow down"},
-    {id:1304, data:"Release the pedal completely to come to a complete stop"}
+    {id:"1301", data:"Press the center button on the 4x4 selector to turn on or off"},
+    {id:"1302", data:"Depress the accelerator pedal to speed up"},
+    {id:"1303", data:"Back off the accelerator with your foot still on the pedal to slow down"},
+    {id:"1304", data:"Release the pedal completely to come to a complete stop"}
   ]
   const info2 = [
-    {id:1401, data:"Stay in 4L for max throttle control. Slow and precise wins the day"},
-    {id:1402, data:"Look and think ahead. Take the time to choose the correct line through the rocks."},
-    {id:1403, data:"Modulate the throttle. Too much or too little can make a big difference."},
-    {id:1404, data:"Minimize steering inputs. Subtle movements will get you through"},
-    {id:1405, data:"Keep your tires on top of the rocks. The path of least resistance."},
-    {id:1406, data:"Watch your sidewalls. Sharp rocks can puncture the side of a tire."}
+    {id:"1401", data:"Stay in 4L for max throttle control. Slow and precise wins the day"},
+    {id:"1402", data:"Look and think ahead. Take the time to choose the correct line through the rocks."},
+    {id:"1403", data:"Modulate the throttle. Too much or too little can make a big difference."},
+    {id:"1404", data:"Minimize steering inputs. Subtle movements will get you through"},
+    {id:"1405", data:"Keep your tires on top of the rocks. The path of least resistance."},
+    {id:"1406", data:"Watch your sidewalls. Sharp rocks can puncture the side of a tire."}
   ]
 
   return (
     <>
-      <FrontBack nextPage={prevPage} previousPage={nextPage}/>
+      <FrontBack nextPage={nextPage} previousPage={prevPage}/>
       <InfoComponentTitle title="Rock Crawling" sub="Advanced" />
       <div className="data-container">
         <div className="offroad-left-half lborder">

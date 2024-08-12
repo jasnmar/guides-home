@@ -8,10 +8,10 @@ function Orientation() {
   const prevPage="/groundschool"
   const nextPage="/softsand"
   const info1 = [
-    {id:201, data:"Front Stabilizer Bar Disconnect"},
-    {id:202, data:"Front Locking Differential"},
-    {id:203, data:"Rear Locking Differential"},
-    {id:204, data:"Trail Turn Assist"}
+    {id:"201", data:"Front Stabilizer Bar Disconnect"},
+    {id:"202", data:"Front Locking Differential"},
+    {id:"203", data:"Rear Locking Differential"},
+    {id:"204", data:"Trail Turn Assist"}
   ]
   return (
     <>

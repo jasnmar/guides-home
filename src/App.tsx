@@ -27,6 +27,7 @@ import AdvancedRockCrawl from "./pages/Offroad/Boards/AdvancedRockCrawl"
 import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
 import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
 import Recovery from "./pages/Recovery/Recovery"
+import AdvancedRockCrawlfromData from "./pages/Offroad/Boards/AdvancedRockCrawlfromData"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
         loader={(params) => GuideDetailLoader(params)}
         element={<GuideDetails />}
       />
+      <Route path="advancedrockcrawlfromdata" element={<AdvancedRockCrawlfromData />} />
       <Route path="offroading" element={<Offroad />}></Route>
       <Route path="groundschool" element={<GroundSchool />} />
       <Route path="orientation" element={<Orientation />} />

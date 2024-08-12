@@ -8,18 +8,18 @@ function HillDescent() {
   const prevPage="/crossings"
   const nextPage="/basicrockcrawl"
   const info1 = [
-    {id:701, data:"Scout the descent for possible obstacles"},
-    {id:702, data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down). Avoid turning diagonally to the fall line, as this increases the risk of roll over"}
+    {id:"701", data:"Scout the descent for possible obstacles"},
+    {id:"702", data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down). Avoid turning diagonally to the fall line, as this increases the risk of roll over"}
   ]
   const info2 = [
-    {id:703, data:"Point the vehicle down the hill and keep turns minimal"},
-    {id:704, data:"Select 1st gear, 4L on the transfer case, for maximum engine braking and control"},
-    {id:705, data:"Maintain a slow, controlled speed - minimize brake useage to reduce the change of wheel lock up or sliding"}
+    {id:"703", data:"Point the vehicle down the hill and keep turns minimal"},
+    {id:"704", data:"Select 1st gear, 4L on the transfer case, for maximum engine braking and control"},
+    {id:"705", data:"Maintain a slow, controlled speed - minimize brake useage to reduce the change of wheel lock up or sliding"}
   ]
   const info3 = [
-    {id:706, data:"If not already on engage Trail Control (automatic transmission) or Hill Descent Control (manual transmission) and begin your descent"},
-    {id:707, data:"Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"},
-    {id:708, data:"Adjust your speed using the SET+ and SET- buttons on the steering wheel, or accelerate as needed"}
+    {id:"706", data:"If not already on engage Trail Control (automatic transmission) or Hill Descent Control (manual transmission) and begin your descent"},
+    {id:"707", data:"Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"},
+    {id:"708", data:"Adjust your speed using the SET+ and SET- buttons on the steering wheel, or accelerate as needed"}
   ]
   return (
     <>

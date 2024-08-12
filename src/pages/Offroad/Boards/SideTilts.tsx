@@ -8,18 +8,18 @@ function SideTilts() {
   const prevPage="/basicrockcrawl"
   const nextPage="/articulationmounds"
   const info1 = [
-    {id:901, data:"Vehicle Weight"},
-    {id:902, data:"Onboard passenger and cargo weight"},
-    {id:903, data:"Suspension and tire modifications"},
-    {id:904, data:"Vehicle speed and trail conditions"},
-    {id:905, data:"Roof rack loads"}
+    {id:"901", data:"Vehicle Weight"},
+    {id:"902", data:"Onboard passenger and cargo weight"},
+    {id:"903", data:"Suspension and tire modifications"},
+    {id:"904", data:"Vehicle speed and trail conditions"},
+    {id:"905", data:"Roof rack loads"}
   ]
   const info2 = [
-    {id:907, data:"ESCV technology was designed to utilize posistion sensitive damping, allowing the passengers to enjoy on-road comfort while maximizing off-road control and stability."},
-    {id:908, data:"When weight is transferred during a tilt, ESCV provides additional control of the vehicle."}
+    {id:"907", data:"ESCV technology was designed to utilize posistion sensitive damping, allowing the passengers to enjoy on-road comfort while maximizing off-road control and stability."},
+    {id:"908", data:"When weight is transferred during a tilt, ESCV provides additional control of the vehicle."}
   ]
   const info3 = [
-    {id:906, data:"If the vehicle starts to slip or roll, turn downhill and lightly accelerate to balance the vehicle. Take a deep breath"}
+    {id:"906", data:"If the vehicle starts to slip or roll, turn downhill and lightly accelerate to balance the vehicle. Take a deep breath"}
   ]
   return (
     <>
