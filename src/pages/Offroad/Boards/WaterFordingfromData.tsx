@@ -1,9 +1,8 @@
 import "../Offroad.css"
 import { renderBoard } from "./renderBoard"
 
-
-function AdvancedRockCrawlfromData() {
-  const bName="AdvancedRockCrawl"
+function WaterFordingfromData() {
+  const bName="WaterFording"
   const boardElement = renderBoard(bName)
   
   return (
@@ -13,8 +12,4 @@ function AdvancedRockCrawlfromData() {
   )
 }
 
-
-
-
-
-export default AdvancedRockCrawlfromData
+export default WaterFordingfromData

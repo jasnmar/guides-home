@@ -5,8 +5,8 @@ import Aside from "../../../components/Aside/Aside"
 import FrontBack from "../../../components/FrontBack/FrontBack"
 
 function Orientation() {
-  const prevPage="/groundschool"
-  const nextPage="/softsand"
+  const prevPage="groundschool"
+  const nextPage="softsand"
   const info1 = [
     {id:"201", data:"Front Stabilizer Bar Disconnect"},
     {id:"202", data:"Front Locking Differential"},

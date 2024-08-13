@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function FrontBack(props: { nextPage: string; previousPage: string }) {
   return (
     <>
-      <Link to={props.nextPage}>
+      <Link to={"/"+props.nextPage}>
         <div className="fb-arrow-container-prev">
           <div className="frontback-prev-arrow">
             <div>
@@ -14,7 +14,7 @@ function FrontBack(props: { nextPage: string; previousPage: string }) {
           </div>
         </div>
       </Link>
-      <Link to={props.previousPage}>
+      <Link to={"/"+props.previousPage}>
         <div className="fb-arrow-container-next">
           <div className="frontback-next-arrow">
             <div>

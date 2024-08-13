@@ -2,8 +2,8 @@ import "../Offroad.css"
 import { renderBoard } from "./renderBoard"
 
 
-function AdvancedRockCrawlfromData() {
-  const bName="AdvancedRockCrawl"
+function ArticulationMoundsfromData() {
+  const bName="ArticulationMounds"
   const boardElement = renderBoard(bName)
   
   return (
@@ -17,4 +17,4 @@ function AdvancedRockCrawlfromData() {
 
 
 
-export default AdvancedRockCrawlfromData
+export default ArticulationMoundsfromData

@@ -6,8 +6,8 @@ import Aside from "../../../components/Aside/Aside"
 
 
 function Crossings() {
-  const prevPage="/hillclimb"
-  const nextPage="/hilldescent"
+  const prevPage="hillclimb"
+  const nextPage="hilldescent"
   const info1 = [
     {id:"601", data:"Stop immediately."},
     {id:"602", data:"Slowly come forward. Can be used one-handed with other signals, such as steer left or right"},

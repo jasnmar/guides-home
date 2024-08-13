@@ -5,8 +5,8 @@ import SmallLeadInfo from "../../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../../components/Aside/Aside"
 
 function SideTilts() {
-  const prevPage="/basicrockcrawl"
-  const nextPage="/articulationmounds"
+  const prevPage="basicrockcrawl"
+  const nextPage="articulationmounds"
   const info1 = [
     {id:"901", data:"Vehicle Weight"},
     {id:"902", data:"Onboard passenger and cargo weight"},

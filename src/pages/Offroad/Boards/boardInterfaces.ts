@@ -10,19 +10,26 @@ export interface boardDataInterface {
 
 export interface layout {
   position: position,
+  border?: boolean
+  components: component[],
+}
+
+export interface layouts extends Array<layout>{}
+
+export interface component {
   displayType: displayType,
   large: string,
   small?: string,
   intro?: string,
   bullets?: bullets,
-  border?: boolean
+  
 }
-
-export interface layouts extends Array<layout>{}
 
 export enum position {
   lefthalf = "offroad-left-half",
   righthalf = "offroad-right-half",
+  lefttwothirds = "offroad-left-two-thirds",
+  rightonethird = "offroad-right-one-third"
 }
 
 export enum displayType {

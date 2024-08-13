@@ -5,8 +5,8 @@ import FrontBack from "../../../components/FrontBack/FrontBack"
 import Aside from "../../../components/Aside/Aside"
 
 function HillClimb() {
-  const prevPage="/softsand"
-  const nextPage="/crossings"
+  const prevPage="softsand"
+  const nextPage="crossings"
   const info1 = [
     {id:"501", data:"Scout the hill's crest - don't guess what's on the other side!"},
     {id:"502", data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down)"},

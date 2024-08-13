@@ -19,15 +19,14 @@ import SoftSand from "./pages/Offroad/Boards/SoftSand"
 import HillClimb from "./pages/Offroad/Boards/HillClimb"
 import Crossings from "./pages/Offroad/Boards/Crossings"
 import HillDescent from "./pages/Offroad/Boards/HillDescent"
-import BasicRockCrawl from "./pages/Offroad/Boards/BasicRockCrawl"
 import SideTilts from "./pages/Offroad/Boards/SideTilts"
-import ArticulationMounds from "./pages/Offroad/Boards/ArticulationMounds"
-import WaterFording from "./pages/Offroad/Boards/WaterFording"
-import AdvancedRockCrawl from "./pages/Offroad/Boards/AdvancedRockCrawl"
 import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
 import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
 import Recovery from "./pages/Recovery/Recovery"
 import AdvancedRockCrawlfromData from "./pages/Offroad/Boards/AdvancedRockCrawlfromData"
+import WaterFordingfromData from "./pages/Offroad/Boards/WaterFordingfromData"
+import ArticulationMoundsfromData from "./pages/Offroad/Boards/ArticulationMoundsfromData"
+import BasicRockCrawlfromData from "./pages/Offroad/Boards/BasicRockCrawlfromData"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,7 +38,8 @@ const router = createBrowserRouter(
         loader={(params) => GuideDetailLoader(params)}
         element={<GuideDetails />}
       />
-      <Route path="advancedrockcrawlfromdata" element={<AdvancedRockCrawlfromData />} />
+      <Route path="advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
+      <Route path="waterfording" element={<WaterFordingfromData />} />
       <Route path="offroading" element={<Offroad />}></Route>
       <Route path="groundschool" element={<GroundSchool />} />
       <Route path="orientation" element={<Orientation />} />
@@ -47,11 +47,9 @@ const router = createBrowserRouter(
       <Route path="hillclimb" element={<HillClimb />} />
       <Route path="crossings" element={<Crossings />} />
       <Route path="/hilldescent" element={<HillDescent />} />
-      <Route path="/basicrockcrawl" element={<BasicRockCrawl />} />
+      <Route path="basicrockcrawl" element={<BasicRockCrawlfromData />} />
       <Route path="/sidetilts" element={<SideTilts />} />
-      <Route path="/articulationmounds" element={<ArticulationMounds />} />
-      <Route path="/waterfording" element={<WaterFording />} />
-      <Route path="/advancedrockcrawl" element={<AdvancedRockCrawl />} />
+      <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
       <Route path="/recovery" element={<Recovery />} />
     </Route>
   )

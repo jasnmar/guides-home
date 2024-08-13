@@ -4,8 +4,8 @@ import SmallLeadInfo from "../../../components/SmallLeadInfo/SmallLeadInfo"
 import FrontBack from "../../../components/FrontBack/FrontBack"
 
 function GroundSchool() {
-  const prevPage="/hillclimb"
-  const nextPage="/orientation"
+  const prevPage="hillclimb"
+  const nextPage="orientation"
   const info1 = [
     {id:"1", data:"Maximum Approach Angle 43.2 degrees"},
     {id:"2", data:"Maximum Departure Angle 37.2 degrees"},

@@ -5,8 +5,8 @@ import SmallLeadInfo from "../../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../../components/Aside/Aside"
 
 function BasicRockCrawl() {
-  const prevPage="/hilldescent"
-  const nextPage="/sidetilts"
+  const prevPage="hilldescent"
+  const nextPage="sidetilts"
   const info1 = [
     {id:"801", data:"Increases the contact patch for better grip"},
     {id:"802", data:"Be aware of reduced ground clearance"}

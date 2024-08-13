@@ -5,8 +5,8 @@ import SmallLeadInfo from "../../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../../components/Aside/Aside"
 
 function HillDescent() {
-  const prevPage="/crossings"
-  const nextPage="/basicrockcrawl"
+  const prevPage="crossings"
+  const nextPage="basicrockcrawl"
   const info1 = [
     {id:"701", data:"Scout the descent for possible obstacles"},
     {id:"702", data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down). Avoid turning diagonally to the fall line, as this increases the risk of roll over"}

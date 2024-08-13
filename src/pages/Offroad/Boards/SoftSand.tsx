@@ -4,8 +4,8 @@ import SmallLeadInfo from "../../../components/SmallLeadInfo/SmallLeadInfo"
 import FrontBack from "../../../components/FrontBack/FrontBack"
 
 function SoftSand() {
-  const prevPage="/orientation"
-  const nextPage="/hillclimb"
+  const prevPage="orientation"
+  const nextPage="hillclimb"
   const info1 = [
     {id:"401", data:"Maintain a steady, quicker pace to 'float' the vehicle on top of the sand"},
     {id:"402", data:"Make gentle, wider turns to prevent the tires from digging into the sand"},
