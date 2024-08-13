@@ -13,8 +13,4 @@ function BasicRockCrawlfromData() {
   )
 }
 
-
-
-
-
 export default BasicRockCrawlfromData

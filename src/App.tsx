@@ -13,13 +13,9 @@ import Guides from "./pages/Guides/Guides"
 // import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
 // import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
 import Offroad from "./pages/Offroad/Offroad"
-import GroundSchool from "./pages/Offroad/Boards/GroundSchool"
-import Orientation from "./pages/Offroad/Boards/Orientation"
-import SoftSand from "./pages/Offroad/Boards/SoftSand"
-import HillClimb from "./pages/Offroad/Boards/HillClimb"
-import Crossings from "./pages/Offroad/Boards/Crossings"
-import HillDescent from "./pages/Offroad/Boards/HillDescent"
-import SideTilts from "./pages/Offroad/Boards/SideTilts"
+import GroundSchoolfromData from "./pages/Offroad/Boards/GroundSchoolfromData"
+import CrossingfromData from "./pages/Offroad/Boards/CrossingsfromData"
+import HillDescentfromData from "./pages/Offroad/Boards/HillDescentfromData"
 import GuideDetails from "./pages/Guides/GuideDetails/GuideDetails"
 import GuideDetailLoader from "./pages/Guides/GuideDetails/GuideDetailLoader"
 import Recovery from "./pages/Recovery/Recovery"
@@ -27,6 +23,10 @@ import AdvancedRockCrawlfromData from "./pages/Offroad/Boards/AdvancedRockCrawlf
 import WaterFordingfromData from "./pages/Offroad/Boards/WaterFordingfromData"
 import ArticulationMoundsfromData from "./pages/Offroad/Boards/ArticulationMoundsfromData"
 import BasicRockCrawlfromData from "./pages/Offroad/Boards/BasicRockCrawlfromData"
+import HillClimbfromData from "./pages/Offroad/Boards/HillClimbfromData"
+import OrientationfromData from "./pages/Offroad/Boards/OrientationfromData"
+import SideTiltsfromData from "./pages/Offroad/Boards/SideTiltsfromData"
+import SoftSandfromData from "./pages/Offroad/Boards/SoftSandfromData"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,14 +41,14 @@ const router = createBrowserRouter(
       <Route path="advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
       <Route path="waterfording" element={<WaterFordingfromData />} />
       <Route path="offroading" element={<Offroad />}></Route>
-      <Route path="groundschool" element={<GroundSchool />} />
-      <Route path="orientation" element={<Orientation />} />
-      <Route path="softSand" element={<SoftSand />} />
-      <Route path="hillclimb" element={<HillClimb />} />
-      <Route path="crossings" element={<Crossings />} />
-      <Route path="/hilldescent" element={<HillDescent />} />
+      <Route path="groundschool" element={<GroundSchoolfromData />} />
+      <Route path="orientation" element={<OrientationfromData />} />
+      <Route path="softSand" element={<SoftSandfromData />} />
+      <Route path="hillclimb" element={<HillClimbfromData />} />
+      <Route path="crossings" element={<CrossingfromData />} />
+      <Route path="/hilldescent" element={<HillDescentfromData />} />
       <Route path="basicrockcrawl" element={<BasicRockCrawlfromData />} />
-      <Route path="/sidetilts" element={<SideTilts />} />
+      <Route path="sidetilts" element={<SideTiltsfromData />} />
       <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
       <Route path="/recovery" element={<Recovery />} />
     </Route>

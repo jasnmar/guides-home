@@ -2,8 +2,8 @@ import "../Offroad.css"
 import { renderBoard } from "./renderBoard"
 
 
-function ArticulationMoundsfromData() {
-  const bName="ArticulationMounds"
+function OrientationfromData() {
+  const bName="Orientation"
   const boardElement = renderBoard(bName)
   
   return (
@@ -13,4 +13,4 @@ function ArticulationMoundsfromData() {
   )
 }
 
-export default ArticulationMoundsfromData
+export default OrientationfromData

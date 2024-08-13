@@ -213,9 +213,355 @@ export const boardData:boardDataInterface[] = [
         ]
       }
     ]
-
-    }
+    },
+    {
+    boardName: "Crossings",
+    title: "Crossings",
+    subtitle: "Ditch & Log",
+    index: 4,
+    prevPage: "hillclimb",
+    nextPage: "hilldescent",
+    layouts: [
+      {
+        position: position["lefttwothirds"],
+        border: true,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Hand Signals",
+          small: "Know Your Off-Road",
+          bullets: [
+            {data:"Stop immediately."},
+            {data:"Slowly come forward. Can be used one-handed with other signals, such as steer left or right"},
+            {data:"Steer and Come Forward. Hold this steering input until direct to change"},
+            {data:"Just a Little Bit. Can be added to to other signamls such as steer left or come forward a little bit"},
+            {data:"Slow Down!"},
+            {data:"Go Back"}
+          ]
+        }
+        ]
+      },
+      {
+        position: position["rightonethird"],
+        components: [
+          {
+            displayType: displayType["aside"],
+            large:
+              "Crossing Tips",
+            bullets: [
+              {data:"Try to cross a ditch with one wheel in the ditch at a time"},
+              {data:"Cross logs at an angle, one wheel at a time, to decrease clearance needed and to maximize traction"},
+              {data:"Can't make it over and obstacle? Consider using a ramp. If you didn't bring one with you, look around to see if anything is available (rocks or logs) to create a makeshift one. Remember to always tread lightly!"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "GroundSchool",
+    title: "Ground School",
+    subtitle: "",
+    index: 0,
+    prevPage: "advancedrockcrawl",
+    nextPage: "orientation",
+    layouts: [
+      {
+        position: position["lefthalf"],
+        border: true,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Capability",
+          small: "Clearance &",
+          bullets: [
+            {data:"Maximum Approach Angle 43.2 degrees"},
+            {data:"Maximum Departure Angle 37.2 degrees"},
+            {data:"Maximum Breakover Angle 29.0 degrees"},
+            {data:"Maximum Ground Clearance 11.6 inches"}
+          ]
+        }
+        ]
+      },
+      {
+        position: position["righthalf"],
+        components: [
+          {
+            displayType: displayType["smallLead"],
+            large:
+              "Traction",
+            small: "Torque &",
+            bullets: [
+              {data:"Front Locking Differential"},
+              {data:"Rear Locking Differential"},
+              {data:"7-Speed Manual Transmission (6+1 with Crawler Gear) OR 10-Speed Automatic Transmission with Trail Control"},
+              {data:"Two-Speed 4x4 Transfer Case with Low-Range (4L)"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "HillClimb",
+    title: "Hill Climb",
+    subtitle: "",
+    index: 3,
+    prevPage: "softsand",
+    nextPage: "crossings",
+    layouts: [
+      {
+        position: position["lefthalf"],
+        border: false,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Survey the Hill",
+          small: "Before You Drive...",
+          bullets: [
+            {data:"Scout the hill's crest - don't guess what's on the other side!"},
+            {data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down)"},
+            {data:"Engage Hill Descent Control or Trail Control in case of a failed hill climb"}
+          ]
+        },
+        {
+          displayType: displayType["smallLead"],
+          large: "Constand & Steady Acceleration",
+          small: "As You Drive...",
+          bullets: [
+            {data:"Point the vehicle up the hill and make sure the wheels are straight"},
+            {data:"Shift into Drive and let the transmission do the work - it will choose the best gear to maintain your momentum"},
+            {data:"As you reach the top of thhe hill, ease up on the throttle and slow to a crawl (or stop) to evaluate the descent on the other side"}
+          ]
+        }
+        ],
+      },
+      {
+        position: position["righthalf"],
+        components: [
+          {
+            displayType: displayType["aside"],
+            large:
+              "What if I can't make it up the hill?",
+            bullets: [
+              {data:"Stay calm and come to a stop - adjust your steering as needed to direct the vehicle back down the hill!"},
+              {data:"If not already on, engage Trail Control (automatic transmission) or Hill Descent Controls (manual transmission)"},
+              {data:"Put the vehicle in Reverse and look over your shoulde or use your mirrors as you slowly back down the hill"},
+              {data:"Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"},
+              {data:"Adjust you speed using the SET+ and SET- buttons on the steering wheel or accelerate as needed"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "HillDescent",
+    title: "Hill Descent",
+    subtitle: "",
+    index: 3,
+    prevPage: "crossings",
+    nextPage: "basicrockcrawl",
+    layouts: [
+      {
+        position: position["lefttwothirds"],
+        border: false,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Survey the Hill",
+          small: "Before You Drive...",
+          bullets: [
+            {data:"Scout the descent for possible obstacles"},
+            {data:"Plan your line parallel to the fall line (the natural path a ball would take rolling down). Avoid turning diagonally to the fall line, as this increases the risk of roll over"}
+          ]
+        },
+        {
+          displayType: displayType["smallLead"],
+          large: "Constand & Steady Acceleration",
+          small: "As You Drive...",
+          bullets: [
+            {data:"Point the vehicle down the hill and keep turns minimal"},
+            {data:"Select 1st gear, 4L on the transfer case, for maximum engine braking and control"},
+            {data:"Maintain a slow, controlled speed - minimize brake useage to reduce the change of wheel lock up or sliding"}
+          ]
+        }
+        ],
+      },
+      {
+        position: position["rightonethird"],
+        components: [
+          {
+            displayType: displayType["aside"],
+            large:
+              "Bronco Trail Control & Hill Descent Control",
+            bullets: [
+              {data:"If not already on engage Trail Control (automatic transmission) or Hill Descent Control (manual transmission) and begin your descent"},
+              {data:"Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"},
+              {data:"Adjust your speed using the SET+ and SET- buttons on the steering wheel, or accelerate as needed"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "Orientation",
+    title: "Orientation",
+    subtitle: "ORX Course Start",
+    index: 1,
+    prevPage: "groundschool",
+    nextPage: "softsand",
+    layouts: [
+      {
+        position: position["lefttwothirds"],
+        border: false,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Push Button Controls",
+          small: "Off-Road Switch Pack with",
+          bullets: [
+            {data:"Front Stabilizer Bar Disconnect"},
+            {data:"Front Locking Differential"},
+            {data:"Rear Locking Differential"},
+            {data:"Trail Turn Assist"}
+          ]
+        }
+        ]
+      },
+      {
+        position: position["rightonethird"],
+        components: [
+          {
+            displayType: displayType["aside"],
+            large:
+              "Trail Turn Assist helps manage tight turns on the trail by reducing the turning radius by as much as 40%. It does this by applying the brake to the inside rear wheel as the vehicle turns in low-speed off-road environments",
+            small: "",
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "SideTilts",
+    title: "Side Tilts",
+    subtitle: "& Center of Gravity",
+    index: 7,
+    prevPage: "basicrockcrawl",
+    nextPage: "articulationmounds",
+    layouts: [
+      {
+        position: position["lefthalf"],
+        border: false,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Maximum Side Tilt Angle",
+          small: "",
+          bullets: [
+            {data:"Vehicle Weight"},
+            {data:"Onboard passenger and cargo weight"},
+            {data:"Suspension and tire modifications"},
+            {data:"Vehicle speed and trail conditions"},
+            {data:"Roof rack loads"}
+          ]
+        },
+        {
+          displayType: displayType["aside"],
+          large: "Don't Panic!",
+          small: "",
+          bullets: [
+            {data:"If the vehicle starts to slip or roll, turn downhill and lightly accelerate to balance the vehicle. Take a deep breath"}
+          ]
+        }
+        ]
+      },
+      {
+        position: position["righthalf"],
+        components: [
+          {
+            displayType: displayType["smallLead"],
+            small: "End Stop Control Valve (ESCV) Technology",
+            large: "Bilstein Shock Absorbers",
+            bullets: [
+              {data:"ESCV technology was designed to utilize posistion sensitive damping, allowing the passengers to enjoy on-road comfort while maximizing off-road control and stability."},
+              {data:"When weight is transferred during a tilt, ESCV provides additional control of the vehicle."}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    boardName: "SoftSand",
+    title: "Soft Sand",
+    subtitle: "",
+    index: 2,
+    prevPage: "orientation",
+    nextPage: "hillclimb",
+    layouts: [
+      {
+        position: position["lefthalf"],
+        border: true,
+        components: [
+          {
+          displayType: displayType["smallLead"],
+          large: "Driving In Sand",
+          small: "Tips for",
+          bullets: [
+            {data:"Maintain a steady, quicker pace to 'float' the vehicle on top of the sand"},
+            {data:"Make gentle, wider turns to prevent the tires from digging into the sand"},
+            {data:"Be smooth with both the throttle and brakes to minimize weight transfer"},
+            {data:"Consider airing down the tires to increase tire footprint"}
+          ]
+        },
+        ]
+      },
+      {
+        position: position["righthalf"],
+        components: [
+          {
+            displayType: displayType["smallLead"],
+            small: 'Dial in the "SAND"',
+            large: "G.O.A.T. Modes",
+            bullets: [
+              {data:"Designed for soft, dry sand (also useful in deep snow)"},
+              {data:"Optimizes powertrain, steering, and traction control response for these conditions"},
+              {data:"Engages 4H and locks the rear differential (if equipped) when selected"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ]
 /*
-
+  const prevPage="orientation"
+  const nextPage="hillclimb"
+  const info1 = [
+    {data:"Maintain a steady, quicker pace to 'float' the vehicle on top of the sand"},
+    {data:"Make gentle, wider turns to prevent the tires from digging into the sand"},
+    {data:"Be smooth with both the throttle and brakes to minimize weight transfer"},
+    {data:"Consider airing down the tires to increase tire footprint"}
+  ]
+  const info2 = [
+    {data:"Designed for soft, dry sand (also useful in deep snow)"},
+    {data:"Optimizes powertrain, steering, and traction control response for these conditions"},
+    {data:"Engages 4H and locks the rear differential (if equipped) when selected"}
+  ]
+  return (
+    <>
+      <FrontBack nextPage={prevPage} previousPage={nextPage}/>
+      <InfoComponentTitle title="Soft Sand" sub="" />
+      <div className="data-container">
+        <div className="offroad-left-half lborder">
+          <SmallLeadInfo small="Tips for" intro={undefined} large="Driving in Sand" bullets={info1} />
+        </div>
+        <div className="offroad-right-half">
+          <SmallLeadInfo small='Dial in the "SAND"' intro={undefined} large="G.O.A.T. Modes" bullets={info2}  />
+        </div>
+      </div>
+    </>
+  )
   */

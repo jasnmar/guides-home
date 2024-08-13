@@ -31,11 +31,10 @@ export function renderBoard(bName: string) : ReactElement {
       icSub = bData.subtitle
     }
 
-    //Board Layouts
+    //Board Layouts - This is the start of the rabbit hole
     if(bData.layouts) {
       boardLayouts = buildLayouts(bData.layouts)
     }
-    console.log('boardLayouts: ', boardLayouts)
   }
   return (
     <>
@@ -49,7 +48,7 @@ export function renderBoard(bName: string) : ReactElement {
 }
 
 //Takes all of the layouts for a page and returns individual React Elements
-//for them.
+//for each of them.
 export function buildLayouts(layouts:layouts) : ReactElement[] {
   let renderedLayouts : ReactElement[] = [<></>] 
   renderedLayouts = layouts.map((layout) => {
@@ -70,6 +69,7 @@ export function buildLayouts(layouts:layouts) : ReactElement[] {
   return renderedLayouts
 }
 
+//Builds all of the components in a layout.
 function buildComponents(layout : layout, classList: string) : ReactElement {
   if(layout.components) {
     const componentList : component[] = layout.components
@@ -81,7 +81,6 @@ function buildComponents(layout : layout, classList: string) : ReactElement {
       <div key={uuidv4()} className={classList}>
         {renderedComponents}
       </div>
-      console.log('rCompList: ', rCompList)
       return rCompList
     } else {
       return <></>

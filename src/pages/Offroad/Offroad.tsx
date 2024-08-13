@@ -1,10 +1,7 @@
 import "./Offroad.css"
-import "./Boards/GroundSchool"
-import "./Boards/Orientation"
 import { Link } from "react-router-dom"
 
 function Offroad() {
-  
   return (
     <>
       <h1>Offroading</h1>

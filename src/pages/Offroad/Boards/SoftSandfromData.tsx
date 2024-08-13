@@ -2,8 +2,8 @@ import "../Offroad.css"
 import { renderBoard } from "./renderBoard"
 
 
-function ArticulationMoundsfromData() {
-  const bName="ArticulationMounds"
+function SoftSandfromData() {
+  const bName="SoftSand"
   const boardElement = renderBoard(bName)
   
   return (
@@ -13,4 +13,4 @@ function ArticulationMoundsfromData() {
   )
 }
 
-export default ArticulationMoundsfromData
+export default SoftSandfromData
