@@ -2,7 +2,7 @@ import "./SmallLeadInfo.css"
 import BulletImage from "../BulletImage/BulletImage"
 
 
-function SmallLeadInfo(props : {small:string, large:string, intro:string|undefined, bullets:{id:number, data:string, image?: string}[]}) {
+function SmallLeadInfo(props : {small?:string, large:string, intro?:string, bullets:{id:string, data:string, image?: string}[]}) {
   
 
   const bulletList = props.bullets.map((item) => {
