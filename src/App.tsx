@@ -27,6 +27,7 @@ import HillClimbfromData from "./pages/Offroad/Boards/HillClimbfromData"
 import OrientationfromData from "./pages/Offroad/Boards/OrientationfromData"
 import SideTiltsfromData from "./pages/Offroad/Boards/SideTiltsfromData"
 import SoftSandfromData from "./pages/Offroad/Boards/SoftSandfromData"
+import RecoveryGear from "./pages/Recovery/RecoveryGear"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -50,7 +51,10 @@ const router = createBrowserRouter(
       <Route path="basicrockcrawl" element={<BasicRockCrawlfromData />} />
       <Route path="sidetilts" element={<SideTiltsfromData />} />
       <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
-      <Route path="/recovery" element={<Recovery />} />
+      <Route path="recovery" element={<Recovery />}>
+        <Route path="gear" element={<RecoveryGear />} />
+      </Route>
+      
     </Route>
   )
 )

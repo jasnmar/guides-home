@@ -1,0 +1,16 @@
+.recovery-nav {
+  display: flex;
+}
+.recovery-nav-item {
+  padding: 11px;
+}
+
+.gear-images {
+  display: flex;
+}
+
+.gear-image {
+  width: 200px;
+  margin: 10px;
+  border-radius: 8px;
+}
