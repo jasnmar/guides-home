@@ -11,7 +11,7 @@ export const boardData:boardDataInterface[] = [
     layouts: [
       {
         position: position["lefthalf"],
-        border: true,
+        border: false,
         components: [
           {
           displayType: displayType["smallLead"],
@@ -113,7 +113,7 @@ export const boardData:boardDataInterface[] = [
     title: "Articulation Mounds",
     subtitle: "Advanced",
     index: 8,
-    prevPage:"sidetilt",
+    prevPage:"sidetilts",
     nextPage:"waterfording",
     layouts: [
       {
