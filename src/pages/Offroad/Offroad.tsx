@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function Offroad() {
   return (
     <>
-      <main>
+      <main className="page-content">
         <h1>Offroading</h1>
         <p>These are some of the items that we usually talk about at our ORX (Offroad Adventure) course</p>
         <ul>
