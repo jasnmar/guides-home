@@ -12,7 +12,7 @@ import {
 function RecoveryGear() {
   return (
     <>
-      <main>
+      <main className="page-content">
         <h1 className="recovery">Recovery Kits</h1>
         <p>
           There are a couple of different recovery kits that we carry at
