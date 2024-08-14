@@ -22,7 +22,6 @@ export interface component {
   small?: string,
   intro?: string,
   bullets?: bullets,
-  
 }
 
 export enum position {
@@ -38,7 +37,8 @@ export enum displayType {
 }
 
 export interface bullet {
-  data: string
+  data: string,
+  image?: string
 }
 
 export interface bullets extends Array<bullet>{}

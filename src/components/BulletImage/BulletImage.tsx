@@ -1,5 +1,4 @@
 import "./BulletImage.css"
-import { stop } from "../../assets/images"
 
 
 function BulletImage(props : {imageIdetifier: string }) {
@@ -7,7 +6,7 @@ function BulletImage(props : {imageIdetifier: string }) {
   console.log('imageName', imageName)
   return (
     <>
-      <img src={"../../assets/"+props.imageIdetifier+".svg"}></img>
+      <img className="bullet-image-default" src={"/"+props.imageIdetifier+".svg"}></img>
     </>
   )
 }

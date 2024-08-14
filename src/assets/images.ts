@@ -1,4 +1,4 @@
-export { default as stop } from "./stop.svg"
+
 export { default as bronco } from "./Bronco-bucking.svg"
 export { default as hdRecoveryKit } from "./M-1820-FPORRHD.jpeg"
 export { default as warnSoftShackle } from "./WarnSoftShackle.jpeg"
