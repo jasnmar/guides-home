@@ -1,27 +1,17 @@
 import "./Aside.css"
 import { bronco } from "../../assets/images"
+import BulletList from "../BulletList/BulletList"
 
-function Aside(props :{asideText:string, asideBullets:{id:string, data:string}[] | undefined}) {
-  let bulletList
-  if(props.asideBullets) {
-    bulletList = props.asideBullets.map((item) => {
-      return (
-        <li className="plus-data-bullet" key={item.id}>
-        {item.data}
-      </li>
-      )
-    })
-  }
-
+function Aside(props :{asideText:string, asideBullets?:{ data:string}[]}) {
+  
 
   return (
     <>
-      
       <div className="aside">
       <img className="bronc-logo" src={bronco}></img>
-      <p className={bulletList ? "aside-header":"aside-text"}>{props.asideText}</p>
+      <p className={props.asideBullets ? "aside-header":"aside-text"}>{props.asideText}</p>
       <ul className="Aside-UL">
-        {bulletList}
+        {props.asideBullets && <BulletList bullets={props.asideBullets}/>}
       </ul>
       </div>
     </>
