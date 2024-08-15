@@ -5,16 +5,18 @@ import { Link } from "react-router-dom"
 function Home() {
   return (
     <>
+      <main className="page-content">
       {/* <Link to="/guides" >
         <h1>Meet the Off-Roadeo Guides</h1>
-      </Link> */}
+        </Link> */}
       <Link to="/offroading">
         <h1>Off-roading information</h1>
       </Link>
-      <Link to="/recovery">
+      <Link to="/recovery/gear">
         <h1>Recovery information</h1>
       </Link>
       {/* <h1>Bronco Information</h1> */}
+        </main>
     </>
   )
 }

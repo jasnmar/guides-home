@@ -7,10 +7,18 @@
 
 .gear-images {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .gear-image {
   width: 150px;
   margin: 10px;
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .gear-image {
+    width: 80%;
+  }
+
 }
