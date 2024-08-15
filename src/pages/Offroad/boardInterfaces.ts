@@ -22,6 +22,7 @@ export interface component {
   small?: string,
   intro?: string,
   bullets?: bullets,
+  imageref?: string
 }
 
 export enum position {

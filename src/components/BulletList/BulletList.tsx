@@ -1,4 +1,5 @@
 import "./BulletList.css"
+import ReactMarkdown from 'react-markdown'
 import BulletImage from "../BulletImage/BulletImage"
 import { v4 as uuidv4 } from 'uuid'
 
@@ -10,7 +11,7 @@ function BulletList(props: {bullets:{ data:string, image?: string}[]} ) {
     }
     return (
       <li className="plus-data-bullet" key={uuidv4()}>
-        {item.data} {bullImg}
+        <ReactMarkdown>{item.data}</ReactMarkdown> {bullImg}
       </li>
     )
   })

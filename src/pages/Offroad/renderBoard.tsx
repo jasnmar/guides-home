@@ -93,8 +93,14 @@ function buildComponents(layout: layout, classList: string): ReactElement {
 
 function buildSingleComponent(component: component) {
   let fixedBullets: { id?: string; data: string }[] = []
+  let imageReference: string
   if (component.bullets) {
     fixedBullets = component.bullets
+  }
+  if (component.imageref) {
+    imageReference = component.imageref
+  } else {
+    imageReference = ""
   }
   let renderedComponent: ReactElement = <></>
   switch (component.displayType) {
@@ -105,6 +111,7 @@ function buildSingleComponent(component: component) {
             large={component.large}
             small={component.small}
             bullets={fixedBullets}
+            imageref={imageReference}
           ></SmallLeadInfo>
         </div>
       )

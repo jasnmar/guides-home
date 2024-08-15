@@ -44,22 +44,22 @@ export const boardData: boardDataInterface[] = [
               "Put your off-roading skills to the test and follow these guidelines:",
             bullets: [
               {
-                data: "Stay in 4L for max throttle control. Slow and precise wins the day"
+                data: "**Stay in 4L for max throttle control.** Slow and precise wins the day"
               },
               {
-                data: "Look and think ahead. Take the time to choose the correct line through the rocks."
+                data: "**Look and think ahead.** Take the time to choose the correct line through the rocks."
               },
               {
-                data: "Modulate the throttle. Too much or too little can make a big difference."
+                data: "**Modulate the throttle.** Too much or too little can make a big difference."
               },
               {
-                data: "Minimize steering inputs. Subtle movements will get you through"
+                data: "**Minimize steering inputs.** Subtle movements will get you through"
               },
               {
-                data: "Keep your tires on top of the rocks. The path of least resistance."
+                data: "**Keep your tires on top of the rocks.** The path of least resistance."
               },
               {
-                data: "Watch your sidewalls. Sharp rocks can puncture the side of a tire."
+                data: "**Watch your sidewalls.** Sharp rocks can puncture the side of a tire."
               }
             ]
           }
@@ -323,7 +323,8 @@ export const boardData: boardDataInterface[] = [
               { data: "Maximum Departure Angle 37.2 degrees" },
               { data: "Maximum Breakover Angle 29.0 degrees" },
               { data: "Maximum Ground Clearance 11.6 inches" }
-            ]
+            ],
+            imageref:"BroncoABC"
           }
         ]
       },
@@ -341,7 +342,8 @@ export const boardData: boardDataInterface[] = [
                 data: "7-Speed Manual Transmission (6+1 with Crawler Gear) OR 10-Speed Automatic Transmission with Trail Control"
               },
               { data: "Two-Speed 4x4 Transfer Case with Low-Range (4L)" }
-            ]
+            ],
+            imageref:"PowerTrain"
           }
         ]
       }
@@ -501,10 +503,10 @@ export const boardData: boardDataInterface[] = [
             large: "Push Button Controls",
             small: "Off-Road Switch Pack with",
             bullets: [
-              { data: "Front Stabilizer Bar Disconnect" },
-              { data: "Front Locking Differential" },
-              { data: "Rear Locking Differential" },
-              { data: "Trail Turn Assist" }
+              { data: "Front Stabilizer Bar Disconnect", image:"StayBarDisconnect" },
+              { data: "Front Locking Differential", image: "FrontLockingDifferential" },
+              { data: "Rear Locking Differential", image: "RearLockingDifferential" },
+              { data: "Trail Turn Assist", image: "TrailTurnAssist" }
             ]
           }
         ]
@@ -515,7 +517,7 @@ export const boardData: boardDataInterface[] = [
           {
             displayType: displayType["aside"],
             large:
-              "Trail Turn Assist helps manage tight turns on the trail by reducing the turning radius by as much as 40%. It does this by applying the brake to the inside rear wheel as the vehicle turns in low-speed off-road environments",
+              "Trail Turn Assist helps manage tight turns on the trail by **reducing the turning radius by as much as 40%**. It does this by applying the brake to the inside rear wheel as the vehicle turns in low-speed off-road environments",
             small: ""
           }
         ]
