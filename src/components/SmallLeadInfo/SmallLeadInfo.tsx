@@ -9,7 +9,7 @@ function SmallLeadInfo(props : {small?:string, large:string, intro?:string, bull
   
   return (
     <>
-      <p className="SmallLeadSmall"><ReactMarkdown>{props.small}</ReactMarkdown></p>
+      <div className="SmallLeadSmall"><ReactMarkdown>{props.small}</ReactMarkdown></div>
       <p className="SmallLeadLarge">{props.large}</p>
       {props.intro ? <p className="SmallLeadIntro">{props.intro}</p> : <></>}
       <ul className="smallLeadUL">

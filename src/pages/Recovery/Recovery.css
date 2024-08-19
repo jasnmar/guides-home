@@ -22,3 +22,12 @@
   }
 
 }
+.recovery-checkbox {
+  list-style: none;
+}
+.recovery-checkbox:before
+{
+  
+  content: "\2610";
+  margin-right:5px;
+}

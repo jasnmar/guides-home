@@ -28,6 +28,7 @@ import OrientationfromData from "./pages/Offroad/Boards/OrientationfromData"
 import SideTiltsfromData from "./pages/Offroad/Boards/SideTiltsfromData"
 import SoftSandfromData from "./pages/Offroad/Boards/SoftSandfromData"
 import RecoveryGear from "./pages/Recovery/RecoveryGear"
+import StuckAssesment from "./pages/Recovery/StuckAssesment"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -53,6 +54,7 @@ const router = createBrowserRouter(
       <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
       <Route path="recovery" element={<Recovery />}>
         <Route path="gear" element={<RecoveryGear />} />
+        <Route path="assesment" element={<StuckAssesment />} />
       </Route>
       
     </Route>
