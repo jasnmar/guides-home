@@ -1,0 +1,22 @@
+.action {
+  display: none;
+  margin-left: 1em;
+}
+
+.answer {
+  margin-right: .5em;
+}
+
+.radio-action {
+  display: inline;
+}
+
+.radio-question {
+  margin-top: 1em;
+}
+
+.radio-question-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

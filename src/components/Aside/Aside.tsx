@@ -11,7 +11,7 @@ function Aside(props :{asideText:string, asideBullets?:{ data:string}[], imagere
     <>
       <div className="aside">
       <img className="bronc-logo" src={bronco}></img>
-      <p className={props.asideBullets ? "aside-header":"aside-text"}><ReactMarkdown>{props.asideText}</ReactMarkdown></p>
+      <div className={props.asideBullets ? "aside-header":"aside-text"}><ReactMarkdown>{props.asideText}</ReactMarkdown></div>
       <ul className="Aside-UL">
         {props.asideBullets && <BulletList bullets={props.asideBullets}/>}
       </ul>

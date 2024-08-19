@@ -415,7 +415,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"
               },
               {
-                data: "Adjust you speed using the SET+ and SET- buttons on the steering wheel or accelerate as needed"
+                data: "Adjust your speed using the SET+ and SET- buttons on the steering wheel or accelerate as needed"
               }
             ]
           }
