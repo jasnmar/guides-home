@@ -26,10 +26,10 @@ function Navbar() {
             {/* <li className="nav-item active">
               <a className="nav-link" href="/guides">Guides</a>
             </li> */}
-            <li className="nav-item active">
+            <li aria-label="Offroading" className="nav-item active">
               <a className="nav-link" href="/offroading">Offroading</a>
             </li>
-            <li className="nav-item active">
+            <li aria-label="Recovery" className="nav-item active">
               <a className="nav-link" href="/recovery/gear">Recovery</a>
             </li>
           </ul>
