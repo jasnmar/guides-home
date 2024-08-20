@@ -6,7 +6,7 @@ function Offroad() {
     <>
       <main className="page-content">
         <h1>Offroading</h1>
-        <p>These are some of the items that we usually talk about at our ORX (Offroad Adventure) course</p>
+        <p>The pages below represent the signs that are scattered around the ORX (Off-Road Experience) Course that guests start the day on (including ground school, which we talk about differently).</p>
         <ul>
           <li>
             <Link to="/groundschool">Ground School</Link><br></br>
