@@ -17,3 +17,6 @@ export { default as recoveryBoards } from "./recovery-board.jpg"
 export { default as stuckBronco } from "./StuckBronco.png"
 export { default as offRoading } from "./offroading1.png"
 export { default as sunrise } from "./sunrise.jpg"
+
+
+export { default as broncoABC } from "./BroncoABC.svg"

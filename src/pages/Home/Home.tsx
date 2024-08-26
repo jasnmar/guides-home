@@ -17,14 +17,16 @@ function Home() {
           <div className="home--card">
             <Link className="home--card-link" to="recovery/gear">
               <div className="home-card-inner">
+                <div className="home--card-title">Recovery</div>
                 <img className="home--card-image" src={stuckBronco}></img>
                 <p className="home--card-text">Off-road recoveries occur when the driver and vehicle are unable to continue, generally due to a loss of traction.</p>
               </div>
             </Link>
           </div>
           <div className="home--card">
-            <Link className="home--card-link" to="recovery/gear">
+            <Link className="home--card-link" to="offroading">
               <div className="home-card-inner">
+              <div className="home--card-title">Offroading</div>
                 <img className="home--card-image" src={offRoading}></img>
                 <p className="home--card-text">Off-Roading, as we talk about it, is done mostly with Broncos and Bronco Sports. </p>
               </div>
