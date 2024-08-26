@@ -4,6 +4,9 @@
   padding: 0px 40px 0px 60px;
 }
 
+.offroad--lead {
+  font-size: 1.25rem;
+}
 .offroad-left-half {
   padding-left: 10px;
   width: 50%;
@@ -20,7 +23,13 @@
   padding-left: 10px;
   width: 33%;
 }
-
+.offroad--list > li {
+  list-style-type: none;
+  font-size: 1.24rem;
+}
+.offroad--list > li > a {
+  font-size: 1.25rem;
+}
 .lborder {
   border-right: 4px solid black;
 }
