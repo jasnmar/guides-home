@@ -5,6 +5,11 @@
   padding: 11px;
 }
 
+.recovery--cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .gear-images {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +25,9 @@
   .gear-image {
     width: 80%;
   }
-
+  .recovery--cards {
+    flex-direction: column;
+  }
 }
 .recovery-checkbox {
   list-style: none;

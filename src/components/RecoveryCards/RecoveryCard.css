@@ -1,0 +1,30 @@
+
+.recoveryCard--card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 20px;
+}
+
+.recoveryCard--images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recoveryCard--gear-image {
+  width: 150px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1280px) {
+  
+}
+@media only screen and (max-width: 800px) {
+  .recoveryCard--gear-image {
+    width: 80%;
+  }
+  .recoveryCard--card {
+    width: 80%;
+  }
+}
