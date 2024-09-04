@@ -1,5 +1,7 @@
 export interface modeData {
   mode: string,
+  sub?: string,
+  icon: string,
   transferCase: transferCaseSelections,
   tcOptions: transferCaseSelections[],
   tractionControl: tractionControlSetttings,

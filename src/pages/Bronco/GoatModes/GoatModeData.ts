@@ -6,10 +6,21 @@ import {
   throttleSetting,
   steeringSetting,
   goatModesForEachModel} from "./GoatModeInterfaces"
+import { 
+  bajaMode,
+  ecoMode,
+  mudRutsMode,
+  normalMode,
+  rockCrawlMode,
+  sandMode,
+  slipperyMode,
+  sportMode
+ } from "../../../assets/images"
 
 export const GoatModeData: modeData[] = [
   {
     mode:"Normal", 
+    icon: normalMode,
     transferCase:transferCaseSelections["twoHigh"], 
     tcOptions:[transferCaseSelections["twoHigh"],transferCaseSelections["fourHigh"], transferCaseSelections["fourAuto"],transferCaseSelections["fourLow"]], 
     tractionControl:tractionControlSetttings["normal"], 
@@ -24,6 +35,7 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Eco", 
+    icon: ecoMode,
     transferCase:transferCaseSelections["twoHigh"], 
     tcOptions:[transferCaseSelections["twoHigh"],transferCaseSelections["fourHigh"], transferCaseSelections["fourAuto"]], 
     tractionControl:tractionControlSetttings["normal"],
@@ -38,8 +50,10 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Sport", 
+    sub: "4",
+    icon: sportMode,
     transferCase:transferCaseSelections["fourAuto"], 
-    tcOptions:[transferCaseSelections["twoHigh"], transferCaseSelections["fourAuto"]], 
+    tcOptions:[transferCaseSelections["twoHigh"], transferCaseSelections["fourAuto"],transferCaseSelections["fourLow"] ], 
     tractionControl:tractionControlSetttings["off"],
     frontDiffLocker:onOff["off"],
     fdLockerOptions:[onOff["off"]], 
@@ -52,8 +66,10 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Slippery", 
+    sub: "5",
+    icon: slipperyMode,
     transferCase:transferCaseSelections["fourAuto"], 
-    tcOptions:[transferCaseSelections["fourAuto"], transferCaseSelections["fourHigh"]], 
+    tcOptions:[transferCaseSelections["fourAuto"], transferCaseSelections["fourHigh"],transferCaseSelections["fourLow"]], 
     tractionControl:tractionControlSetttings["extra"],
     frontDiffLocker:onOff["off"],
     fdLockerOptions:[onOff["off"],onOff["on"]], 
@@ -66,6 +82,7 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Sand", 
+    icon: sandMode,
     transferCase:transferCaseSelections["fourHigh"], 
     tcOptions:[transferCaseSelections["fourHigh"], transferCaseSelections["fourLow"],], 
     tractionControl:tractionControlSetttings["extra"],
@@ -80,6 +97,7 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Mud and Ruts", 
+    icon: mudRutsMode,
     transferCase:transferCaseSelections["fourHigh"], 
     tcOptions:[transferCaseSelections["fourHigh"], transferCaseSelections["fourLow"],], 
     tractionControl:tractionControlSetttings["off"],
@@ -94,6 +112,7 @@ export const GoatModeData: modeData[] = [
   },
   {
     mode:"Rock Crawl", 
+    icon: rockCrawlMode,
     transferCase:transferCaseSelections["fourLow"], 
     tcOptions:[transferCaseSelections["fourLow"],], 
     tractionControl:tractionControlSetttings["off"],
@@ -107,7 +126,8 @@ export const GoatModeData: modeData[] = [
     sbDisconnectOptions:[onOff["off"],onOff["on"]]
   },
   {
-    mode:"Baja", 
+    mode:"Baja",
+    icon: bajaMode,
     transferCase:transferCaseSelections["fourHigh"], 
     tcOptions:[transferCaseSelections["fourHigh"], transferCaseSelections["fourLow"],], 
     tractionControl:tractionControlSetttings["off"],

@@ -20,3 +20,12 @@ export { default as sunrise } from "./sunrise.jpg"
 
 
 export { default as broncoABC } from "./BroncoABC.svg"
+export { default as ecoMode } from "./eco.jpeg"
+export { default as bajaMode } from "./baja.jpeg"
+export { default as mudRutsMode } from "./mudruts.jpeg"
+export { default as normalMode } from "./normal.jpeg"
+export { default as rockCrawlMode } from "./rockcrawl.jpeg"
+export { default as sandMode } from "./sand.jpeg"
+export { default as slipperyMode } from "./slippery.jpeg"
+export { default as sportMode } from "./sport.jpeg"
+
