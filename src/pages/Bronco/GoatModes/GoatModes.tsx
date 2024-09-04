@@ -42,7 +42,6 @@ function GoatModes() {
     if(model.modes.find((item) => {
       if(item.modename === mode) {
         if(item.enabled === true) {
-          console.log('item: ', item)
           return true
         }
       }
@@ -52,7 +51,7 @@ function GoatModes() {
     return tableData
   }
   const modelLines = goatModesByModel.map((model) => {
-    const row = [<td >{model.model}</td>]
+    const row = [<td key={uuidV4()}>{model.model}</td>]
     //Normal
     const ntd = getModeData(model, "normal")
     row.push(ntd)
@@ -77,7 +76,7 @@ function GoatModes() {
     //baja
     const btd = getModeData(model, "baja")
     row.push(btd)
-    const actualRow = <tr>{row}</tr>
+    const actualRow = <tr key={uuidV4()}>{row}</tr>
     return actualRow
   })
 
