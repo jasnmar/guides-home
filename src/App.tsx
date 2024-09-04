@@ -29,6 +29,7 @@ import SideTiltsfromData from "./pages/Offroad/Boards/SideTiltsfromData"
 import SoftSandfromData from "./pages/Offroad/Boards/SoftSandfromData"
 import RecoveryGear from "./pages/Recovery/RecoveryGear"
 import StuckAssesment from "./pages/Recovery/StuckAssesment"
+import GoatModes from "./pages/Bronco/GoatModes/GoatModes"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
         <Route path="gear" element={<RecoveryGear />} />
         <Route path="assesment" element={<StuckAssesment />} />
       </Route>
+      <Route path="goatModes" element={<GoatModes />} />
       
     </Route>
   )

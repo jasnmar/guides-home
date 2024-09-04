@@ -214,7 +214,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Designed to decrease the risk of a tire dismounting from the wheel when you air down"
               },
               {
-                data: "Securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring"
+                data: "Securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring", image:"Beadlock"
               }
             ]
           }
