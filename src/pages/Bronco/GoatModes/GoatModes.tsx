@@ -94,9 +94,12 @@ function GoatModes() {
     <>
     <main className="page-content">
       <h1>G.O.A.T. Modes</h1>
-      <h2>What do G.O.A.T. Modes Do?</h2>
-      <p>There are a total of 8 G.O.A.T. Modes available across the different trim levels (technically there are a couple more if we include the Raptor), but the most in any vehicle directly from Ford is 7.</p>
-      <p>G.O.A.T. Modes are primarily combinations of Transfer Case and Hero Bar settings. They can also adjust throttle sensitivity, steering feel, as well as transmission shift points.</p>
+      <h2>What is a G.O.A.T Mode?</h2>
+      <p>G.O.A.T stands for Goes Over Any Terrain (technically the lawyers say Goes Over Any Type of Terrain, but the acronym for that is G.O.A.T.O.T, so we're going to keep it simple).</p>
+      <p>G.O.A.T. Modes are primarily combinations of Transfer Case and Hero Bar settings that are reasonable starting points for the conditions they describe. They can also adjust throttle sensitivity, steering feel, as well as transmission shift points which are things we can't access without using a G.O.A.T mode.</p>
+      <h2>What do each of the G.O.A.T. Modes Do?</h2>
+      <p>There are a total of 8 G.O.A.T. Modes available across the different trim levels (technically there are a couple more if we include the Raptor, but for now we are talking about non-Raptor versions), but the most in any vehicle directly from Ford is 7.</p>
+
       <div className="table-responsive">
       <table className="table table-striped">
         <thead>
