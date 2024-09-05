@@ -32,6 +32,9 @@ function Navbar() {
             <li aria-label="Recovery" className="nav-item active">
               <a className="nav-link" href="/recovery/gear">Recovery</a>
             </li>
+            <li aria-label="Goat Modes" className="nav-item active">
+              <a className="nav-link" href="/goatmodes">GOAT Modes</a>
+            </li>
           </ul>
         </div>
       </nav>

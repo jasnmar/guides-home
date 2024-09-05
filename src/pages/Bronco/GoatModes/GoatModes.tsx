@@ -114,8 +114,8 @@ function GoatModes() {
             <th>Rear Locking Options<sub>2</sub></th>
             <th>Throttle</th>
             <th>Steering</th>
-            <th>Stay-Bar Disconnect</th>
-            <th>Stay-Bar Options<sub>3</sub></th>
+            <th>Sta-Bar Disconnect</th>
+            <th>Sta-Bar Options<sub>3</sub></th>
           </tr>
         </thead>
         <tbody>
