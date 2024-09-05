@@ -5,13 +5,15 @@ import { guideData } from "./guideData"
 
 function Guides() {
   const guideList = guideData.map((guide) => {
-    return (
-      <li key={guide.id}>
+    if(guide.id!=0){
+      return (
+        <li key={guide.id}>
         <Link to={guide.id.toString()}>
           {guide.firstName} - {guide.location}
         </Link>
       </li>
     )
+    }
   })
 
   return (

@@ -17,6 +17,9 @@ export { default as recoveryBoards } from "./recovery-board.jpg"
 export { default as stuckBronco } from "./StuckBronco.png"
 export { default as offRoading } from "./offroading1.png"
 export { default as sunrise } from "./sunrise.jpg"
+export { default as jasonBio } from "./jason-bio.png"
+export { default as jasonVenmo } from "./jasonVenmo.png"
+export { default as anonymousBio } from "./anonymous.jpeg"
 
 
 export { default as broncoABC } from "./BroncoABC.svg"
