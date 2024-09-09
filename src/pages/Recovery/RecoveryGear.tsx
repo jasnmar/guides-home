@@ -20,7 +20,6 @@ function RecoveryGear() {
   //const d1 = [{altText:"Ford Heavy Duty Recovery Kit", image:hdRecoveryKit}]
   return (
     <>
-      <main className="page-content">
         <h1 className="recovery">Items We Carry</h1>
         <h2 className="recovery">Recovery Kits</h2>
         <div className="recovery--cards">
@@ -61,7 +60,6 @@ function RecoveryGear() {
           <RecoveryCard imageInfo={[{altText:"Soft Shackle", image:warnSoftShackle}]} title="Soft Shackles">Soft shackles are another great option for connecting to recovery points on your vehicle. Soft shackles are made from a high molecular weight polyethelyene material. They are light weigh and are easy to store with your other off road gear. Like recovery ropes and straps, they come in various lengths. Many of them also come with a protective sleave that is intended to reduce damage to the shackle material when it is being used.</RecoveryCard>
           <RecoveryCard imageInfo={[{altText:"Tree Saver Strap", image:treeSaver}]}title="Tree Saver">Technically Tree savers are typically just tow straps. They are generally fairly short, fairly wide tow straps, but they are typically just tow straps (although some other forms of tree savers also exist). Never wrap a winch line around a tree. It damages the winch line as well as the tree. Use a tow strap instead to spread the load out over the bark area of the tree. Secure the tree saver as low on the tree as practicle for the recovery to reduce the amount of leverage that you are placing on the tree.</RecoveryCard>
         </div>
-      </main>
     </>
   )
 }
