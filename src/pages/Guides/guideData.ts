@@ -7,10 +7,12 @@ import {
 
 export const guideData : guideDataInterface[] = [
   {id: 0,
-    firstName: "place",
-    lastName: "holder",
+    firstName: "Place",
+    lastName: "Holder",
     location: "New Hampshire",
-    bio: ["none","more than none", "some additional stuffs"],
+    bio: ["Place first got into offroading because he's bad at reading maps and makes terrible decisions. He would often find himself on an unmaintained road somewhere, and would have to figure out how to get his Ford Pinto through these roads.",
+      "more than none", 
+      "some additional stuffs"],
     started: "July 19, 2022",
     headshot: anonymousBio,
     venmoImage: jasonVenmo,

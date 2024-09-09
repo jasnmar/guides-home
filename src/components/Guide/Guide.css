@@ -1,0 +1,13 @@
+
+
+.guide--main-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
+.guide--venmo-qr {
+  width:100px;
+}

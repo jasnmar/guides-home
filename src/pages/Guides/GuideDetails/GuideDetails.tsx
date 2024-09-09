@@ -7,19 +7,21 @@ function GuideDetails() {
   const guide : guideDataInterface = useLoaderData() as guideDataInterface
   return (
     <>
-      <Guides 
-        id={guide.id}
-        firstName={guide.firstName} 
-        lastName={guide.lastName} 
-        started={guide.started}
-        level={guide.level}
-        location={guide.location} 
-        headshot={guide.headshot} 
-        bio={guide.bio}
-        venmoImage={guide.venmoImage}
-        venmoLink={guide.venmoLink}
-        >  
-      </Guides>
+      <main className='page-content'>
+        <Guides 
+          id={guide.id}
+          firstName={guide.firstName} 
+          lastName={guide.lastName} 
+          started={guide.started}
+          level={guide.level}
+          location={guide.location} 
+          headshot={guide.headshot} 
+          bio={guide.bio}
+          venmoImage={guide.venmoImage}
+          venmoLink={guide.venmoLink}
+          >  
+        </Guides>
+      </main>
     </>
   )
 }

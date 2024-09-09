@@ -17,7 +17,7 @@ function Guides() {
   })
 
   return (
-    <>
+    <main className="page-content">
       <h1>Your Off-Roadeo Guides</h1>
       <p>
         We only list guides who have volunteered to be listed. It is possible
@@ -25,7 +25,7 @@ function Guides() {
       </p>
       <ul>{guideList}</ul>
       <Outlet />
-    </>
+    </main>
   )
 }
 
