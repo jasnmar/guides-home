@@ -19,6 +19,12 @@ function GuideDetails() {
           bio={guide.bio}
           venmoImage={guide.venmoImage}
           venmoLink={guide.venmoLink}
+          xLink={guide.xLink}
+          fblink={guide.fblink}
+          instaLink={guide.instaLink}
+          youTubeLink={guide.youTubeLink}
+          linkedInLink={guide.linkedInLink}
+          email={guide.email}
           >  
         </Guides>
       </main>
