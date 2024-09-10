@@ -17,6 +17,9 @@ export { default as recoveryBoards } from "./recovery-board.jpg"
 export { default as stuckBronco } from "./StuckBronco.webp"
 export { default as offRoading } from "./offroading1.webp"
 export { default as sunrise } from "./sunrise.webp"
+export { default as jasonBio } from "./jason-bio.png"
+export { default as jasonVenmo } from "./jasonVenmo.png"
+export { default as anonymousBio } from "./anonymous.jpeg"
 
 
 export { default as broncoABC } from "./BroncoABC.svg"
@@ -28,4 +31,11 @@ export { default as rockCrawlMode } from "./rockcrawl.jpeg"
 export { default as sandMode } from "./sand.jpeg"
 export { default as slipperyMode } from "./slippery.jpeg"
 export { default as sportMode } from "./sport.jpeg"
+
+export { default as fbLogo } from "./facebook.svg"
+export { default as xLogo } from "./x.svg"
+export { default as instLogo } from "./instagram.svg"
+export { default as youTubeLogo } from "./youtube.svg"
+export { default as linkedInLogo } from "./linkedin.svg"
+export { default as emailLogo } from "./email.svg"
 

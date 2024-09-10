@@ -5,17 +5,19 @@ import { guideData } from "./guideData"
 
 function Guides() {
   const guideList = guideData.map((guide) => {
-    return (
-      <li key={guide.id}>
+    if(guide.id!=0){
+      return (
+        <li key={guide.id}>
         <Link to={guide.id.toString()}>
           {guide.firstName} - {guide.location}
         </Link>
       </li>
     )
+    }
   })
 
   return (
-    <>
+    <main className="page-content">
       <h1>Your Off-Roadeo Guides</h1>
       <p>
         We only list guides who have volunteered to be listed. It is possible
@@ -23,7 +25,7 @@ function Guides() {
       </p>
       <ul>{guideList}</ul>
       <Outlet />
-    </>
+    </main>
   )
 }
 
