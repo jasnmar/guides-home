@@ -41,7 +41,7 @@ const router = createBrowserRouter(
         loader={(params) => GuideDetailLoader(params)}
         element={<GuideDetails />}
       />
-      <Route path="advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
+      <Route path="/advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
       <Route path="waterfording" element={<WaterFordingfromData />} />
       <Route path="offroading" element={<Offroad />}></Route>
       <Route path="groundschool" element={<GroundSchoolfromData />} />
