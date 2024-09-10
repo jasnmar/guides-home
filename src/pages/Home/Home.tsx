@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <div className="home--hero-section">
-        <div className="home--hero-message">Wecome to Off-Roadeo Guides</div>
+        <h1 className="home--hero-message">Wecome to Off-Roadeo Guides</h1>
       </div>
       <main className="page-content">
         
