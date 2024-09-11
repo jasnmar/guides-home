@@ -38,9 +38,11 @@ export function renderBoard(bName: string): ReactElement {
   }
   return (
     <>
-      <FrontBack nextPage={nPage} previousPage={pPage} />
-      <InfoComponentTitle title={icTitle} sub={icSub} />
-      <div className="data-container">{boardLayouts}</div>
+      <main>
+        <FrontBack nextPage={nPage} previousPage={pPage} />
+        <InfoComponentTitle title={icTitle} sub={icSub} />
+        <div className="data-container">{boardLayouts}</div>
+      </main>
     </>
   )
 }
