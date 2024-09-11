@@ -2,7 +2,6 @@ import { guideDataInterface } from "./GuideInterfaces"
 import { 
   anonymousBio,
   jasonBio,
-  jasonVenmo 
 } from "../../assets/images"
 
 export const guideData : guideDataInterface[] = [
@@ -15,9 +14,7 @@ export const guideData : guideDataInterface[] = [
       "`some additional words using code formatting`"],
     started: "July 2022",
     headshot: anonymousBio,
-    venmoImage: jasonVenmo,
     venmoLink: "https://account.venmo.com/pay?recipients=jasonmartin603",
-    level: "Base",
     fblink: "https://www.facebook.com/profile.php?id=61565644077822",
     xLink: "https://x.com/YourAnonNews",
     instaLink: "https://www.instagram.com/anonymous.leaks/",
@@ -30,17 +27,17 @@ export const guideData : guideDataInterface[] = [
     location: "New Hampshire", 
     bio: ["Jason lives in a small town in NH, about 25 miles from Gunstock. He has lived in New Hampshire since 2002, but grew up in Oklahoma, where his father was a dirt contractor. When he was 10 years old he was driving bulldozers, scrapers, and graders. He didn't realize it at the time, but he was offroading to get to many of these job sites. He just thought that's when 10 years olds get to drive the 4 wheeled vehicles.","Jason has always owned 4 wheel drive vehicles, but a few years ago bought a new truck and gave his truck to his son. Since then they've been doing some really dumb things with mostly stock vehciles on some of NH's class VI roads.", "Jason also had a *breif* career as a motorcycle road racer. This is where he really learned the details of traction and clearance, and how important those two things are in motorsports."],
     headshot: jasonBio,
-    venmoImage: jasonVenmo,
     venmoLink: "https://account.venmo.com/pay?recipients=jasonmartin603",
     started: "May 2023",
-    level: "Black Diamond",
     fblink: "https://www.facebook.com/jason.martin.5243817",
-    linkedInLink: "https://www.linkedin.com/in/jason-martin-58a6512/"
+    linkedInLink: "https://www.linkedin.com/in/jason-martin-58a6512/",
+    email:"mailto://offroadeoguides@gmail.com"
   },
   {id: 2, 
-    firstName: "Bob", 
+    firstName: "Bob",
+    started:"2024",
     location: "New Hampshire", 
     bio: ["more blah"],
     headshot:"string",
-    level:"Base"}
+  }
   ]
