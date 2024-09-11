@@ -13,11 +13,9 @@ function GuideDetails() {
           firstName={guide.firstName} 
           lastName={guide.lastName} 
           started={guide.started}
-          level={guide.level}
           location={guide.location} 
           headshot={guide.headshot} 
           bio={guide.bio}
-          venmoImage={guide.venmoImage}
           venmoLink={guide.venmoLink}
           xLink={guide.xLink}
           fblink={guide.fblink}
