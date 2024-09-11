@@ -8,7 +8,7 @@ function Guides() {
     if(guide.id!=0){
       return (
         <li key={guide.id}>
-        <Link to={guide.id.toString()}>
+        <Link to={guide.firstName}>
           {guide.firstName} - {guide.location}
         </Link>
       </li>

@@ -38,4 +38,5 @@ export { default as instLogo } from "./instagram.svg"
 export { default as youTubeLogo } from "./youtube.svg"
 export { default as linkedInLogo } from "./linkedin.svg"
 export { default as emailLogo } from "./email.svg"
+export { default as venmoLogo } from "./venmo.svg"
 
