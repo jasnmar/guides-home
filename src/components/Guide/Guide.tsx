@@ -20,12 +20,9 @@ function Guide( props : guideDataInterface ) {
   return (
     <>
       <div className="guide--main-card">
-        <div className="guide--main-text">
-          <h1>{props.firstName} {props.lastName}</h1>
-          <h2>{props.firstName} is an Off-Roadeo guide in {props.location} {props.started && "and has been since "+props.started}</h2>
-        </div>
-        <div><img className="guide--headshot" src={props.headshot}></img></div>
-        <div>{bioDetails}</div>
+        <h1>{props.firstName} {props.lastName}</h1> 
+        <h2>{props.firstName} is an Off-Roadeo guide in {props.location} {props.started && "and has been since "+props.started}</h2>
+      <div><img className="guide--headshot float" src={props.headshot}></img>{bioDetails}</div>
         <div className="guide--socials">
           {props.fblink && <a href={props.fblink}><img className="guide--social-logo" src={fbLogo}></img></a>}
           {props.xLink && <a href={props.xLink}><img className="guide--social-logo" src={xLogo}></img></a>}
