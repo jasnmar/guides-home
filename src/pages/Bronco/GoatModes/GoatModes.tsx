@@ -19,7 +19,7 @@ function GoatModes() {
     const newRow = (
     <tr key={uuidV4()}>
       <th>{mode.mode}<>{mode.sub && <sub>{mode.sub}</sub>}</></th>
-      <td><>{mode.icon && <img className="goatmodes--icon" src={mode.icon}></img>}</></td>
+      <td><>{mode.icon && <img alt={mode.mode+" Goat Mode"} className="goatmodes--icon" src={mode.icon}></img>}</></td>
       <td>{mode.transferCase}</td>
       <td>{fixList(mode.tcOptions)}</td>
       <td>{mode.tractionControl}</td>
@@ -136,14 +136,14 @@ function GoatModes() {
         <thead>
           <tr>
             <th>Model</th>
-            <th>Normal <img className="goatmodes--icon" src={normalMode}></img></th>
-            <th>Eco <img className="goatmodes--icon" src={ecoMode}></img></th>
-            <th>Sport <img className="goatmodes--icon" src={sportMode}></img></th>
-            <th>Slippery <img className="goatmodes--icon" src={slipperyMode}></img></th>
-            <th>Sand <img className="goatmodes--icon" src={sandMode}></img></th>
-            <th>Mud and Ruts <img className="goatmodes--icon" src={mudRutsMode}></img></th>
-            <th>Rock Crawl <img className="goatmodes--icon" src={rockCrawlMode}></img></th>
-            <th>Baja <img className="goatmodes--icon" src={bajaMode}></img></th>
+            <th>Normal <img alt="Normal Goat Mode" className="goatmodes--icon" src={normalMode}></img></th>
+            <th>Eco <img alt="Eco Goat Mode" className="goatmodes--icon" src={ecoMode}></img></th>
+            <th>Sport <img alt="Sport Goat Mode" className="goatmodes--icon" src={sportMode}></img></th>
+            <th>Slippery <img alt="Slippery Goat Mode" className="goatmodes--icon" src={slipperyMode}></img></th>
+            <th>Sand <img alt="Sand Goat Mode" className="goatmodes--icon" src={sandMode}></img></th>
+            <th>Mud and Ruts <img alt="Mud and Ruts Goat Mode" className="goatmodes--icon" src={mudRutsMode}></img></th>
+            <th>Rock Crawl <img alt="Rock Crawl Goat Mode" className="goatmodes--icon" src={rockCrawlMode}></img></th>
+            <th>Baja <img alt="Baja Goat Mode" className="goatmodes--icon" src={bajaMode}></img></th>
           </tr>
         </thead>
         <tbody>
