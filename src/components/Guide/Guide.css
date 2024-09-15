@@ -7,10 +7,10 @@
   justify-content: space-between;
 }
 
-.guide--main-text {
-  width: 50vw;
+.float {
+  float: right;
+  margin: 5px;
 }
-
 .guide--headshot {
   width: 40vw;
   border-radius: 8px;

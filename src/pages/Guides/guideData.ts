@@ -9,7 +9,16 @@ export const guideData : guideDataInterface[] = [
     firstName: "Place",
     lastName: "Holder",
     location: "New Hampshire",
-    bio: ["If you are seeing this (and you weren't sent a link to it directly) something has gone wrong. This person isn't an offroadeo guide at all, it's just a place holder so that we can test things.","*Place* first got into offroading because he's bad at reading maps and makes terrible decisions. He would often find himself on an unmaintained road somewhere, and would have to figure out how to get his Ford Pinto through these roads.",
+    bio: [
+      "If you are seeing this (and you weren't sent a link to it directly) something has gone wrong. This person isn't an offroadeo guide at all, it's just a place holder so that we can test things",
+`# This is h1
+- This is bullet 1
+- Bullet 2
+1. Ordered 1
+2. Ordered 2
+---
+`,
+      "*Place* first got into offroading because he's bad at reading maps and makes terrible decisions. He would often find himself on an unmaintained road somewhere, and would have to figure out how to get his Ford Pinto through these roads.",
       "Place studied nuclear science, he loved his classes, he had a crazy teacher who wore **dark glasses**.", "[Lorem ipsum](https://lipsum.com) dolor sit amet, consectetur adipiscing elit. Suspendisse semper orci nisl, ut aliquam tellus vulputate quis. Pellentesque nec tortor at arcu commodo laoreet. Integer finibus nisl mi. Integer at odio sagittis, consequat odio interdum, sollicitudin risus. Aliquam vestibulum non sem non semper. In hac habitasse platea dictumst. Sed fringilla arcu eu sapien facilisis, nec viverra massa ornare. Etiam quis cursus est. Phasellus aliquet tellus libero, sed feugiat tortor efficitur a.",
       "`some additional words using code formatting`"],
     started: "July 2022",
