@@ -6,7 +6,6 @@ import ComponentImage from "../ComponentImage/ComponentImage"
 
 
 function SmallLeadInfo(props : {small?:string, large:string, intro?:string, bullets:{ data:string, image?: string}[], imageref?: string}) {
-  
   return (
     <>
       <div className="SmallLeadSmall"><ReactMarkdown>{props.small}</ReactMarkdown></div>

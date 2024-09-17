@@ -1,4 +1,18 @@
 import { boardDataInterface, position, displayType } from "./boardInterfaces"
+import { 
+  beadlock,
+  tpmswarning,
+  broncoABC,
+  powerTrain,
+  stabarDisconnect,
+  FrontLockingDifferential,
+  RearLockingDifferential,
+  TrailTurnAssist,
+  stop,
+  ComeForward,
+  PassDrive,
+  SlowDown
+ } from "../../assets/images"
 
 export const boardData: boardDataInterface[] = [
   {
@@ -200,7 +214,7 @@ export const boardData: boardDataInterface[] = [
 
             intro: undefined,
             bullets: [
-              { data: "Increases the contact patch for better grip", image:"TPMS_warning_icon" },
+              { data: "Increases the contact patch for better grip", image:tpmswarning },
               { data: "Be aware of reduced ground clearance" }
             ]
           },
@@ -214,7 +228,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Designed to decrease the risk of a tire dismounting from the wheel when you air down"
               },
               {
-                data: "Securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring", image:"Beadlock"
+                data: "Securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring", image:beadlock
               }
             ]
           }
@@ -266,15 +280,15 @@ export const boardData: boardDataInterface[] = [
             large: "Hand Signals",
             small: "Know Your Off-Road",
             bullets: [
-              { data: "Stop immediately.", image: "stop" },
+              { data: "Stop immediately.", image: stop },
               {
                 data: "Slowly come forward. Can be used one-handed with other signals, such as steer passenger or driver",
-                image: "ComeForward"
+                image: ComeForward
               },
               {
-                data: "Steer passenger or steer driver. Hold this steering input until direct to change", image:"PassDrive"
+                data: "Steer passenger or steer driver. Hold this steering input until direct to change", image:PassDrive
               },
-              { data: "Slow Down!", image:"SlowDown" },
+              { data: "Slow Down!", image:SlowDown },
               { data: "Go Back" }
             ]
           }
@@ -324,7 +338,7 @@ export const boardData: boardDataInterface[] = [
               { data: "Maximum Breakover Angle 29.0 degrees" },
               { data: "Maximum Ground Clearance 11.6 inches" }
             ],
-            imageref:"BroncoABC"
+            imageref:broncoABC
           }
         ]
       },
@@ -343,7 +357,7 @@ export const boardData: boardDataInterface[] = [
               },
               { data: "Two-Speed 4x4 Transfer Case with Low-Range (4L)" }
             ],
-            imageref:"PowerTrain"
+            imageref:powerTrain
           }
         ]
       }
@@ -503,10 +517,10 @@ export const boardData: boardDataInterface[] = [
             large: "Push Button Controls",
             small: "Off-Road Switch Pack with",
             bullets: [
-              { data: "Front Stabilizer Bar Disconnect", image:"StayBarDisconnect" },
-              { data: "Front Locking Differential", image: "FrontLockingDifferential" },
-              { data: "Rear Locking Differential", image: "RearLockingDifferential" },
-              { data: "Trail Turn Assist", image: "TrailTurnAssist" }
+              { data: "Front Stabilizer Bar Disconnect", image:stabarDisconnect },
+              { data: "Front Locking Differential", image:FrontLockingDifferential },
+              { data: "Rear Locking Differential", image: RearLockingDifferential },
+              { data: "Trail Turn Assist", image: TrailTurnAssist }
             ]
           }
         ]
