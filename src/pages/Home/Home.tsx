@@ -2,8 +2,11 @@ import "./Home.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { stuckBronco, offRoading } from "../../assets/images"
 import NavCard from "../../components/NavCard/NavCard"
+import Title from "../../components/Title/Title"
 
 function Home() {
+  
+  Title("Home Page")
   return (
     <>
       <div className="home--hero-section">

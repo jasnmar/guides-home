@@ -1,7 +1,9 @@
+import Title from "../../components/Title/Title"
 import "./Offroad.css"
 import { Link } from "react-router-dom"
 
 function Offroad() {
+  Title("Offroading")
   return (
     <>
       <main className="page-content">

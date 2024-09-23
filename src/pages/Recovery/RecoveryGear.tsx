@@ -15,8 +15,10 @@ import {
   treeSaver
 } from "../../assets/images"
 import RecoveryCard from "../../components/RecoveryCards/RecovveryCard"
+import Title from "../../components/Title/Title"
 
 function RecoveryGear() {
+  Title("Recovery Gear")
   //const d1 = [{altText:"Ford Heavy Duty Recovery Kit", image:hdRecoveryKit}]
   return (
     <>
