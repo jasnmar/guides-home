@@ -11,10 +11,11 @@ import {
   sandMode,
   slipperyMode,
   sportMode} from "../../../assets/images"
+import Title from "../../../components/Title/Title"
 //import { goatModes } from "./GoatModeInterfaces"
 
 function GoatModes() {
-
+  Title("Goat Modes")
   const gmLines = GoatModeData.map((mode) => {
     const newRow = (
     <tr key={uuidV4()}>

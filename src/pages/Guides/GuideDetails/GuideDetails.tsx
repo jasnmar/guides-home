@@ -1,10 +1,12 @@
 import { useLoaderData } from 'react-router-dom'
 import Guides from '../../../components/Guide/Guide'
 import { guideDataInterface } from '../GuideInterfaces'
+import Title from '../../../components/Title/Title'
 
 
 function GuideDetails() {
   const guide : guideDataInterface = useLoaderData() as guideDataInterface
+  Title(guide.firstName)
   return (
     <>
       <main className='page-content'>

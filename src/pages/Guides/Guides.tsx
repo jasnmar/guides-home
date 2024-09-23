@@ -2,8 +2,10 @@ import "./Guides.css"
 
 import { Link, Outlet } from "react-router-dom"
 import { guideData } from "./guideData"
+import Title from "../../components/Title/Title"
 
 function Guides() {
+  Title("Guides List")
   const guideList = guideData.map((guide) => {
     if(guide.id!=0){
       return (

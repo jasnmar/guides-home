@@ -6,6 +6,7 @@ import InfoComponentTitle from "../../components/InfoComponentTitle/InfoComponen
 import FrontBack from "../../components/FrontBack/FrontBack"
 import SmallLeadInfo from "../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../components/Aside/Aside"
+import Title from "../../components/Title/Title"
 
 export function renderBoard(bName: string): ReactElement {
   const bData = boardData.find(({ boardName }) => boardName === bName)
@@ -24,8 +25,10 @@ export function renderBoard(bName: string): ReactElement {
     }
 
     //Title Info
+    
     if (bData.title) {
       icTitle = bData.title
+      Title(icTitle)
     }
     if (bData.subtitle) {
       icSub = bData.subtitle
