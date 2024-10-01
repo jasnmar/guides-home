@@ -273,7 +273,7 @@ export const boardData: boardDataInterface[] = [
     layouts: [
       {
         position: position["lefttwothirds"],
-        border: true,
+        border: false,
         components: [
           {
             displayType: displayType["smallLead"],
@@ -286,7 +286,7 @@ export const boardData: boardDataInterface[] = [
                 image: ComeForward
               },
               {
-                data: "Steer passenger or steer driver. Hold this steering input until direct to change", image:PassDrive
+                data: "Steer passenger or steer driver. Hold this steering input until directed to change it", image:PassDrive
               },
               { data: "Slow Down!", image:SlowDown },
               { data: "Go Back" }

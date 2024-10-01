@@ -11,7 +11,9 @@ function BulletList(props: {bullets:{ data:string, image?: string}[]} ) {
     }
     return (
       <li className="plus-data-bullet" key={uuidv4()}>
-        <ReactMarkdown>{item.data}</ReactMarkdown> {bullImg}
+        <div className="plus-data-bullet-content">
+          <ReactMarkdown>{item.data}</ReactMarkdown> {bullImg}
+        </div>
       </li>
     )
   })

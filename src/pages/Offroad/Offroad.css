@@ -31,7 +31,8 @@
   font-size: 1.25rem;
 }
 .lborder {
-  border-right: 4px solid black;
+  border-right: 4px solid var(--clr-dark);
+  padding-right: 8px;
 }
 
 

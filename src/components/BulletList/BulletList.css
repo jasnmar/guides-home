@@ -1,0 +1,12 @@
+.plus-data-bullet-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .plus-data-bullet-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -18,7 +18,7 @@
 .gear-image {
   width: 150px;
   margin: 10px;
-  border-radius: 8px;
+  border-radius: var(--br-image);
 }
 
 @media only screen and (max-width: 800px) {
