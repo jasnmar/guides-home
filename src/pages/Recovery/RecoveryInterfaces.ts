@@ -1,11 +1,20 @@
 export const recoveryMethods = [
-  {method:"Traction"},
-  {method:"Field Repair"},
-  {method:"Hand Winch"},
-  {method:"Powered Winch"},
-  {method:"Towing"},
-  {method:"Kinetic Energy"},
+  {method:"Traction", category:"Self"},
+  {method:"Field Repair", category:"Self"},
+  {method:"Hand Winch", category:"Self"},
+  {method:"Powered Winch", category:"Self"},
+  {method:"Towing", category:"Vehicle Assisted"},
+  {method:"Kinetic Energy", category:"Vehicle Assisted" },
 ]
+
+export interface radioAnswer {
+
+    answer:string, 
+    action?:string, 
+    execute?:() => void, 
+    selected?:boolean
+
+}
 
 export enum considerations {
   rollaway = "Rolling Away",

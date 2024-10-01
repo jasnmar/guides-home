@@ -2,49 +2,60 @@
 import "./RadioQuestion.css"
 import { v4 as uuidV4 } from 'uuid'
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-function RadioQuestion(props:{question:string, answerList:{answer:string, action?:string}[] }) {
 
+function RadioQuestion(props:{question:string, answerList:{answer:string, action?:string, execute?:() => void, selected?:boolean}[] }) {
   //Adds some IDs to the answers to associate them
   const internalAnswerList = props.answerList.map((answer) => {
-    return {...answer, id:uuidV4()}
+    return { ...answer, id: uuidV4() }
   })
 
   //Happens when a radio button is clicked
-  function radioClick(inputName:string) {
-      const answerID = document.getElementById(inputName)
-      if(answerID) {
-        const parentElem = answerID.parentElement
-        if(parentElem) {
-          removeActionClass(parentElem)
-        }
-        answerID.classList.add("radio-action")
+  function radioClick(inputName: string) {
+    const currentAnswer = internalAnswerList.find(
+      (answer) => answer.id === inputName
+    )
+    if (currentAnswer?.execute) currentAnswer.execute()
+    const answerID = document.getElementById(inputName)
+    if (answerID) {
+      const parentElem = answerID.parentElement
+      if (parentElem) {
+        removeActionClass(parentElem)
       }
+      answerID.classList.add("radio-action")
+    }
   }
 
   function removeActionClass(htmlElement: Element) {
-    if(htmlElement.children.length > 1) {
+    if (htmlElement.children.length > 1) {
       const elemArray = Array.from(htmlElement.children)
-      elemArray.forEach(element => {
+      elemArray.forEach((element) => {
         removeActionClass(element)
-      });
+      })
     } else {
       htmlElement.classList.remove("radio-action")
     }
   }
 
+    const questionId = uuidV4()
+    const answerList = internalAnswerList.map((answer) => {
+    const itemId = answer.id
 
-  const questionId = uuidV4()
-  const answerList = internalAnswerList.map((answer) => {
-    const itemId=answer.id
     return (
-        <div key={answer.id} className="form-check answer">
-          <div className="answer">
-
-          <input onClick={() => radioClick(itemId)} className="form-check-input" type="radio" name={questionId} id={itemId+answer.answer}></input>
-          <label className="form-check-label" htmlFor={itemId+answer.answer}>{answer.answer}</label>
-          </div>
+      <div key={answer.id} className="form-check answer">
+        <div className="answer">
+          <input
+            onChange={() => radioClick(itemId)}
+            className="form-check-input"
+            type="radio"
+            name={questionId}
+            id={itemId + answer.answer}
+            checked={answer.selected}
+          ></input>
+          <label className="form-check-label" htmlFor={itemId + answer.answer}>
+            {answer.answer}
+          </label>
         </div>
+      </div>
     )
   })
 
@@ -55,7 +66,7 @@ function RadioQuestion(props:{question:string, answerList:{answer:string, action
       </div>
     )
   })
-  
+
   return (
     <>
       <div className="radio-question">
