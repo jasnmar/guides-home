@@ -1,5 +1,5 @@
 .infoTitleBackgound {
-  background-color: midnightblue;
+  background-color: var(--clr-accent);
   padding: 10px;
   margin-bottom: .3em;
   min-height: 108px;

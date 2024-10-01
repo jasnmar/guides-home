@@ -14,7 +14,7 @@ function Home() {
       </div>
       <main className="page-content">
         
-        <p className="home--description">This site provides our Off-Roadeo Guests with information that we may have covered during their experience, the ability to prepare for their day with us, but also provides people with general offroading and recovery information.</p>
+        <p className="home--description">We provide Off-Roadeo Guests with information that we may have covered during their experience, the ability to prepare for their day with us, but also provides people with general offroading and recovery information.</p>
 
         <div className="home--nav-cards">
           <NavCard title="Recovery" link="recovery/gear" altText="A bronco stuck in the sand" image={stuckBronco}>Off-road recoveries occur when the driver and vehicle are unable to continue, generally due to a loss of traction.</NavCard>
