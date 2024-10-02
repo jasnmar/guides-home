@@ -48,6 +48,17 @@ export { default as stop } from "./boards/stop.svg"
 export { default as ComeForward } from "./boards/ComeForward.svg"
 export { default as PassDrive } from "./boards/PassDrive.svg"
 export { default as SlowDown } from "./boards/SlowDown.svg"
+export { default as groundSchool } from "./boards/ground-school.webp"
+export { default as orientation } from "./boards/orientation.webp"
+export { default as softSand } from "./boards/softsand.webp"
+export { default as downhill } from "./boards/downhill.webp"
+export { default as hillclimb } from "./boards/hillclimb.webp"
+export { default as crossing } from "./boards/crossing.webp"
+export { default as rockcrawling } from "./boards/rockCrawl.webp"
+export { default as sidetilt } from "./boards/sideTilt.webp"
+export { default as articMounds } from "./boards/articulationMounds.png"
+export { default as waterFord } from "./boards/waterford.webp"
+export { default as advRock } from "./boards/advRockCrawl.webp"
 
 
 //Goat Modes

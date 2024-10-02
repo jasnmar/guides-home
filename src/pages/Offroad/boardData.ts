@@ -11,13 +11,26 @@ import {
   stop,
   ComeForward,
   PassDrive,
-  SlowDown
+  SlowDown,
+  groundSchool,
+  orientation,
+  softSand,
+  downhill,
+  hillclimb,
+  crossing,
+  rockcrawling,
+  sidetilt,
+  waterFord,
+  advRock,
+  articMounds
  } from "../../assets/images"
 
 export const boardData: boardDataInterface[] = [
   {
     boardName: "AdvancedRockCrawl",
-    title: "Rock Crawling",
+    address: "advancedrockcrawl",
+    linkImage: advRock,
+    title: "Advanced Rock Crawl",
     subtitle: "Advanced",
     index: 10,
     prevPage: "waterfording",
@@ -83,6 +96,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "WaterFording",
+    address: "waterfording",
+    linkImage: waterFord,
     title: "Water Fording",
     subtitle: "Advanced",
     index: 9,
@@ -133,6 +148,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "ArticulationMounds",
+    address: "articulationmounds",
+    linkImage: articMounds,
     title: "Articulation Mounds",
     subtitle: "Advanced",
     index: 8,
@@ -198,6 +215,8 @@ export const boardData: boardDataInterface[] = [
   {
     boardName: "BasicRockCrawl",
     title: "Rock Crawling",
+    address: "rockcrawling",
+    linkImage: rockcrawling,
     subtitle: "The Basics",
     index: 6,
     prevPage: "hilldescent",
@@ -265,6 +284,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "Crossings",
+    address: "crossings",
+    linkImage: crossing,
     title: "Crossings",
     subtitle: "Ditch & Log",
     index: 4,
@@ -318,6 +339,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "GroundSchool",
+    address: "groundschool",
+    linkImage: groundSchool,
     title: "Ground School",
     subtitle: "",
     index: 0,
@@ -365,6 +388,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "HillClimb",
+    address: "hillclimb",
+    linkImage: hillclimb,
     title: "Hill Climb",
     subtitle: "",
     index: 3,
@@ -439,6 +464,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "HillDescent",
+    address: "hilldescent",
+    linkImage: downhill,
     title: "Hill Descent",
     subtitle: "",
     index: 3,
@@ -502,6 +529,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "Orientation",
+    address: "orientation",
+    linkImage: orientation,
     title: "Orientation",
     subtitle: "ORX Course Start",
     index: 1,
@@ -540,6 +569,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "SideTilts",
+    address: "sidetilts",
+    linkImage: sidetilt,
     title: "Side Tilts",
     subtitle: "& Center of Gravity",
     index: 7,
@@ -596,6 +627,8 @@ export const boardData: boardDataInterface[] = [
   },
   {
     boardName: "SoftSand",
+    address: "softsand",
+    linkImage: softSand,
     title: "Soft Sand",
     subtitle: "",
     index: 2,

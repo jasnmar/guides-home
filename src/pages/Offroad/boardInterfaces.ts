@@ -1,11 +1,13 @@
 export interface boardDataInterface {
   boardName: string,
+  address?: string,
+  linkImage?: string,
   title: string,
   subtitle?: string,
   layouts: layouts,
   prevPage?: string,
   nextPage?: string
-  index?: number
+  index: number
 }
 
 export interface layout {

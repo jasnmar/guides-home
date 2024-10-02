@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <div className="home--hero-section">
-        <h1 className="home--hero-message">Wecome to Off-Roadeo Guides</h1>
+        <h1 className="home--hero-message">Off-Roadeo Guides</h1>
       </div>
       <main className="page-content">
         
@@ -18,7 +18,7 @@ function Home() {
 
         <div className="home--nav-cards">
           <NavCard title="Recovery" link="recovery/gear" altText="A bronco stuck in the sand" image={stuckBronco}>Off-road recoveries occur when the driver and vehicle are unable to continue, generally due to a loss of traction.</NavCard>
-          <NavCard title="Offroading" link="offroading" altText="A bronco sport driving between some trees" image={offRoading}>Off-Roading, as we talk about it, is done mostly with **Broncos** and **Bronco Sports**.</NavCard>
+          <NavCard title="Offroading" link="offroading/offroad" altText="A bronco sport driving between some trees" image={offRoading}>Off-Roading, as we talk about it, is done mostly with **Broncos** and **Bronco Sports**.</NavCard>
           <NavCard title="Bronco Information" link="goatmodes" altText="A Red 2 door Bronco on some rocks" image={rockbronco}>Technical details related to Broncos.</NavCard>
         </div>
         <p>This site is maintained by some of the guides at Bronco Off-Roadeo. It is not associated with or endorsed by <a href="http://www.ford.com" target="_blank">Ford</a> or <a href="http://www.broncooffroadeo.com" target="_blank">Bronco Off-Roadeo</a>.</p>

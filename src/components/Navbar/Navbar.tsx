@@ -27,7 +27,7 @@ function Navbar() {
                 <a className="nav-link" href="/guides">Guides</a>
                 </li> */}
               <li aria-label="Offroading" className="nav-item active">
-                <a className="nav-link" href="/offroading">Offroading</a>
+                <a className="nav-link" href="/offroading/offroad">Offroading</a>
               </li>
               <li aria-label="Recovery" className="nav-item active">
                 <a className="nav-link" href="/recovery/gear">Recovery</a>
