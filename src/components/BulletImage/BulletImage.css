@@ -1,4 +1,5 @@
 .bullet-image-default {
-  width: 150px;
+  max-width: 150px;
+  max-height: 150px;
   margin-left: 10px;
 }
