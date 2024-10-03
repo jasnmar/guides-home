@@ -1,10 +1,10 @@
 import "../Offroad.css"
-import { renderBoard } from "../renderBoard"
+import { RenderBoard } from "../renderBoard"
 
 
 function SideTiltsfromData() {
   const bName="SideTilts"
-  const boardElement = renderBoard(bName)
+  const boardElement = RenderBoard({board: bName})
   
   return (
     <>

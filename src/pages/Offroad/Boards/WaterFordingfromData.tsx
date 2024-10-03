@@ -1,9 +1,9 @@
 import "../Offroad.css"
-import { renderBoard } from "../renderBoard"
+import { RenderBoard } from "../renderBoard"
 
 function WaterFordingfromData() {
   const bName="WaterFording"
-  const boardElement = renderBoard(bName)
+  const boardElement = RenderBoard({board: bName})
   
   return (
     <>

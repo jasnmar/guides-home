@@ -1,10 +1,10 @@
 import "../Offroad.css"
-import { renderBoard } from "../renderBoard"
+import { RenderBoard } from "../renderBoard"
 
 
 function SoftSandfromData() {
   const bName="SoftSand"
-  const boardElement = renderBoard(bName)
+  const boardElement = RenderBoard({board: bName})
   
   return (
     <>

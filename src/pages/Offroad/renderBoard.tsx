@@ -8,7 +8,11 @@ import SmallLeadInfo from "../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../components/Aside/Aside"
 import Title from "../../components/Title/Title"
 
-export function renderBoard(bName: string): ReactElement {
+export function RenderBoard(props : {board:string}) {
+  return rBoard(props.board)
+}
+
+function rBoard(bName: string): ReactElement {
   const bData = boardData.find(({ boardName }) => boardName === bName)
   let pPage = ""
   let nPage = ""
@@ -52,7 +56,7 @@ export function renderBoard(bName: string): ReactElement {
 
 //Takes all of the layouts for a page and returns individual React Elements
 //for each of them.
-export function buildLayouts(layouts: layouts): ReactElement[] {
+function buildLayouts(layouts: layouts): ReactElement[] {
   let renderedLayouts: ReactElement[] = [<></>]
   renderedLayouts = layouts.map((layout) => {
     let components: ReactElement = <></>

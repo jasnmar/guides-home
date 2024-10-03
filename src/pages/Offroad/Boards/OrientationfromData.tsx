@@ -1,10 +1,10 @@
 import "../Offroad.css"
-import { renderBoard } from "../renderBoard"
+import { RenderBoard } from "../renderBoard"
 
 
 function OrientationfromData() {
   const bName="Orientation"
-  const boardElement = renderBoard(bName)
+  const boardElement = RenderBoard({board: bName})
   
   return (
     <>

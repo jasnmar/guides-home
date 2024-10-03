@@ -1,10 +1,10 @@
 import "../Offroad.css"
-import { renderBoard } from "../renderBoard"
+import { RenderBoard } from "../renderBoard"
 
 
 function AdvancedRockCrawlfromData() {
   const bName="AdvancedRockCrawl"
-  const boardElement = renderBoard(bName)
+  const boardElement = RenderBoard({board: bName})
   
   return (
     <>
