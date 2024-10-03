@@ -3,7 +3,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Route
+  Route,
+  Outlet
 } from "react-router-dom"
 
 import Error from "./pages/Error/Error"
@@ -41,18 +42,21 @@ const router = createBrowserRouter(
         loader={(params) => GuideDetailLoader(params)}
         element={<GuideDetails />}
       />
-      <Route path="/advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
-      <Route path="waterfording" element={<WaterFordingfromData />} />
-      <Route path="offroading" element={<Offroad />}></Route>
-      <Route path="groundschool" element={<GroundSchoolfromData />} />
-      <Route path="orientation" element={<OrientationfromData />} />
-      <Route path="softSand" element={<SoftSandfromData />} />
-      <Route path="hillclimb" element={<HillClimbfromData />} />
-      <Route path="crossings" element={<CrossingfromData />} />
-      <Route path="/hilldescent" element={<HillDescentfromData />} />
-      <Route path="basicrockcrawl" element={<BasicRockCrawlfromData />} />
-      <Route path="sidetilts" element={<SideTiltsfromData />} />
-      <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
+      <Route path="offroading" element={<Outlet />}>
+        <Route path="offroad" element={<Offroad />} />
+        <Route path="advancedrockcrawl" element={<AdvancedRockCrawlfromData />} />
+        <Route path="waterfording" element={<WaterFordingfromData />} />
+        
+        <Route path="groundschool" element={<GroundSchoolfromData />} />
+        <Route path="orientation" element={<OrientationfromData />} />
+        <Route path="softSand" element={<SoftSandfromData />} />
+        <Route path="hillclimb" element={<HillClimbfromData />} />
+        <Route path="crossings" element={<CrossingfromData />} />
+        <Route path="hilldescent" element={<HillDescentfromData />} />
+        <Route path="basicrockcrawl" element={<BasicRockCrawlfromData />} />
+        <Route path="sidetilts" element={<SideTiltsfromData />} />
+        <Route path="articulationmounds" element={<ArticulationMoundsfromData />} />
+      </Route>
       <Route path="recovery" element={<Recovery />}>
         <Route path="gear" element={<RecoveryGear />} />
         <Route path="assesment" element={<StuckAssesment />} />
@@ -62,6 +66,8 @@ const router = createBrowserRouter(
     </Route>
   )
 )
+
+
 
 function App() {
   return (

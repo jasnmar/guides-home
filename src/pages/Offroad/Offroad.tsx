@@ -1,49 +1,32 @@
 import Title from "../../components/Title/Title"
 import "./Offroad.css"
-import { Link } from "react-router-dom"
+import BoardLink from "../../components/BoardLink/BoardLink"
+import { boardData } from "./boardData"
+import { v4 as uuidV4} from 'uuid'
 
 function Offroad() {
   Title("Offroading")
+  boardData.sort((a,b) => {
+    if(a.index < b.index) {
+      return -1
+    } else {
+      return 1
+    }
+  })
+  const boardLinks = boardData.map((board) => {
+    return <BoardLink key={uuidV4()} title={board.title} image={board.linkImage} address={board.address}></BoardLink>
+  })
   return (
     <>
       <main className="page-content">
         <h1>Offroading</h1>
         <h2>The pages below represent the signs that are scattered around the ORX (Off-Road Experience) Course that guests start the day on (including ground school, which we talk about differently).</h2>
-        <ul className="offroad--list">
-          <li>
-            <Link to="/groundschool">Ground School</Link><br></br>
-          </li>
-          <li>
-            <Link to="/orientation">Orientation</Link><br></br>
-          </li>
-          <li>
-            <Link to="/softsand">Soft Sand</Link><br></br>
-          </li>
-          <li>
-            <Link to="/hillclimb">Hill Climb</Link><br></br>
-          </li>
-          <li>
-            <Link to="/crossings">Crossings</Link><br></br>
-          </li>
-          <li>
-            <Link to="/hilldescent">Hill Descent</Link><br></br>
-          </li>
-          <li>
-            <Link to="/basicrockcrawl">Basic Rock Crawl</Link><br></br>
-          </li>
-          <li>
-            <Link to="/sidetilts">Side Tilts</Link><br></br>
-          </li>
-          <li>
-            <Link to="/articulationmounds">Articulation Mounds</Link><br></br>
-          </li>
-          <li>
-            <Link to="/waterfording">Water Fording</Link><br></br>
-          </li>
-          <li>
-            <Link to="/advancedrockcrawl">Advanced Rock Crawl</Link>
-          </li>
-        </ul>
+        <div className="offroad--links">
+
+        {boardLinks}
+        </div>
+        
+        
       <h2>Offroading while you are visiting us</h2>
       <h3>We often get questions about where to off-road while you are visiting, or if you are a local, what are some of the ways to find local roads. Below are some of your best resources for that</h3>
       <h4>New Hampshire</h4>
