@@ -4,10 +4,10 @@
   border-radius: var(--br-image)
 }
 
-.navCard--wrapper:hover,
+/* .navCard--wrapper:hover,
 .navCard--wrapper:focus {
   box-shadow: var(--bs);
-}
+} */
 
 .navCard--inner {
   display: flex;
@@ -28,9 +28,15 @@
   width: 70%;
   border-radius: var(--br-image);
   margin: 2px;
-  box-shadow: var(--bs)
+  box-shadow: var(--bs);
+  transition: transform 200ms ease-in-out;
 }
 
+.navCard--image:hover,
+.navCard--image:focus {
+  transform: scale(1.1);
+  overflow: hidden;
+}
 .navCard--text {
   text-decoration: none;
   padding: .2em;
