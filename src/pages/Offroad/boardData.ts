@@ -470,7 +470,7 @@ export const boardData: boardDataInterface[] = [
     subtitle: "",
     index: 3,
     prevPage: "crossings",
-    nextPage: "basicrockcrawl",
+    nextPage: "rockcrawling",
     layouts: [
       {
         position: position["lefttwothirds"],
@@ -574,7 +574,7 @@ export const boardData: boardDataInterface[] = [
     title: "Side Tilts",
     subtitle: "& Center of Gravity",
     index: 7,
-    prevPage: "basicrockcrawl",
+    prevPage: "rockcrawling",
     nextPage: "articulationmounds",
     layouts: [
       {
