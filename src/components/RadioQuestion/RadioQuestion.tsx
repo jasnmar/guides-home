@@ -1,16 +1,8 @@
 import "./RadioQuestion.css"
 import { v4 as uuidV4 } from "uuid"
+import { question } from "../../pages/Recovery/RecoveryInterfaces"
 
-function RadioQuestion(props: {
-  question: string
-  id?: string
-  answerList: {
-    answer: string
-    action?: string
-    execute?: () => void
-    selected?: boolean
-  }[]
-}) {
+function RadioQuestion(props: question) {
   //Adds some IDs to the answers to associate them
   const internalAnswerList = props.answerList.map((answer) => {
     const nAnswer = {...answer, id:uuidV4(), questionid:props.id}
@@ -23,7 +15,9 @@ function RadioQuestion(props: {
       (answer) => answer.id === inputName
     )
     // console.log("currentAnswer: ", currentAnswer)
-    if (currentAnswer?.execute) currentAnswer.execute()
+    if (currentAnswer?.execute) {
+      currentAnswer.execute(currentAnswer.aData)
+    }
     const answerID = document.getElementById(inputName)
     if (answerID) {
       const parentElem = answerID.parentElement

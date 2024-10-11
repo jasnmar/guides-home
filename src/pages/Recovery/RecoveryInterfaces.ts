@@ -49,11 +49,20 @@ export const recoveryMethods:rMethods[] = [
 ]
 
 export interface answerItem {
-  id: string
+  aId: string
+  aData: answerData
   answer: string
   action?: string
-  execute: () => void
+  execute: (val:answerData) => void
   selected: boolean | undefined
+}
+
+export interface answerData {
+  qId:string, 
+  id:string,
+  equipment:string,
+  value: boolean, 
+  falseList:string[]
 }
 
 export interface question {

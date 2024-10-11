@@ -1,6 +1,6 @@
 import "./Recovery.css"
 import { v4 as uuidV4 } from 'uuid'
-import { recoveryMethods, equipmentList, equipment, question } from "./RecoveryInterfaces"
+import { recoveryMethods, equipmentList, equipment, question, answerData } from "./RecoveryInterfaces"
 import RadioQuestion from "../../components/RadioQuestion/RadioQuestion"
 import { useState } from "react"
 
@@ -11,62 +11,10 @@ function Think() {
   //manages the state of the questions
   const [conditions, setConditions] = useState(equipmentList)
 
-  // This is sooo cumbersome, but working for now...
-  function q1Yes() {
-    updateRecoveryMethods({key:"additionalVehicle", value: false})
-    updateSelectedAnswer("t1","t1Y","t1N")
-  }
-  function q1No() {
-    updateRecoveryMethods({key:"additionalVehicle", value: true})
-    updateSelectedAnswer("t1","t1N","t1Y")
-  }
-  function q2Yes() {
-    updateRecoveryMethods({key:"pWinch", value: true})
-    updateSelectedAnswer("t2","t2Y","t2N")
-  }
-  function q2No() {
-    updateRecoveryMethods({key:"pWinch", value: false})
-    updateSelectedAnswer("t2","t2N","t2Y")
-  }
-  function q3Yes() {
-    updateRecoveryMethods({key:"traction", value: true})
-    updateSelectedAnswer("t3","t3Y","t3N")
-  }
-  function q3No() {
-    updateRecoveryMethods({key:"traction", value: false})
-    updateSelectedAnswer("t3","t3N","t3Y")
-  }
-  function q4Yes() {
-    updateRecoveryMethods({key:"hWinch", value: true})
-    updateSelectedAnswer("t4","t4Y","t4N")
-  }
-  function q4No() {
-    updateRecoveryMethods({key:"hWinch", value: false})
-    updateSelectedAnswer("t4","t4N","t4Y")
-  }
-  function q5Yes() {
-    updateRecoveryMethods({key:"shackles", value: true})
-    updateSelectedAnswer("t5","t5Y","t5N")
-  }
-  function q5No() {
-    updateRecoveryMethods({key:"shackles", value: false})
-    updateSelectedAnswer("t5","t5N","t5Y")
-  }
-  function q6Yes() {
-    updateRecoveryMethods({key:"tStrap", value: true})
-    updateSelectedAnswer("t6","t6Y","t6N")
-  }
-  function q6No() {
-    updateRecoveryMethods({key:"tStrap", value: false})
-    updateSelectedAnswer("t6","t6N","t6Y")
-  }
-  function q7Yes() {
-    updateRecoveryMethods({key:"rStrap", value: true})
-    updateSelectedAnswer("t7","t7Y","t7N")
-  }
-  function q7No() {
-    updateRecoveryMethods({key:"rStrap", value: false})
-    updateSelectedAnswer("t7","t7N","t7Y")
+  function radioHandler(radioData: answerData):void {
+    updateRecoveryMethods({key:radioData.equipment, value:radioData.value})
+    updateSelectedAnswer(radioData.qId, radioData.id, radioData.falseList[0])
+    
   }
   const thinkQuestions: question[] = [
     {
@@ -74,17 +22,19 @@ function Think() {
       question: "Are you the only vehicle?",
       answerList:[
         {
-          id:"t1Y",
+          aId:"t1Y",
+          aData: {qId:"t1", id:"t1Y",equipment:"additionalVehicle",value: false, falseList:["t1N"]},
           answer: "Yes",
           action: "",
-          execute: q1Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t1N",
+          aId:"t1N",
+          aData: {qId:"t1", id:"t1N", equipment:"additionalVehicle", value: true, falseList:["t1Y"]},
           answer: "No",
           action: "Proceed",
-          execute: q1No,
+          execute: radioHandler,
           selected: undefined
         }
       ],
@@ -94,17 +44,19 @@ function Think() {
       question: "Do you have a powered winch?",
       answerList: [
         {
-          id:"t2Y",
+          aId:"t2Y",
+          aData: {qId:"t2", id:"t2Y",equipment:"pWinch",value: true, falseList:["t2N"]},
           answer:"Yes",
           action:"",
-          execute: q2Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t2N",
+          aId:"t2N",
+          aData: {qId:"t2", id:"t2N",equipment:"pWinch",value: false, falseList:["t2Y"]},
           answer:"No",
           action:"",
-          execute: q2No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -114,17 +66,19 @@ function Think() {
       question:"Do you have traction aids available?",
       answerList: [
         {
-          id:"t3Y",
+          aId:"t3Y",
+          aData: {qId:"t3", id:"t3Y",equipment:"traction",value: true, falseList:["t3N"]},
           answer:"Yes",
           action:"",
-          execute: q3Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t3N",
+          aId:"t3N",
+          aData: {qId:"t3", id:"t3N",equipment:"traction",value: false, falseList:["t3Y"]},
           answer:"No",
           action:"",
-          execute: q3No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -134,17 +88,19 @@ function Think() {
       question:"Do you have a hand winch?",
       answerList: [
         {
-          id:"t4Y",
+          aId:"t4Y",
+          aData: {qId:"t4", id:"t4Y",equipment:"hWinch",value: true, falseList:["t4N"]},
           answer:"Yes",
           action:"",
-          execute: q4Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t4N",
+          aId:"t4N",
+          aData: {qId:"t4", id:"t4N",equipment:"hWinch",value: false, falseList:["t4Y"]},
           answer:"No",
           action:"",
-          execute: q4No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -154,17 +110,19 @@ function Think() {
       question:"Do you have a shackles?",
       answerList: [
         {
-          id:"t5Y",
+          aId:"t5Y",
+          aData: {qId:"t5", id:"t5Y",equipment:"shackles",value: true, falseList:["t5N"]},
           answer:"Yes",
           action:"",
-          execute: q5Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t5N",
+          aId:"t5N",
+          aData: {qId:"t5", id:"t5N",equipment:"shackles",value: false, falseList:["t5Y"]},
           answer:"No",
           action:"",
-          execute: q5No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -174,17 +132,19 @@ function Think() {
       question:"Do you have a tow strap?",
       answerList: [
         {
-          id:"t6Y",
+          aId:"t6Y",
+          aData: {qId:"t6", id:"t6Y",equipment:"tStrap",value: true, falseList:["t6N"]},
           answer:"Yes",
           action:"",
-          execute: q6Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t6N",
+          aId:"t6N",
+          aData: {qId:"t6", id:"t6N",equipment:"tStrap",value: false, falseList:["t6Y"]},
           answer:"No",
           action:"",
-          execute: q6No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -194,17 +154,19 @@ function Think() {
       question:"Do you have a recovery strap or recovery rope?",
       answerList: [
         {
-          id:"t7Y",
+          aId:"t7Y",
+          aData: {qId:"t7", id:"t7Y",equipment:"rStrap",value: true, falseList:["t7N"]},
           answer:"Yes",
           action:"",
-          execute: q7Yes,
+          execute: radioHandler,
           selected: undefined
         },
         {
-          id:"t7N",
+          aId:"t7N",
+          aData: {qId:"t7", id:"t7N",equipment:"rStrap",value: false, falseList:["t7Y"]},
           answer:"No",
           action:"",
-          execute: q7No,
+          execute: radioHandler,
           selected: undefined
         }
       ]
@@ -221,10 +183,10 @@ function Think() {
     // console.log('currentQuestion: ', currentQuestion)
     if(currentQuestion) {
       const currentAnswer = currentQuestion?.answerList.find((answerItem) => {
-        return answerItem.id === answerId
+        return answerItem.aId === answerId
       })
       const nonAnswer = currentQuestion?.answerList.find((answerItem) => {
-        return answerItem.id === nonAnswerId
+        return answerItem.aId === nonAnswerId
       })
       if(currentAnswer) {
         currentAnswer.selected = true
