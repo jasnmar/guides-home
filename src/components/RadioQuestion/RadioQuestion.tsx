@@ -1,12 +1,12 @@
-
 import "./RadioQuestion.css"
-import { v4 as uuidV4 } from 'uuid'
+import { v4 as uuidV4 } from "uuid"
+import { question } from "../../pages/Recovery/RecoveryInterfaces"
 
-
-function RadioQuestion(props:{question:string, answerList:{answer:string, action?:string, execute?:() => void, selected?:boolean}[] }) {
+function RadioQuestion(props: question) {
   //Adds some IDs to the answers to associate them
   const internalAnswerList = props.answerList.map((answer) => {
-    return { ...answer, id: uuidV4() }
+    const nAnswer = {...answer, id:uuidV4(), questionid:props.id}
+    return nAnswer
   })
 
   //Happens when a radio button is clicked
@@ -14,7 +14,10 @@ function RadioQuestion(props:{question:string, answerList:{answer:string, action
     const currentAnswer = internalAnswerList.find(
       (answer) => answer.id === inputName
     )
-    if (currentAnswer?.execute) currentAnswer.execute()
+    // console.log("currentAnswer: ", currentAnswer)
+    if (currentAnswer?.execute) {
+      currentAnswer.execute(currentAnswer.aData)
+    }
     const answerID = document.getElementById(inputName)
     if (answerID) {
       const parentElem = answerID.parentElement
@@ -23,6 +26,7 @@ function RadioQuestion(props:{question:string, answerList:{answer:string, action
       }
       answerID.classList.add("radio-action")
     }
+    return "I'm a teapot"
   }
 
   function removeActionClass(htmlElement: Element) {
@@ -36,12 +40,11 @@ function RadioQuestion(props:{question:string, answerList:{answer:string, action
     }
   }
 
-    const questionId = uuidV4()
-    const answerList = internalAnswerList.map((answer) => {
+  const questionId = uuidV4()
+  const answerList = internalAnswerList.map((answer) => {
     const itemId = answer.id
-
     return (
-      <div key={answer.id} className="form-check answer">
+      <div key={answer.id} data-questionid={answer.questionid} className="form-check answer">
         <div className="answer">
           <input
             onChange={() => radioClick(itemId)}
@@ -69,7 +72,7 @@ function RadioQuestion(props:{question:string, answerList:{answer:string, action
 
   return (
     <>
-      <div className="radio-question">
+      <div className="radio-question" data-questionid={props.id}>
         {props.question}
         <div className="radio-question-section">
           {answerList}
