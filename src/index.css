@@ -59,10 +59,17 @@ blockquote {
 
 main {
   flex: 1;
+  margin-bottom: 1rem;
+}
+
+.contain {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .page-content {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 

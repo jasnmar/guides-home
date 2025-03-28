@@ -1,7 +1,6 @@
 .aside {
-  border: 4px solid var(--clr-accent);
   border-radius: var(--br-image);
-  margin: 3em .8em;
+  margin: 0;
   padding:10px;
   color: var(--clr-accent);
   display: flex;
