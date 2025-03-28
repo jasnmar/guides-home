@@ -247,7 +247,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Designed to decrease the risk of a tire dismounting from the wheel when you air down"
               },
               {
-                data: "Securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring", image:beadlock
+                data: "Beadlocks securely clamp the tire bead between the outer edge of the wheels and a bolt-on bead lock ring", image:beadlock
               }
             ]
           }
@@ -349,17 +349,17 @@ export const boardData: boardDataInterface[] = [
     layouts: [
       {
         position: position["lefthalf"],
-        border: true,
+        border: false,
         components: [
           {
             displayType: displayType["smallLead"],
             large: "Capability",
             small: "Clearance &",
             bullets: [
-              { data: "Maximum Approach Angle 43.2 degrees" },
-              { data: "Maximum Departure Angle 37.2 degrees" },
-              { data: "Maximum Breakover Angle 29.0 degrees" },
-              { data: "Maximum Ground Clearance 11.6 inches" }
+              { data: "Maximum Approach Angle: **43.2&deg;**" },
+              { data: "Maximum Departure Angle **37.2&deg;**" },
+              { data: "Maximum Breakover Angle **29.0&deg;**" },
+              { data: 'Maximum Ground Clearance **11.6"**' }
             ],
             imageref:broncoABC
           }
@@ -406,7 +406,7 @@ export const boardData: boardDataInterface[] = [
             small: "Before You Drive...",
             bullets: [
               {
-                data: "Scout the hill's crest - don't guess what's on the other side!"
+                data: "Scout the hill's crest - **don't guess** what's on the other side!"
               },
               {
                 data: "Plan your line parallel to the fall line (the natural path a ball would take rolling down)"
@@ -428,7 +428,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Shift into Drive and let the transmission do the work - it will choose the best gear to maintain your momentum"
               },
               {
-                data: "As you reach the top of thhe hill, ease up on the throttle and slow to a crawl (or stop) to evaluate the descent on the other side"
+                data: "As you reach the top of the hill, ease up on the throttle and slow to a crawl (or stop) to evaluate the descent on the other side"
               }
             ]
           }
@@ -442,19 +442,19 @@ export const boardData: boardDataInterface[] = [
             large: "What if I can't make it up the hill?",
             bullets: [
               {
-                data: "Stay calm and come to a stop - adjust your steering as needed to direct the vehicle back down the hill!"
+                data: "Stay calm and come to a stop - adjust your steering as needed to direct the vehicle back down the hill"
               },
               {
                 data: "If not already on, engage Trail Control (automatic transmission) or Hill Descent Controls (manual transmission)"
               },
               {
-                data: "Put the vehicle in Reverse and look over your shoulde or use your mirrors as you slowly back down the hill"
+                data: "Put the vehicle in Reverse and look over your shoulder or use your mirrors as you slowly back down the hill"
               },
               {
                 data: "Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"
               },
               {
-                data: "Adjust your speed using the SET+ and SET- buttons on the steering wheel or accelerate as needed"
+                data: "Adjust your speed using the SET+ and SET- buttons on the steering wheel"
               }
             ]
           }
@@ -496,10 +496,10 @@ export const boardData: boardDataInterface[] = [
                 data: "Point the vehicle down the hill and keep turns minimal"
               },
               {
-                data: "Select 1st gear, 4L on the transfer case, for maximum engine braking and control"
+                data: "Select manual mode on the shifter and 1st gear (automatic transmission), 4L on the transfer case, for maximum engine braking and control"
               },
               {
-                data: "Maintain a slow, controlled speed - minimize brake useage to reduce the change of wheel lock up or sliding"
+                data: "Maintain a slow, controlled speed - minimize brake useage to reduce the chance of wheel lock up or sliding"
               }
             ]
           }
@@ -519,7 +519,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Don't touch the brake or throttle - Trail Control and Hill Descent Control will manage the rate of descent by applying individual brakes as necessary"
               },
               {
-                data: "Adjust your speed using the SET+ and SET- buttons on the steering wheel, or accelerate as needed"
+                data: "Adjust your speed using the SET+ and SET- buttons on the steering wheel"
               }
             ]
           }
@@ -579,18 +579,18 @@ export const boardData: boardDataInterface[] = [
     layouts: [
       {
         position: position["lefthalf"],
-        border: true,
+        border: false,
         components: [
           {
             displayType: displayType["smallLead"],
             large: "Maximum Side Tilt Angle",
             small: "",
             bullets: [
-              { data: "Vehicle Weight" },
-              { data: "Onboard passenger and cargo weight" },
-              { data: "Suspension and tire modifications" },
-              { data: "Vehicle speed and trail conditions" },
-              { data: "Roof rack loads" }
+              { data: "How much does the vehicle weigh" },
+              { data: "How much do onboard passengers and cargo weigh" },
+              { data: "Are there suspension and / or tire modifications" },
+              { data: "Consider the vehicles speed and trail conditions" },
+              { data: "Are there any roof rack loads" }
             ]
           },
           {
@@ -637,7 +637,7 @@ export const boardData: boardDataInterface[] = [
     layouts: [
       {
         position: position["lefthalf"],
-        border: true,
+        border: false,
         components: [
           {
             displayType: displayType["smallLead"],
@@ -645,7 +645,7 @@ export const boardData: boardDataInterface[] = [
             small: "Tips for",
             bullets: [
               {
-                data: "Maintain a steady, quicker pace to 'float' the vehicle on top of the sand"
+                data: "Maintain a steady, quicker pace to **float** the vehicle on top of the sand"
               },
               {
                 data: "Make gentle, wider turns to prevent the tires from digging into the sand"
@@ -654,7 +654,7 @@ export const boardData: boardDataInterface[] = [
                 data: "Be smooth with both the throttle and brakes to minimize weight transfer"
               },
               {
-                data: "Consider airing down the tires to increase tire footprint"
+                data: "**Air down** the tires to increase tire footprint"
               }
             ]
           }
@@ -665,7 +665,7 @@ export const boardData: boardDataInterface[] = [
         components: [
           {
             displayType: displayType["smallLead"],
-            small: 'Dial in the "SAND"',
+            small: 'Dial in the **SAND**',
             large: "G.O.A.T. Modes",
             bullets: [
               {

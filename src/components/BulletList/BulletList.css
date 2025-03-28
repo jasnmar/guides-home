@@ -1,7 +1,15 @@
+.plus-data-bullet {
+  margin-bottom: 1rem;
+}
+
 .plus-data-bullet-content {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.plus-data-bullet-text > p {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 800px) {
