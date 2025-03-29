@@ -16,7 +16,7 @@ function RadioQuestion(props: question) {
     )
     // console.log("currentAnswer: ", currentAnswer)
     if (currentAnswer?.execute) {
-      currentAnswer.execute(currentAnswer.aData)
+      console.log("error")
     }
     const answerID = document.getElementById(inputName)
     if (answerID) {
