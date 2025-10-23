@@ -90,7 +90,7 @@ export const GoatModeData: modeData[] = [
     fdLockerOptions:[onOff["off"],onOff["on"]], 
     rearDiffLocker:onOff["on"],
     rdLockerOptions:[onOff["off"],onOff["on"]], 
-    throttle:throttleSetting["normal"], 
+    throttle:throttleSetting["aggressive"], 
     steering:steeringSetting["soft"], 
     stayBarDisconnect:onOff["off"], 
     sbDisconnectOptions:[onOff["off"],onOff["on"]]
