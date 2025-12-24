@@ -60,6 +60,8 @@ blockquote {
 main {
   flex: 1;
   margin-bottom: 1rem;
+  container-type: inline-size;
+  container-name: main;
 }
 
 .contain {
