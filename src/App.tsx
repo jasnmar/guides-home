@@ -20,6 +20,7 @@ import Recovery from "./pages/Recovery/Recovery"
 import RecoveryGear from "./pages/Recovery/RecoveryGear"
 import StuckAssesment from "./pages/Recovery/StuckAssesment"
 import GoatModes from "./pages/Bronco/GoatModes/GoatModes"
+import Traction from "./pages/Traction/Traction"
 import { RenderBoard } from "./pages/Offroad/renderBoard"
 import { boardData } from "./pages/Offroad/boardData"
 import { v4 as uuidV4 } from 'uuid'
@@ -49,6 +50,7 @@ const router = createBrowserRouter(
         <Route path="assesment" element={<StuckAssesment />} />
       </Route>
       <Route path="goatModes" element={<GoatModes />} />
+      <Route path="traction" element={<Traction />} />
       
     </Route>
   )
