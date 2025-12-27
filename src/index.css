@@ -22,6 +22,7 @@
   --fs-body: 1rem;
 
   --br-image: 10px;
+  --br: 4px;
 
   --bs: .25em .25em .75em rgba(0,0,0,.25),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -60,6 +61,8 @@ blockquote {
 main {
   flex: 1;
   margin-bottom: 1rem;
+  container-type: inline-size;
+  container-name: main;
 }
 
 .contain {
