@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets"
+const { link, altText, title, image } = Astro.props
+console.log("address: ", link);
+---
+
+<div class="navCard--wrapper">
+  <a class="navCard--link" href={link}>
+    <div class="navCard--inner">
+      <div class="navCard--title">{title}</div>
+      <Image alt={altText} class="navCard--image" src={image} />
+    </div>
+    <div class="navCard--text">
+      <slot />
+    </div>
+  </a>
+</div>
+
+<style>
+  .navCard--wrapper {
+    display: flex;
+    border-radius: var(--br-image);
+    container-type: inline-size;
+    container-name: nav-card;
+  }
+
+  .navCard--inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navCard--title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .navCard--link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .navCard--image {
+    width: 70%;
+    height:auto;
+    aspect-ratio: 1;
+    border-radius: var(--br-image);
+    margin:1rem;
+    box-shadow: var(--bs);
+    transition: transform 200ms ease-in-out;
+  }
+
+  .navCard--image:hover,
+  .navCard--image:focus {
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  .navCard--text {
+    text-decoration: none;
+    padding: 0.2em;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .navCard--wrapper {
+      display: flex;
+      width: 100%;
+      border-radius: var(--br-image);
+    }
+  }
+</style>

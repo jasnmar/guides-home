@@ -1,0 +1,34 @@
+---
+import BoardComponent from "../BoardComponent/BoardComponent.astro"
+import { boardBulletsType } from "../../content-schemas"
+import type { z } from "astro:content"
+interface Props {
+  position: string
+  border?: boolean
+  components?: {
+    displayType: string
+    large?: string
+    small?: string
+    image?: string
+    bullets?: z.infer<typeof boardBulletsType>
+  }[]
+}
+const { position, border, components } = Astro.props
+---
+
+<div>
+  {border && "border expected"}
+  {components &&
+    components.map((component) => {
+      return (
+        <BoardComponent
+          displayType={component.displayType}
+          small={component.small}
+          large={component.large}
+          bullets={component.bullets}
+          image={component.image}
+          >{component.displayType}
+        </BoardComponent>
+      )
+    })}
+</div>

@@ -1,0 +1,84 @@
+---
+import BoardBullets from "../BoardBullets.astro"
+import { Image } from "astro:assets"
+import { getImage } from "../../utils/boardUtils.astro"
+
+interface Props {
+  displayType: string
+  large?: string
+  small?: string
+  image?: string
+  bullets?: {
+    data: string
+    image?: string
+  }[]
+}
+const { displayType, small, large, image, bullets } = Astro.props
+let resolvedImage: { default: ImageMetadata } | null = null
+if (image) {
+  console.log(image)
+  resolvedImage = await getImage(image)
+}
+---
+
+<div class="card">
+  {small && displayType === "smallLead" && <p class="small-lead">{small}</p>}
+  {large && <p class="large-lead">{large}</p>}
+  {
+    bullets && (
+      <ul class="card-list">
+        {bullets.map((bullet) => {
+          return <BoardBullets data={bullet.data} image={bullet.image} />
+        })}
+      </ul>
+    )
+  }
+  <div class="image-container">
+    {
+      resolvedImage && (
+        <Image
+          class="card-image"
+          src={resolvedImage.default}
+          alt={large || ""}
+          widths={[240, 480, 720, 800, 960, 1200]}
+          sizes="(max-width:420px) 240px, (max-width:720px) 400px, 800px"
+        />
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-inline: 1rem;
+    /* background:green; */
+    container-type: inline-size;
+    container-name: content-card;
+    .image-container {
+      @container content-card (width < 480px) {
+        /* background:red; */
+        width: 360px;
+        height: 360px;
+      }
+    }
+    .card-image {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+  .small-lead {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-block: 0;
+  }
+  .large-lead {
+    margin-block: 0;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+</style>

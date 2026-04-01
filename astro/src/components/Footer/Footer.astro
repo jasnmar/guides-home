@@ -1,0 +1,38 @@
+---
+const date = new Date()
+
+const year = date.getFullYear()
+---
+
+<footer>
+  <div class="footer">
+    <p class="footer-text">All rights reserved. Martin Consulting {year}</p>
+    <p class="footer-text">
+      No information on this website is endoresed by Ford Motor Company or any
+      of their affiliates.
+    </p>
+  </div>
+</footer>
+
+
+<style>
+  .footer {
+  margin-left: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--clr-light);
+  color: black;
+}
+.footer-text {
+  font-size: xx-small;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    bottom: 0;
+  }
+}
+</style>

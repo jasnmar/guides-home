@@ -1,0 +1,19 @@
+---
+export async function getImage(image: string | undefined) {
+  if (!image) {
+    return null
+  }
+  const cardImagesFolder = "/src/assets/cardImages/"
+  const imagePath = cardImagesFolder + image
+  const images = import.meta.glob<{
+    default: import("astro").ImageMetadata
+  }>("/src/assets/cardImages/*.{jpeg,jpg,png,gif,webp,svg}")
+
+  if (!images[imagePath]) {
+    throw new Error(
+      `"${imagePath}" does not exist in glob: "/src/assets/cardImages/*.{jpeg,jpg,png,gif,webp,svg}"`
+    )
+  }
+  return await images[imagePath]()
+}
+---
