@@ -1,78 +1,133 @@
-/* General Settings */
+:root {
+  /* Rugged Outdoors Palette */
+  --clr-bg: #1a1c1e;
+  --clr-surface: #26292b;
+  --clr-surface-alt: #313538;
+  --clr-primary: #bc6c25; /* Sandstone/Dirt */
+  --clr-secondary: #606c38; /* Forest Green */
+  --clr-accent: #f7b731; /* Trail Marker Yellow */
+  --clr-text: #fefae0; /* Sand/Dust */
+  --clr-text-muted: #a3a380;
+  --clr-border: #3c4144;
+
+  /* Typography */
+  --ff-primary: 'Oswald', sans-serif;
+  --ff-body: 'Inter', sans-serif;
+  --ff-mono: 'Ubuntu Mono', monospace;
+
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-h1: 3.5rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1.1rem;
+
+  /* Industrial Borders & Corners */
+  --br: 0px; /* Sharp corners for industrial feel */
+  --br-lg: 4px;
+  --border-width: 2px;
+  
+  /* Shadows - Heavy/Industrial */
+  --bs: 4px 4px 0px rgba(0,0,0,0.4);
+  --bs-inset: inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* General Reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-:root {
-  --ff-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --ff-secondary: monospace;
-
-  --fw-reg: 300;
-  --fw-bold: 900;
-
-  --clr-light: lightblue;
-  --clr-dark: #303030;
-  --clr-accent: brown;
-
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
-
-  --br-image: 10px;
-  --br: 4px;
-
-  --bs: .25em .25em .75em rgba(0,0,0,.25),
-    0.125em 0.125em 0.25em rgba(0,0,0,.15);
-}
-
 html {
   scroll-behavior: smooth;
-}
-
-a {
-  color:var(--clr-dark);
+  font-family: var(--ff-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-top: 50px;
-  margin:0;
-  background-color: var(--clr-light);
-  color: var(--clr-dark);
-  background-image: url("/Topo.svg");
+  background-image: 
+    linear-gradient(rgba(26, 28, 30, 0.92), rgba(26, 28, 30, 0.92)),
+    url("/Topo.svg");
   background-repeat: repeat;
-  background-size:cover;
+  background-size: 500px;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  color: var(--clr-text);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); }
+h2 { font-size: var(--fs-h2); font-weight: var(--fw-medium); color: var(--clr-primary); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
+
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  filter: brightness(1.1);
 }
 
 blockquote {
-  font: normal helvetica, sans-serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  padding-left: 15px;
-  border-left: 3px solid var(--clr-accent);
+  font-family: var(--ff-mono);
+  background: var(--clr-surface);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--clr-primary);
+  box-shadow: var(--bs-inset);
 }
 
 main {
   flex: 1;
-  margin-bottom: 1rem;
-  container-type: inline-size;
-  container-name: main;
-}
-
-.contain {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .page-content {
-  padding: 10px;
-  margin-bottom: 30px;
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  padding: 2rem;
+  box-shadow: var(--bs);
+}
+
+/* Specific UI Utilities */
+.btn-rugged {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-text);
+  border: none;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: transform 0.1s;
+  box-shadow: var(--bs);
+}
+
+.btn-rugged:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
 }
 

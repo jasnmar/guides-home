@@ -1,55 +1,59 @@
 .navCard--wrapper {
   display: flex;
-  width: 40%;
-  border-radius: var(--br-image)
+  flex-direction: column;
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--bs);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 }
 
-/* .navCard--wrapper:hover,
-.navCard--wrapper:focus {
-  box-shadow: var(--bs);
-} */
+.navCard--wrapper:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px var(--clr-primary);
+}
 
 .navCard--inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .navCard--title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: var(--ff-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+  letter-spacing: 0.05em;
 }
 
 .navCard--link {
   text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
 }
 
 .navCard--image {
-  width: 70%;
-  border-radius: var(--br-image);
-  margin: 2px;
-  box-shadow: var(--bs);
-  transition: transform 200ms ease-in-out;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--clr-border);
 }
 
-.navCard--image:hover,
-.navCard--image:focus {
-  transform: scale(1.1);
-  overflow: hidden;
-}
 .navCard--text {
-  text-decoration: none;
-  padding: .2em;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
-
-  .navCard--wrapper {
-    display: flex;
-    width: 100%;
-    border-radius: var(--br-image);
-
+  .navCard--wrapper:hover {
+    transform: none;
+    box-shadow: var(--bs);
   }
-
 }

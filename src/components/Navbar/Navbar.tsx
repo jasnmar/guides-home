@@ -1,5 +1,4 @@
 import "./Navbar.css"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery'
 
 function Navbar() {

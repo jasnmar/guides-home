@@ -1,5 +1,4 @@
 import "./Home.css"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { stuckBronco, offRoading, rockbronco } from "../../assets/images"
 import NavCard from "../../components/NavCard/NavCard"
 import Title from "../../components/Title/Title"

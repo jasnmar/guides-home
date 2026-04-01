@@ -1,9 +1,49 @@
+.navbar {
+  background-color: var(--clr-bg) !important;
+  border-bottom: 2px solid var(--clr-primary);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  padding: 0.75rem 1.5rem;
+}
+
 .navbar-brand {
-  margin-left: 10px;
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-primary) !important;
+  font-size: 1.5rem;
+  margin-left: 0;
+}
+
+.nav-link {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--clr-text) !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--clr-accent) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--clr-primary) !important;
+  border-radius: 0 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(188, 108, 37)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media only screen and (max-width: 800px) {
-  .nav-item {
-    margin-left: 1rem;
+  .navbar-collapse {
+    background-color: var(--clr-bg);
+    padding: 1rem;
+    border-top: 1px solid var(--clr-border);
+    margin-top: 0.5rem;
   }
 }

@@ -1,19 +1,28 @@
 .footer {
-  margin-left: 10px;
-  position: fixed;
+  position: relative; /* Change from fixed if we want it to flow */
   bottom: 0;
   width: 100%;
-  background-color: var(--clr-light);
-  color: black;
+  background-color: var(--clr-bg);
+  border-top: 1px solid var(--clr-border);
+  color: var(--clr-text-muted);
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  font-family: var(--ff-body);
+  margin-top: 5rem; /* Space before footer */
 }
+
 .footer-text {
-  font-size: xx-small;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 800px) {
   .footer {
-    bottom: 0;
+    padding: 1rem;
+    position: relative;
+    margin-top: 3rem;
   }
 }
