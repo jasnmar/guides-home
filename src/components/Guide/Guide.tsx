@@ -24,13 +24,13 @@ function Guide( props : guideDataInterface ) {
         <h2>{props.firstName} is an Off-Roadeo guide in {props.location} {props.started && "and has been since "+props.started}</h2>
       <div><img className="guide--headshot float" src={props.headshot}></img>{bioDetails}</div>
         <div className="guide--socials">
-          {props.fblink && <a href={props.fblink}><img className="guide--social-logo" src={fbLogo}></img></a>}
-          {props.xLink && <a href={props.xLink}><img className="guide--social-logo" src={xLogo}></img></a>}
-          {props.instaLink && <a href={props.instaLink}><img className="guide--social-logo" src={instLogo}></img></a>}
-          {props.youTubeLink && <a href={props.youTubeLink}><img className="guide--social-logo" src={youTubeLogo}></img></a>}
-          {props.linkedInLink && <a href={props.linkedInLink}><img className="guide--social-logo" src={linkedInLogo}></img></a>}
+          {props.fblink && <a href={props.fblink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={fbLogo}></img></a>}
+          {props.xLink && <a href={props.xLink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={xLogo}></img></a>}
+          {props.instaLink && <a href={props.instaLink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={instLogo}></img></a>}
+          {props.youTubeLink && <a href={props.youTubeLink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={youTubeLogo}></img></a>}
+          {props.linkedInLink && <a href={props.linkedInLink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={linkedInLogo}></img></a>}
           {props.email && <a href={props.email}><img className="guide--social-logo" src={emailLogo}></img></a>}
-          {props.venmoLink && <a href={props.venmoLink}><img className="guide--social-logo" src={venmoLogo}></img></a>}
+          {props.venmoLink && <a href={props.venmoLink} target="_blank" rel="noopener noreferrer"><img className="guide--social-logo" src={venmoLogo}></img></a>}
         </div>
       </div>
     </>
