@@ -1,0 +1,79 @@
+/* General Settings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ff-secondary: monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: lightblue;
+  --clr-dark: #303030;
+  --clr-accent: brown;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --br-image: 10px;
+  --br: 4px;
+
+  --bs: .25em .25em .75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--ff-primary);
+  display:flex;
+}
+
+a {
+  color:var(--clr-dark);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin:0;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  background-image: url("/Topo.svg");
+  background-repeat: repeat;
+  background-size:cover;
+  width:100%;
+}
+
+blockquote {
+  font: normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  padding-left: 15px;
+  border-left: 3px solid var(--clr-accent);
+}
+
+main {
+  container-type: inline-size;
+  container-name: main;
+  min-width:100%;
+}
+
+.contain {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.page-content {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+

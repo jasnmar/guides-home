@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../layouts/layout.astro"
+import BoardLink from "../components/BoardLink/BoardLink.astro"
+const boardData = await getCollection("boardData")
+
+boardData.sort((a, b) => a.data.index - b.data.index)
+---
+
+<Layout>
+  <h1>Offroad</h1>
+  <div class="board-links">
+    {
+      boardData.map((bData) => {
+        return (
+          <div>
+            <BoardLink
+              title={bData.data.title}
+              image={bData.data.linkImage}
+              link={"offroading/" + bData.data.address}
+            />
+          </div>
+        )
+      })
+    }
+  </div>
+</Layout>
+
+
+<style>
+  .board-links {
+    margin:1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:1rem;
+  }
+</style>

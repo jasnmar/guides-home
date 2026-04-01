@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string
+  sub?: string
+}
+const { title, sub } = Astro.props
+---
+
+<div class="infoTitleBackgound">
+  <p class="infoTitleText">{title}</p>
+  {
+    sub && <p class="subTitleText">{sub}</p>
+  }
+</div>
+
+
+<style>
+  .infoTitleBackgound {
+  background-color: var(--clr-accent);
+  padding: 10px;
+  margin-bottom: .3em;
+  min-height: 108px;
+  display:flex;
+  flex-direction:column
+}
+
+.infoTitleText {
+  color: white;
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.subTitleText {
+  color: white;
+  font-size: 1rem;
+}
+</style>

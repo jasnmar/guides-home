@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.520827in" height="0.520827in" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 520.83 520.83"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:41.67;stroke-miterlimit:2.61313}
+    .str1 {stroke:black;stroke-width:41.67;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+    .fil1 {fill:black;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0 str0" d="M386.28 329.93l0 156.09"/>
+  <path class="fil0 str0" d="M78.77 329.93l0 156.09"/>
+  <path class="fil0 str0" d="M412.98 72.39l-53.39 146.68"/>
+  <path class="fil0 str0" d="M105.47 72.39l-53.39 146.68"/>
+  <path class="fil0 str0" d="M78.77 145.73l96.71 0"/>
+  <path class="fil0 str0" d="M78.77 407.97l96.55 0"/>
+  <path class="fil0 str0" d="M232.53 208.33l0 145.42"/>
+  <circle class="fil0 str1" cx="232.53" cy="151.04" r="57.29"/>
+  <circle class="fil0 str1" cx="232.53" cy="411.04" r="57.29"/>
+  <g>
+   <path class="fil1" d="M467.12 294.02l-17.16 11.81 -3.06 -4.24 -3.13 -3.95 -3.2 -3.67 -3.25 -3.37 -3.31 -3.09 -3.35 -2.81 -3.38 -2.53 -3.4 -2.26 -3.42 -1.98 -3.43 -1.71 -3.43 -1.44 -3.43 -1.18 -3.43 -0.92 -3.43 -0.67 -3.41 -0.42 -3.41 -0.17 -3.41 0.08 -3.39 0.33 -3.39 0.58 -3.4 0.84 -3.39 1.1 -3.39 1.37 -3.38 1.64 -3.38 1.92 -3.35 2.21 -3.33 2.51 -3.31 2.81 -3.27 3.13 -3.23 3.44 -3.17 3.76 -3.11 4.09 -3.04 4.41 -17.43 -11.42 3.59 -5.22 3.73 -4.89 3.86 -4.58 4 -4.26 4.11 -3.93 4.24 -3.61 4.35 -3.28 4.46 -2.94 4.55 -2.6 4.65 -2.26 4.73 -1.91 4.79 -1.56 4.85 -1.19 4.89 -0.84 4.93 -0.48 4.92 -0.11 4.92 0.24 4.9 0.6 4.87 0.95 4.81 1.3 4.76 1.64 4.69 1.97 4.61 2.3 4.53 2.62 4.43 2.93 4.33 3.24 4.22 3.54 4.11 3.84 3.99 4.14 3.86 4.42 3.73 4.7 3.6 4.99zm31.4 -32.05l11.3 112.41 -100.99 -50.64 89.69 -61.77z"/>
+  </g>
+  <path class="fil0 str0" d="M289.82 145.73l96.71 0"/>
+  <path class="fil0 str0" d="M286.55 407.97l96.55 0"/>
+ </g>
+</svg>
