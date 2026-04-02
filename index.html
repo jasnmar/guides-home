@@ -3,10 +3,22 @@
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="/gtm-loader.js" crossorigin="anonymous"></script>
-    <script src="/gtag-init.js" crossorigin="anonymous"></script>
+    <script async src="/gtag-init.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link 
+      rel="preload" 
+      as="style" 
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
+    >
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap" 
+      rel="stylesheet" 
+      media="print" 
+      onload="this.media='all'"
+    >
+    <link rel="preload" as="image" href="/sunrise.jpg" fetchpriority="high">
+    <link rel="preconnect" href="https://www.google-analytics.com">
     <meta charset="UTF-8" />
     <meta name="description" content="Information from you Off-Roadeo Guides">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

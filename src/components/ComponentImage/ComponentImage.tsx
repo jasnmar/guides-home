@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "./ComponentImage.css"
 
-function ComponentImage(props: { imageRef: string, className?: string }) {
+function ComponentImage(props: { imageRef: string, className?: string, loading?: "lazy" | "eager", fetchPriority?: "high" | "low" | "auto" }) {
   const [svgContent, setSvgContent] = useState<string | null>(null)
   
   // Robust check for .svg extension, handling query strings and fragments
@@ -35,7 +35,14 @@ function ComponentImage(props: { imageRef: string, className?: string }) {
 
   return (
     <>
-      <img className={`component-image-default ${props.className || ""}`} src={props.imageRef} alt="" />
+      <img 
+        className={`component-image-default ${props.className || ""}`} 
+        src={props.imageRef} 
+        alt="" 
+        loading={props.loading || "lazy"} 
+        // @ts-ignore
+        fetchPriority={props.fetchPriority || "auto"}
+      />
     </>
   )
 }
