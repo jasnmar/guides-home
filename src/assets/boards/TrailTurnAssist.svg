@@ -7,10 +7,10 @@ viewBox="0 0 520.83 520.83"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:41.67;stroke-miterlimit:2.61313}
-    .str1 {stroke:black;stroke-width:41.67;stroke-miterlimit:2.61313}
+    .str0 {stroke:var(--svg-p-stroke, currentColor);stroke-width:41.67;stroke-miterlimit:2.61313}
+    .str1 {stroke:var(--svg-p-stroke, currentColor);stroke-width:41.67;stroke-miterlimit:2.61313}
     .fil0 {fill:none}
-    .fil1 {fill:black;fill-rule:nonzero}
+    .fil1 {fill:var(--svg-p-fill, currentColor);fill-rule:nonzero}
    ]]>
   </style>
  </defs>
@@ -32,3 +32,4 @@ viewBox="0 0 520.83 520.83"
   <path class="fil0 str0" d="M286.55 407.97l96.55 0"/>
  </g>
 </svg>
+

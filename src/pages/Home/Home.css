@@ -1,62 +1,64 @@
 .home--hero-section {
-  background-image: url("/sunrise.jpg");
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/sunrise.jpg");
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center;
-  width: 100vw;
-  height: 50vh;
+  width: 100%;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.home--description {
-  font-size: 1.5rem;
-}
-
-.home--hero {
-  width: 100vw;
+  border-bottom: 4px solid var(--clr-primary);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .home--hero-message {
-  font-size: 4em;
-  color: black;
+  font-size: 5rem;
+  color: var(--clr-text);
   text-align: center;
-  font-weight: bold;
-  text-shadow: 0px 0px 3px rgba(255,200,200,.5);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 4px 4px 0px var(--clr-primary), 8px 8px 0px rgba(0,0,0,0.5);
+  margin: 0;
+  font-family: var(--ff-primary);
+}
+
+.home--description {
+  font-size: 1.3rem;
+  color: var(--clr-text-muted);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  border-left: 4px solid var(--clr-secondary);
+  padding: 1rem 2rem;
+  background: var(--clr-surface-alt);
 }
 
 .home--nav-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.home--card-link {
-  text-decoration: none;
-}
-
-.home--card {
-  display: flex;
-  width: 40%;
-  border-radius: var(--br-image);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
 }
 
 @media only screen and (max-width: 800px) {
   .home--hero-section {
-    width: 100vw;
-    height: 300px;
-  }
-
-  .home--nav-cards {
-    flex-direction: column;
+    height: 40vh;
   }
 
   .home--hero-message {
-    font-size: 2em;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    text-shadow: 2px 2px 0px var(--clr-primary), 4px 4px 0px rgba(0,0,0,0.5);
+  }
+
+  .home--description {
+    font-size: 1.1rem;
+    margin: 1rem;
+    padding: 1rem;
   }
 }

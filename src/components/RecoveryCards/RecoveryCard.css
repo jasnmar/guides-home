@@ -1,33 +1,42 @@
-
 .recoveryCard--card {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 20px;
+  background-color: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--bs);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .recoveryCard--images {
   display: flex;
   flex-wrap: wrap;
-  
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .recoveryCard--gear-image {
   width: 150px;
   height: 150px;
-  margin: 10px;
-  border-radius: var(--br-image);
-  box-shadow: var(--bs)
+  object-fit: cover;
+  border: 2px solid var(--clr-primary);
+  box-shadow: var(--bs);
+  transition: transform 0.1s;
 }
 
-@media only screen and (max-width: 1280px) {
-  
+.recoveryCard--gear-image:hover {
+  transform: scale(1.05);
 }
+
 @media only screen and (max-width: 800px) {
-  .recoveryCard--gear-image {
-    width: 80%;
-  }
   .recoveryCard--card {
-    width: 80%;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .recoveryCard--gear-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
   }
 }

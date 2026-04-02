@@ -1,24 +1,41 @@
-.frontback-next-arrow {
+.fb-nav-link {
   position: fixed;
-  top: 50%;
-  right: 0%;
-}
-
-.frontback-prev-arrow {
-  position: fixed;
-  top: 50%;
-  left: 0%;
-}
-
-.fb-arrow-container-prev {
-  position: fixed;
+  top: 0;
   height: 100vh;
-  width:40px;
+  width: 60px; /* Slightly wider hitbox for easier clicking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  z-index: 999; /* Below the main navbar (1000) but above content */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.fb-arrow-container-next {
-  position: fixed;
-  height: 100vh;
-  width:40px;
-  right: 0%;
+.fb-nav-prev {
+  left: 0;
+  /* background: linear-gradient(to right, rgba(0,0,0,0.2), transparent); */
+}
+
+.fb-nav-next {
+  right: 0;
+  /* background: linear-gradient(to left, rgba(0,0,0,0.2), transparent); */
+}
+
+.fb-nav-link:hover {
+  color: var(--clr-accent);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.fb-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Let the Link handle clicks */
+}
+
+/* Ensure no 'flash' from top-left by pinning coordinate immediately */
+.fb-nav-prev, .fb-nav-next {
+  top: 0 !important;
 }

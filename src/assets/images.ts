@@ -16,12 +16,12 @@ export { default as mgloves } from "./recovery/mgloves.webp"
 export { default as recoveryRope } from "./recovery/RecoveryRope.webp"
 export { default as bowShackle } from "./recovery/bowShackle.webp"
 export { default as treeSaver } from "./recovery/treeSaver.webp"
-export { default as recoveryBoards } from "./recovery/recovery-board.jpg"
+// export { default as recoveryBoards } from "./recovery/recovery-board.jpg"
 
 
 
 //Guides
-export { default as jasonBio } from "./guides/jason-bio.png"
+export { default as jasonBio } from "./guides/jason-bio.webp"
 export { default as anonymousBio } from "./guides/anonymous.jpeg"
 
 export { default as fbLogo } from "./guides/icons/facebook.svg"
