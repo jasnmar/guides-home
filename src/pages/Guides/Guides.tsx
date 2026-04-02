@@ -2,10 +2,10 @@ import "./Guides.css"
 
 import { Link, Outlet } from "react-router-dom"
 import { guideData } from "./guideData"
-import Title from "../../components/Title/Title"
+import PageTitle from "../../components/Title/PageTitle"
 
 function Guides() {
-  Title("Guides List")
+  PageTitle("Our Guides", "Meet the expert Bronco Off-Roadeo guides from across the country. Experienced instructors dedicated to your off-road success.")
   const guideList = guideData.map((guide) => {
     if(guide.id!=0){
       return (

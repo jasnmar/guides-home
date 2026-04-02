@@ -1,11 +1,11 @@
 import "./Home.css"
 import { stuckBronco, offRoading, rockbronco } from "../../assets/images"
 import NavCard from "../../components/NavCard/NavCard"
-import Title from "../../components/Title/Title"
+import PageTitle from "../../components/Title/PageTitle"
 
 function Home() {
   
-  Title("Home Page")
+  PageTitle("Home Page", "Expert off-roading, recovery gear, and G.O.A.T. mode guidance from official Bronco Off-Roadeo Guides.")
   return (
     <>
       <div className="home--hero-section">

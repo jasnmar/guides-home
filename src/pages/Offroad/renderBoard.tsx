@@ -6,7 +6,7 @@ import InfoComponentTitle from "../../components/InfoComponentTitle/InfoComponen
 import FrontBack from "../../components/FrontBack/FrontBack"
 import SmallLeadInfo from "../../components/SmallLeadInfo/SmallLeadInfo"
 import Aside from "../../components/Aside/Aside"
-import Title from "../../components/Title/Title"
+import PageTitle from "../../components/Title/PageTitle"
 
 export function RenderBoard(props : {board:string}) {
   return rBoard(props.board)
@@ -32,7 +32,8 @@ function rBoard(bName: string): ReactElement {
     
     if (bData.title) {
       icTitle = bData.title
-      Title(icTitle)
+      icSub = bData.subtitle || ""
+      PageTitle(icTitle, icSub || `Expert advice on ${icTitle} for Bronco off-roading.`)
     }
     if (bData.subtitle) {
       icSub = bData.subtitle
