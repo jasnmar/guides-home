@@ -7,9 +7,9 @@ viewBox="0 0 625 312.5"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:41.67;stroke-linejoin:round;stroke-miterlimit:2.61313}
+    .str0 {stroke:var(--svg-p-stroke, currentColor);stroke-width:41.67;stroke-linejoin:round;stroke-miterlimit:2.61313}
     .fil0 {fill:none}
-    .fil1 {fill:black}
+    .fil1 {fill:var(--svg-p-fill, currentColor)}
    ]]>
   </style>
  </defs>
@@ -27,3 +27,4 @@ viewBox="0 0 625 312.5"
   </g>
  </g>
 </svg>
+

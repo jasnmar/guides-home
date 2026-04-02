@@ -1,5 +1,12 @@
-.bullet-image-default {
+.bullet-image-default,
+.bullet-image-wrapper .component-image-svg-wrapper svg {
   max-width: 150px;
-  max-height: 150px;
+  max-height: 80px; /* Constrain height for inline bullet icons */
   margin-left: 10px;
+}
+
+.bullet-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

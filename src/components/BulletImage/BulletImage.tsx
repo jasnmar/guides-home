@@ -1,11 +1,11 @@
 import "./BulletImage.css"
+import ComponentImage from "../ComponentImage/ComponentImage"
 
-
-function BulletImage(props : {imageIdetifier: string }) {
+function BulletImage(props: { imageIdetifier: string }) {
   return (
-    <>
-      <img className="bullet-image-default" src={props.imageIdetifier}></img>
-    </>
+    <div className="bullet-image-wrapper">
+      <ComponentImage imageRef={props.imageIdetifier} />
+    </div>
   )
 }
 

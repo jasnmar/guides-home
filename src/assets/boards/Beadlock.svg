@@ -7,11 +7,11 @@ viewBox="0 0 1500 1500"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:6.94;stroke-miterlimit:2.61313}
-    .str1 {stroke:#E6E6E6;stroke-width:3;stroke-miterlimit:2.61313}
-    .fil0 {fill:black}
-    .fil1 {fill:#999999}
-    .fil2 {fill:#E6E6E6}
+    .str0 {stroke:var(--svg-p-stroke, currentColor);stroke-width:6.94;stroke-miterlimit:2.61313}
+    .str1 {stroke:var(--svg-s-stroke, #E6E6E6);stroke-width:3;stroke-miterlimit:2.61313}
+    .fil0 {fill:var(--svg-p-fill, currentColor)}
+    .fil1 {fill:var(--svg-s-fill, #999999)}
+    .fil2 {fill:var(--svg-t-fill, #E6E6E6)}
    ]]>
   </style>
  </defs>
@@ -116,3 +116,4 @@ viewBox="0 0 1500 1500"
   </g>
  </g>
 </svg>
+
