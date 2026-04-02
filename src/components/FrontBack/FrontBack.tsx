@@ -5,24 +5,20 @@ import { Link } from "react-router-dom"
 function FrontBack(props: { nextPage: string; previousPage: string }) {
   return (
     <>
-      <Link to={"/offroading/"+props.previousPage}>
-        <div className="fb-arrow-container-prev">
-          <div className="frontback-prev-arrow">
-            <div>
-              <FaChevronLeft size={40} />
-            </div>
+      {props.previousPage && (
+        <Link to={"/offroading/" + props.previousPage} className="fb-nav-link fb-nav-prev" aria-label="Previous Page">
+          <div className="fb-arrow-wrapper">
+            <FaChevronLeft size={40} />
           </div>
-        </div>
-      </Link>
-      <Link to={"/offroading/"+props.nextPage}>
-        <div className="fb-arrow-container-next">
-          <div className="frontback-next-arrow">
-            <div>
-              <FaChevronRight size={40} />
-            </div>
+        </Link>
+      )}
+      {props.nextPage && (
+        <Link to={"/offroading/" + props.nextPage} className="fb-nav-link fb-nav-next" aria-label="Next Page">
+          <div className="fb-arrow-wrapper">
+            <FaChevronRight size={40} />
           </div>
-        </div>
-      </Link>
+        </Link>
+      )}
     </>
   )
 }

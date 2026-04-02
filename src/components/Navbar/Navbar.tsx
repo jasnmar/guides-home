@@ -1,43 +1,43 @@
+import { useState } from "react"
 import "./Navbar.css"
-import 'jquery'
 
 function Navbar() {
-  function navButtonClick() {
-    const navContent = document.getElementById("navbarSupportedContent")
-    if(navContent) {
-      if(navContent.style.display === "block") {
-        navContent.style.display = "none"
-      } else {
-        navContent.style.display = "block"
-      }
-    }
-    return true
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
   }
+
   return (
-    <>
-      <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-          <a className="navbar-brand" href="/">Home</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" onClick={navButtonClick} aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              {/* <li className="nav-item active">
-                <a className="nav-link" href="/guides">Guides</a>
-                </li> */}
-              <li aria-label="Offroading" className="nav-item active">
-                <a className="nav-link" href="/offroading/offroad">Offroading</a>
-              </li>
-              <li aria-label="Recovery" className="nav-item active">
-                <a className="nav-link" href="/recovery/gear">Recovery</a>
-              </li>
-              <li aria-label="Goat Modes" className="nav-item active">
-                <a className="nav-link" href="/goatmodes">GOAT Modes</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
-    </>
+    <nav className="nav--main">
+      <div className="nav--container">
+        <a className="nav--brand" href="/">Off-Roadeo Guides</a>
+        
+        <button 
+          className={`nav--toggler ${isOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="nav--toggler-icon"></span>
+          <span className="nav--toggler-icon"></span>
+          <span className="nav--toggler-icon"></span>
+        </button>
+
+        <div className={`nav--menu ${isOpen ? 'show' : ''}`}>
+          <ul className="nav--list">
+            <li className="nav--item">
+              <a className="nav--link" href="/offroading/offroad">Offroading</a>
+            </li>
+            <li className="nav--item">
+              <a className="nav--link" href="/recovery/gear">Recovery</a>
+            </li>
+            <li className="nav--item">
+              <a className="nav--link" href="/goatmodes">GOAT Modes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 
