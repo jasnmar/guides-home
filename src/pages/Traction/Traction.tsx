@@ -1,7 +1,9 @@
 import "./Traction.css"
 import { useState, useEffect } from "react"
+import PageTitle from "../../components/Title/PageTitle"
 
 export default function Traction() {
+  PageTitle("Off-Road Traction", "Interactive off-road traction calculator. Understand the physics of friction, vehicle weight, and terrain types for better driving.")
   const [lineStyle, setLineStyle] = useState({})
   const [calcTipStyle, setCalcTipStyle] = useState({})
   const [mBox, setmBox] = useState([

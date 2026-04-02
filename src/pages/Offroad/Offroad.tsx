@@ -1,11 +1,11 @@
-import Title from "../../components/Title/Title"
+import PageTitle from "../../components/Title/PageTitle"
 import "./Offroad.css"
 import BoardLink from "../../components/BoardLink/BoardLink"
 import { boardData } from "./boardData"
 import { v4 as uuidV4} from 'uuid'
 
 function Offroad() {
-  Title("Offroading")
+  PageTitle("Off-Road Experience", "Learn about the Bronco Off-Road Experience (ORX) course. Explore ground school topics, trail techniques, and New Hampshire off-roading resources.")
   boardData.sort((a,b) => {
     if(a.index < b.index) {
       return -1

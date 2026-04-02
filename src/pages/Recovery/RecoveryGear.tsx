@@ -15,10 +15,10 @@ import {
   treeSaver
 } from "../../assets/images"
 import RecoveryCard from "../../components/RecoveryCards/RecovveryCard"
-import Title from "../../components/Title/Title"
+import PageTitle from "../../components/Title/PageTitle"
 
 function RecoveryGear() {
-  Title("Recovery Gear")
+  PageTitle("Essential Recovery Gear", "Detailed guide to the off-road recovery gear used at Bronco Off-Roadeo. Learn about recovery kits, boards, kinetic straps, and soft shackles.")
   //const d1 = [{altText:"Ford Heavy Duty Recovery Kit", image:hdRecoveryKit}]
   return (
     <>

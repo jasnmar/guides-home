@@ -11,11 +11,11 @@ import {
   sandMode,
   slipperyMode,
   sportMode} from "../../../assets/images"
-import Title from "../../../components/Title/Title"
+import PageTitle from "../../../components/Title/PageTitle"
 //import { goatModes } from "./GoatModeInterfaces"
 
 function GoatModes() {
-  Title("Goat Modes")
+  PageTitle("G.O.A.T. Modes Guide", "Comprehensive guide to Bronco G.O.A.T. Modes (Goes Over Any Type of Terrain). Learn about Normal, Eco, Sport, Slippery, Sand, Mud/Ruts, Rock Crawl, and Baja modes.")
   const gmLines = GoatModeData.map((mode) => {
     const newRow = (
     <tr key={uuidV4()}>
