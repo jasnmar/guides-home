@@ -25,11 +25,15 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <SEO
       title={title}
       description={description}
       noindex={noindex}
+      canonical={`https://www.offroadeoguides.com${Astro.url.pathname}`}
       openGraph={{
         basic: {
           title: `${title} | Off-Roadeo Guides`,
