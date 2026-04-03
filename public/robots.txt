@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /guides
-
-Sitemap: https://offroadeoguides.com/sitemap.xml

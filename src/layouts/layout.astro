@@ -1,0 +1,77 @@
+---
+import { SEO } from "astro-seo"
+import "../style.css"
+import Navbar from "../components/Navbar/Navbar.astro"
+import Footer from "../components/Footer/Footer.astro"
+
+interface Props {
+  title?: string
+  description?: string
+  ogImage?: string
+  noindex?: boolean
+}
+
+const { 
+  title = "Off-Roadeo Guides",
+  description = "Expert off-roading, recovery gear, and G.O.A.T. mode guidance from official Bronco Off-Roadeo Guides.",
+  ogImage = "/sunrise.jpg",
+  noindex = false
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title={title}
+      description={description}
+      noindex={noindex}
+      openGraph={{
+        basic: {
+          title: `${title} | Off-Roadeo Guides`,
+          type: "website",
+          image: ogImage,
+        },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: `${title} | Off-Roadeo Guides`,
+        description: description,
+        image: ogImage,
+      }}
+    />
+    <!-- <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme-preference")
+        ) {
+          return localStorage.getItem("theme-preference")
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark"
+        }
+        return "light"
+      })()
+
+      if (theme === "light") {
+        document.documentElement.setAttribute("data-theme", "light")
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark")
+      }
+    </script> -->
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global></style>

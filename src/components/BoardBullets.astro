@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets"
+import { getImage, resolveSvgPath } from "../utils/boardUtils.astro"
+import SvgInliner from "./SvgInliner.astro"
+
+interface Props {
+  data: string
+  image?: string
+}
+
+const { data, image } = Astro.props
+
+const transformedData = data
+  ? data.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/&deg;/g, "°")
+  : ""
+
+const svgPath = resolveSvgPath(image)
+const resolvedImage = !svgPath ? await getImage(image) : null
+---
+
+<div class="bullet-container">
+  {data && <li class="bullet-li" set:html={transformedData} />}
+  {svgPath && (
+    <div class="bullet-image-wrapper">
+      <SvgInliner src={svgPath} class="bullet-image" />
+    </div>
+  )}
+  {resolvedImage && (
+    <div class="bullet-image-wrapper">
+      <Image 
+        src={resolvedImage.default} 
+        alt={data || ""} 
+        class="bullet-image"
+      />
+    </div>
+  )}
+</div>
+
+<style>
+  .bullet-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .bullet-li {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--clr-text);
+    list-style-type: square;
+    flex: 1; /* Allow text to take remaining space and wrap */
+    min-width: 0; /* Enable flex-item wrapping */
+  }
+  .bullet-li :global(strong) {
+    color: var(--clr-accent);
+    font-weight: 700;
+  }
+  .bullet-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    flex-shrink: 0; /* Ensure icon doesn't shrink */
+  }
+  .bullet-image {
+    width: auto;
+    height: 80px; /* Constrain height for inline bullet icons */
+    object-fit: contain;
+  }
+</style>

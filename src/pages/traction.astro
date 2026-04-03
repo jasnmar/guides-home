@@ -1,0 +1,373 @@
+---
+import Layout from "../layouts/layout.astro"
+---
+
+<Layout 
+  title="Off-Road Traction" 
+  description="Interactive off-road traction calculator. Understand the physics of friction, vehicle weight, and terrain types for better driving."
+>
+  <main class="page-content">
+    <h1>Traction</h1>
+    <div class="main-content">
+      <div class="figure">
+        <p class="title top-title">Acceleration</p>
+        <p class="title bottom-title">Braking</p>
+        <p class="title right-title">Right</p>
+        <p class="title left-title">Left</p>
+        <div class="circle" id="traction-circle">
+          <div class="mouseBox" id="mouse-box"></div>
+          <div class="line" id="traction-line"></div>
+          <div class="calctip" id="calc-tip">
+            <ul>
+              <li>horizontal: <span id="h-vector">0</span></li>
+              <li>linear: <span id="v-vector">0</span></li>
+              <li>total: <span id="total-force">0</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        <p>
+          The amount of traction available (F<sub>f</sub>) is a product of the
+          coefficient of friction between the surface and your tire (μ) and
+          the weight of vehicle (N).
+        </p>
+        <p class="equation">
+          F<sub>f</sub> = μN
+        </p>
+        <form>
+          <div>
+            <label for="friction">
+              Friction Coefficient (μ):
+              <input
+                id="friction"
+                type="number"
+                value="0.5"
+                min="0.0"
+                step="0.1"
+                max="0.99"
+              />
+            </label>
+            <ul>
+              Typical μ Values:
+              <li>Dry Asphalt/Concrete: 0.7 - 0.9</li>
+              <li>Wet Asphalt/Concrete: 0.4 - 0.7</li>
+              <li>Gravel/Earth: 0.5 - 0.6</li>
+              <li>Snow (Hard-Packed): 0.15 - 0.3</li>
+              <li>Ice: 0.2 - 0.07</li>
+            </ul>
+          </div>
+          <div>
+            <label for="weight">
+              Vehicle Weight (N):
+              <input
+                id="weight"
+                type="number"
+                value="1000"
+              />
+            </label>
+          </div>
+        </form>
+        <div class="results-grid">
+          <div class="result-item">
+            <span class="result-label">Maximum Force</span>
+            <span class="result-value" id="max-force-display">500</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Horizontal Force</span>
+            <span class="result-value" id="horizontal-force-display">0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Linear Force</span>
+            <span class="result-value" id="linear-force-display">0</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total Force</span>
+            <span class="result-value" id="total-force-display">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const circle = document.getElementById('traction-circle')
+  const mouseBox = document.getElementById('mouse-box')
+  const tractionLine = document.getElementById('traction-line')
+  const calcTip = document.getElementById('calc-tip')
+  const frictionInput = document.getElementById('friction') as HTMLInputElement
+  const weightInput = document.getElementById('weight') as HTMLInputElement
+  
+  const hVectorSpan = document.getElementById('h-vector')
+  const vVectorSpan = document.getElementById('v-vector')
+  const totalForceSpan = document.getElementById('total-force')
+  
+  const maxForceDisplay = document.getElementById('max-force-display')
+  const horizontalForceDisplay = document.getElementById('horizontal-force-display')
+  const linearForceDisplay = document.getElementById('linear-force-display')
+  const totalForceDisplay = document.getElementById('total-force-display')
+
+  let weight = 1000
+  let frictionCoefficient = 0.5
+  let maxForce = 500
+
+  function updateSettings() {
+    weight = Number(weightInput.value)
+    frictionCoefficient = Number(frictionInput.value)
+    maxForce = frictionCoefficient * weight
+    if (maxForceDisplay) maxForceDisplay.textContent = maxForce.toFixed(0)
+  }
+
+  frictionInput?.addEventListener('input', updateSettings)
+  weightInput?.addEventListener('input', updateSettings)
+
+  circle?.addEventListener('mousemove', (e) => {
+    const rect = circle.getBoundingClientRect()
+    let mouseX = e.clientX - rect.left
+    let mouseY = e.clientY - rect.top
+
+    const centerX = rect.width / 2
+    const centerY = rect.height / 2
+    const radius = centerX
+
+    let dx = mouseX - centerX
+    let dy = mouseY - centerY
+
+    const distance = Math.sqrt(dx * dx + dy * dy)
+
+    if (distance > radius) {
+      const angle = Math.atan2(dy, dx)
+      mouseX = centerX + radius * Math.cos(angle)
+      mouseY = centerY + radius * Math.sin(angle)
+      dx = mouseX - centerX
+      dy = mouseY - centerY
+    }
+
+    const length = Math.sqrt(dx * dx + dy * dy)
+    const angle = (Math.atan2(dy, dx) * 180) / Math.PI
+
+    const left = Math.min(mouseX, centerX)
+    const top = Math.min(mouseY, centerY)
+    const width = Math.abs(mouseX - centerX)
+    const height = Math.abs(mouseY - centerY)
+
+    const hForceRatio = Math.abs(dx) / centerX
+    const vForceRatio = Math.abs(dy) / centerY
+    
+    const hForce = (hForceRatio * maxForce).toFixed(0)
+    const vForce = (vForceRatio * maxForce).toFixed(0)
+    const currentForce = Math.sqrt(Number(hForce) ** 2 + Number(vForce) ** 2).toFixed(0)
+
+    // Update DOM
+    if (mouseBox) {
+      mouseBox.style.left = `${left}px`
+      mouseBox.style.top = `${top}px`
+      mouseBox.style.width = `${width}px`
+      mouseBox.style.height = `${height}px`
+    }
+
+    if (tractionLine) {
+      tractionLine.style.width = `${length}px`
+      tractionLine.style.transform = `rotate(${angle}deg)`
+      tractionLine.style.top = `${centerY}px`
+      tractionLine.style.left = `${centerX}px`
+    }
+
+    if (calcTip) {
+      calcTip.style.left = `${mouseX}px`
+      calcTip.style.top = `${mouseY}px`
+    }
+
+    if (hVectorSpan) hVectorSpan.textContent = hForce
+    if (vVectorSpan) vVectorSpan.textContent = vForce
+    if (totalForceSpan) totalForceSpan.textContent = currentForce
+    
+    if (horizontalForceDisplay) horizontalForceDisplay.textContent = hForce
+    if (linearForceDisplay) linearForceDisplay.textContent = vForce
+    if (totalForceDisplay) totalForceDisplay.textContent = currentForce
+  })
+
+  // Initial call
+  updateSettings()
+</script>
+
+<style>
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--clr-text);
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 500px;
+  }
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--clr-primary);
+    border-radius: 50%;
+    position: relative;
+    cursor: crosshair;
+    background: var(--clr-surface-alt);
+    box-shadow: var(--bs);
+    overflow: hidden;
+  }
+
+  .title {
+    position: absolute;
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--clr-text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .top-title { top: -30px; left: 50%; transform: translateX(-50%); }
+  .bottom-title { bottom: -30px; left: 50%; transform: translateX(-50%); }
+  .right-title { right: -60px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+  .left-title { left: -60px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+
+  .mouseBox {
+    position: absolute;
+    border: 1px dashed var(--clr-primary);
+    background: rgba(188, 108, 37, 0.05);
+    pointer-events: none;
+  }
+
+  .line {
+    position: absolute;
+    height: 3px;
+    background: var(--clr-accent);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(247, 183, 49, 0.5);
+  }
+
+  .calctip {
+    position: absolute;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-text);
+    padding: 0.75rem;
+    border-radius: 2px;
+    font-family: var(--ff-mono);
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: var(--bs);
+  }
+
+  .calctip ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .equation {
+    font-family: var(--ff-primary);
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    color: var(--clr-accent);
+  }
+
+  form {
+    background: var(--clr-surface-alt);
+    padding: 2rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 4px;
+    box-shadow: var(--bs-inset);
+  }
+
+  form div {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--clr-primary);
+    letter-spacing: 0.05em;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text);
+    font-family: var(--ff-mono);
+    border-radius: 0;
+  }
+
+  input:focus {
+    outline: 2px solid var(--clr-accent);
+    border-color: transparent;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background: var(--clr-surface-alt);
+    padding: 1.5rem;
+    border: 1px solid var(--clr-border);
+  }
+
+  .result-item {
+    font-family: var(--ff-mono);
+    font-size: 1rem;
+  }
+
+  .result-label {
+    color: var(--clr-text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .result-value {
+    color: var(--clr-accent);
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .main-content {
+      grid-template-columns: 1fr;
+    }
+    .figure {
+      margin: 2rem auto;
+    }
+  }
+</style>
