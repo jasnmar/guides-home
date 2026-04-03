@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/layout.astro"
+import { Image } from 'astro:assets'
 import NavCard from "../components/NavCard/NavCard.astro"
 import stuckBronco from "../assets/StuckBronco.webp"
 import offRoading from "../assets/offroading1.webp"
 import rockbronco from "../assets/rocksbronco.webp"
+import heroImage from "../assets/sunrise.webp"
 ---
 
 <Layout 
@@ -11,6 +13,14 @@ import rockbronco from "../assets/rocksbronco.webp"
   description="Expert Bronco Off-Roadeo guidance. Prepare for your adventure with our comprehensive resources on recovery, G.O.A.T. modes, and more."
 >
   <header class="home--hero-section">
+    <Image 
+      src={heroImage} 
+      alt="Sunrise over an off-roading trail" 
+      class="home--hero-image"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="home--hero-overlay"></div>
     <h1 class="home--hero-message">Off-Roadeo Guides</h1>
   </header>
   <main class="page-content">
