@@ -27,7 +27,10 @@ export async function getStaticPaths() {
 const { offroading, title, subtitle, index, layouts, prevPage, nextPage } = Astro.props
 ---
 
-<Layout title={title}>
+<Layout 
+  title={title}
+  description={subtitle || `Expert guidance on ${title} for Bronco Off-Roadeo guests. Technical trail information and professional instructor insights.`}
+>
   <FrontBack prev={prevPage} next={nextPage} />
   <BoardHeader title={title} sub={subtitle} />
   <div class="data-container">

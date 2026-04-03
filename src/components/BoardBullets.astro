@@ -42,6 +42,7 @@ const resolvedImage = !svgPath ? await getImage(image) : null
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     margin-bottom: 1rem;
     gap: 1rem;
     width: 100%;
@@ -51,7 +52,6 @@ const resolvedImage = !svgPath ? await getImage(image) : null
     line-height: 1.4;
     color: var(--clr-text);
     list-style-type: square;
-    flex: 1; /* Allow text to take remaining space and wrap */
     min-width: 0; /* Enable flex-item wrapping */
   }
   .bullet-li :global(strong) {
