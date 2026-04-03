@@ -74,6 +74,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   line-height: 1.6;
+  container-type: inline-size;
+  container-name: body;
 }
 
 @media (min-width: 480px) {

@@ -8,30 +8,34 @@ const year = date.getFullYear()
   <div class="footer">
     <p class="footer-text">All rights reserved. Martin Consulting {year}</p>
     <p class="footer-text">
-      No information on this website is endorsed by Ford Motor Company or any
-      of their affiliates.
+      No information on this website is endorsed by Ford Motor Company or any of
+      their affiliates.
     </p>
   </div>
 </footer>
 
-
 <style>
-  footer {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: var(--clr-surface-alt);
     color: var(--clr-text-muted);
-    padding: 2rem;
     border-top: 2px solid var(--clr-secondary);
-    margin-top: 4rem;
-  }
-  .footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+    gap: 2rem;
+    @container (width < 1000px) {
+      flex-direction: column;
+      gap: 0;
+
+    }
   }
   .footer-text {
     font-size: 0.8rem;
     margin: 0.5rem 0;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-align: center;
+
+      
   }
 </style>
