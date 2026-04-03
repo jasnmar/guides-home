@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/layout.astro"
+import BoardHeader from "../../components/BoardHeader/BoardHeader.astro"
+import BoardLayout from "../../components/BoardLayout/BoardLayout.astro"
+import FrontBack from "../../components/FrontBack.astro"
+
+export async function getStaticPaths() {
+  const boardData = await getCollection("boardData")
+  const paths = boardData.map((bData) => {
+    return {
+      params: { offroading: bData.data.address },
+      props: {
+        title: bData.data.title,
+        subtitle: bData.data.subtitle,
+        offroading: bData.data.address,
+        index: bData.data.index,
+        layouts: bData.data.layouts,
+        prevPage: bData.data.prevPage,
+        nextPage: bData.data.nextPage,
+      },
+    }
+  })
+  return paths
+}
+
+const { offroading, title, subtitle, index, layouts, prevPage, nextPage } = Astro.props
+---
+
+<Layout title={title}>
+  <FrontBack prev={prevPage} next={nextPage} />
+  <BoardHeader title={title} sub={subtitle} />
+  <div class="data-container">
+    {
+      layouts &&
+        layouts.map((layout) => {
+          return <BoardLayout 
+          position={layout.position} 
+          border={layout.border} 
+          components={layout.components} />
+        })
+    }
+  </div>
+</Layout>
+
+<style>
+  .data-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 40px 0px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+</style>

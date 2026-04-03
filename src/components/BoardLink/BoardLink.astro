@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets"
+import { getImage } from "../../utils/boardUtils.astro"
+import type { ImageMetadata } from "astro"
+
+interface Props {
+  link: string
+  title: string
+  image: string
+}
+const { link, title, image } = Astro.props
+
+const resolvedImage = await getImage(image)
+---
+
+<a href={link} class="boardLink--link">
+  <div class="boardLink--item">
+    <div class="boardLink--image-wrapper">
+      {
+        resolvedImage && (
+          <Image
+            src={resolvedImage.default}
+            alt={title}
+            class="boardLink--image"
+          />
+        )
+      }
+    </div>
+    <p class="boardLink--label">{title}</p>
+  </div>
+</a>
+
+<style>
+  .boardLink--link {
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    color: inherit;
+  }
+  .boardLink--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .boardLink--label {
+    font-weight: bold;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+  }
+  .boardLink--image-wrapper {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: var(--br-image);
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--bs);
+  }
+  .boardLink--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 200ms ease-in-out;
+  }
+  .boardLink--link:hover .boardLink--image {
+    transform: scale(1.1);
+  }
+  @media only screen and (max-width: 800px) {
+    .boardLink--link {
+      margin: 10px auto;
+    }
+  }
+</style>

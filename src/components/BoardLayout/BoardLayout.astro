@@ -1,0 +1,69 @@
+---
+import BoardComponent from "../BoardComponent/BoardComponent.astro"
+import { boardBulletsType } from "../../content-schemas"
+import type { z } from "astro:content"
+interface Props {
+  position: string
+  border?: boolean
+  components?: {
+    displayType: string
+    large?: string
+    small?: string
+    image?: string
+    imageref?: string
+    bullets?: z.infer<typeof boardBulletsType>
+  }[]
+}
+const { position, border, components } = Astro.props
+---
+
+<div class={position + (border ? " lborder" : "")}>
+  {components &&
+    components.map((component) => {
+      const finalImage = component.image || component.imageref
+      return (
+        <BoardComponent
+          displayType={component.displayType}
+          small={component.small}
+          large={component.large}
+          bullets={component.bullets}
+          image={finalImage}
+        />
+      )
+    })}
+</div>
+
+<style>
+  .lefthalf { 
+    width: 50%; 
+    padding-left: 10px;
+  }
+  .righthalf { 
+    width: 50%; 
+    padding-left: 20px;
+  }
+  .lefttwothirds { 
+    width: 66%; 
+    padding-left: 10px;
+  }
+  .rightonethird { 
+    width: 33%; 
+    padding-left: 10px;
+  }
+  
+  .lborder {
+    border-right: 4px solid var(--clr-bg-alt); /* Matches React .lborder */
+    padding-right: 8px;
+  }
+
+  @media (max-width: 800px) {
+    .lefthalf, .righthalf, .lefttwothirds, .rightonethird {
+      width: 100%;
+      border-right: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-bottom: 4px solid var(--clr-bg-alt);
+      margin-bottom: 2rem;
+    }
+  }
+</style>

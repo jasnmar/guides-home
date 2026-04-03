@@ -1,0 +1,55 @@
+---
+export const svgMapping: Record<string, string> = {
+  "beadlock": "Beadlock.svg",
+  "tpmswarning": "TPMS_warning_icon.svg",
+  "stabarDisconnect": "StayBarDisconnect.svg",
+  "FrontLockingDifferential": "FrontLockingDifferential.svg",
+  "RearLockingDifferential": "RearLockingDifferential.svg",
+  "TrailTurnAssist": "TrailTurnAssist.svg",
+  "stop": "stop.svg",
+  "ComeForward": "ComeForward.svg",
+  "PassDrive": "PassDrive.svg",
+  "SlowDown": "SlowDown.svg",
+  "powerTrain": "PowerTrain.svg",
+  "broncoABC": "BroncoABC.svg"
+}
+
+export function resolveSvgPath(image: string | undefined): string | null {
+  if (!image) return null;
+  if (image.toLowerCase().endsWith(".svg")) return `boards/${image}`;
+  if (svgMapping[image]) return `boards/${svgMapping[image]}`;
+  return null;
+}
+
+export async function getImage(image: string | undefined) {
+  if (!image) {
+    return null
+  }
+  
+  const filename = svgMapping[image] || image
+  const boardImagesFolder = "/src/assets/boards/"
+  const imagePath = boardImagesFolder + filename
+  
+  const images = import.meta.glob<{
+    default: import("astro").ImageMetadata
+  }>("/src/assets/boards/*.{jpeg,jpg,png,gif,webp,svg}")
+
+  if (!images[imagePath]) {
+    // If not found, try adding common extensions if it doesn't have one
+    if (!filename.includes('.')) {
+      for (const ext of ['webp', 'svg', 'png', 'jpg', 'jpeg']) {
+        const pathWithExt = `${imagePath}.${ext}`
+        if (images[pathWithExt]) {
+          return await (images[pathWithExt] as any)()
+        }
+      }
+    }
+    // Final check for the path as-is
+    if (images[imagePath]) {
+      return await (images[imagePath] as any)()
+    }
+    return null;
+  }
+  return await (images[imagePath] as any)()
+}
+---

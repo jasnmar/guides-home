@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/layout.astro"
+import { GoatModeData, goatModesByModel } from "../data/goatModeData"
+import normalMode from "../assets/bronco/goatmodes/normal.jpeg"
+import ecoMode from "../assets/bronco/goatmodes/eco.jpeg"
+import sportMode from "../assets/bronco/goatmodes/sport.jpeg"
+import slipperyMode from "../assets/bronco/goatmodes/slippery.jpeg"
+import sandMode from "../assets/bronco/goatmodes/sand.jpeg"
+import mudRutsMode from "../assets/bronco/goatmodes/mudruts.jpeg"
+import rockCrawlMode from "../assets/bronco/goatmodes/rockcrawl.jpeg"
+import bajaMode from "../assets/bronco/goatmodes/baja.jpeg"
+
+function fixList(list: Array<string>) {
+  return list.join(", ")
+}
+
+function getModeData(model: any, mode: string) {
+  const isEnabled = model.modes.find((item: any) => item.modename === mode)?.enabled
+  return isEnabled
+}
+---
+
+<Layout 
+  title="G.O.A.T. Modes Guide" 
+  description="Comprehensive guide to Bronco G.O.A.T. Modes (Goes Over Any Type of Terrain). Learn about Normal, Eco, Sport, Slippery, Sand, Mud/Ruts, Rock Crawl, and Baja modes."
+>
+  <main class="page-content">
+    <h1>G.O.A.T. Modes</h1>
+    <h2>What is a G.O.A.T Mode?</h2>
+    <p>G.O.A.T stands for Goes Over Any Terrain (technically the lawyers say Goes Over Any Type of Terrain, but the acronym for that is G.O.A.T.O.T, so we're going to keep it simple).</p>
+    <p>G.O.A.T. Modes are primarily combinations of Transfer Case and Hero Bar settings that are reasonable starting points for the conditions they describe. They can also adjust throttle sensitivity, steering feel, as well as transmission shift points which are things we can't access without using a G.O.A.T mode.</p>
+    
+    <h2>What do each of the G.O.A.T. Modes Do?</h2>
+    <p>There are a total of 8 G.O.A.T. Modes available across the different trim levels (technically there are a couple more if we include the Raptor, but for now we are talking about non-Raptor versions), but the most in any vehicle directly from Ford is 7.</p>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th colspan="2">Mode</th>
+            <th>Transfer Case Setting</th>
+            <th>Available Transfer Case Settings</th>
+            <th>Traction Control Setting</th>
+            <th>Front Locking Differential</th>
+            <th>Front Locking Options<sub>1</sub></th>
+            <th>Rear Locking Differential</th>
+            <th>Rear Locking Options<sub>2</sub></th>
+            <th>Throttle</th>
+            <th>Steering</th>
+            <th>Sta-Bar Disconnect</th>
+            <th>Sta-Bar Options<sub>3</sub></th>
+          </tr>
+        </thead>
+        <tbody>
+          {GoatModeData.map((mode) => (
+            <tr>
+              <th>{mode.mode}{mode.sub && <sub>{mode.sub}</sub>}</th>
+              <td>{mode.icon && <img alt={mode.mode + " Goat Mode"} class="goatmodes--icon" src={mode.icon} />}</td>
+              <td>{mode.transferCase}</td>
+              <td>{fixList(mode.tcOptions)}</td>
+              <td>{mode.tractionControl}</td>
+              <td>{mode.frontDiffLocker}</td>
+              <td>{fixList(mode.fdLockerOptions)}</td>
+              <td>{mode.rearDiffLocker}</td>
+              <td>{fixList(mode.rdLockerOptions)}</td>
+              <td>{mode.throttle}</td>
+              <td>{mode.steering}</td>
+              <td>{mode.stayBarDisconnect}</td>
+              <td>{fixList(mode.sbDisconnectOptions)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <ol>
+      <li>Only available in 4L. Only available when going under 20mph. Will automatically disconnect at speeds over 25mph </li>
+      <li>In Normal, Eco, Sport, or Slippery mode, Only available when going under 20mph in 4H. In Sand, Mud and Ruts, Baja, or Rock Crawl modes, can be engaged at any speed.</li>
+      <li>The Stabilizer Bar Disconnect can only be operated in 4H and 4L (i.e. not in 2H or 4A).</li>
+      <li>Vehicles not equipped with the Advanced Transfer Case will be in 2H in Sport mode, rather than 4A.</li>
+      <li>Vehicles not equipped with the Advanced Transfer Case will be in 4H in Slippery mode, rather than 4A.</li>
+    </ol>
+
+    <h2>What models have what Goat Modes?</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Normal <img alt="Normal Goat Mode" class="goatmodes--icon" src={normalMode.src} /></th>
+            <th>Eco <img alt="Eco Goat Mode" class="goatmodes--icon" src={ecoMode.src} /></th>
+            <th>Sport <img alt="Sport Goat Mode" class="goatmodes--icon" src={sportMode.src} /></th>
+            <th>Slippery <img alt="Slippery Goat Mode" class="goatmodes--icon" src={slipperyMode.src} /></th>
+            <th>Sand <img alt="Sand Goat Mode" class="goatmodes--icon" src={sandMode.src} /></th>
+            <th>Mud and Ruts <img alt="Mud and Ruts Goat Mode" class="goatmodes--icon" src={mudRutsMode.src} /></th>
+            <th>Rock Crawl <img alt="Rock Crawl Goat Mode" class="goatmodes--icon" src={rockCrawlMode.src} /></th>
+            <th>Baja <img alt="Baja Goat Mode" class="goatmodes--icon" src={bajaMode.src} /></th>
+          </tr>
+        </thead>
+        <tbody>
+          {goatModesByModel.map((model) => (
+            <tr>
+              <th>{model.model}</th>
+              <td>{getModeData(model, "normal") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "eco") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "sport") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "slippery") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "sand") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "mudRuts") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "rockCrawl") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+              <td>{getModeData(model, "baja") ? <div class="goatmodes--green">✔</div> : <div class="goatmodes--red">X</div>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.goatmodes--icon {
+  width: 45px;
+  height: auto;
+  border-radius: 0;
+  border: 1px solid var(--clr-border);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+td {
+  text-align: center;
+  font-family: var(--ff-body);
+  color: var(--clr-text-muted);
+}
+
+th {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  letter-spacing: 0.05em;
+  padding: 1rem;
+}
+
+.goatmodes--green {
+  color: #a3b18a; /* Soft Forest Green */
+  font-weight: bold;
+}
+
+.goatmodes--red {
+  color: #bc6c25; /* Sandstone/Burnt */
+  font-weight: bold;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 3rem 0;
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--bs);
+  background-color: var(--clr-surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid var(--clr-border);
+}
+
+.table thead tr {
+  background-color: var(--clr-surface-alt);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--clr-text);
+  border-left: 12px solid var(--clr-primary);
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  color: var(--clr-accent);
+}
+
+sub {
+  font-size: 0.6rem;
+  color: var(--clr-accent);
+  vertical-align: sub;
+}
+
+ol {
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+</style>

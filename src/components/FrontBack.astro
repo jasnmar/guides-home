@@ -1,0 +1,78 @@
+---
+interface Props {
+  next?: string
+  prev?: string
+}
+const { next, prev } = Astro.props
+---
+
+{prev && (
+  <a href={`/offroading/${prev}`} class="fb-nav-link fb-nav-prev" aria-label="Previous Page">
+    <div class="fb-arrow-wrapper">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </div>
+  </a>
+)}
+
+{next && (
+  <a href={`/offroading/${next}`} class="fb-nav-link fb-nav-next" aria-label="Next Page">
+    <div class="fb-arrow-wrapper">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </div>
+  </a>
+)}
+
+<style>
+  .fb-nav-link {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary);
+    z-index: 900;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+
+  .fb-nav-prev {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
+  }
+
+  .fb-nav-next {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.2), transparent);
+  }
+
+  .fb-nav-link:hover {
+    color: var(--clr-accent);
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .fb-arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    .fb-nav-link {
+      width: 40px;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>

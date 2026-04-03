@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../layouts/layout.astro"
+import BoardLink from "../components/BoardLink/BoardLink.astro"
+const boardData = await getCollection("boardData")
+
+boardData.sort((a, b) => a.data.index - b.data.index)
+---
+
+<Layout 
+  title="Off-Road Experience" 
+  description="Explore the Bronco Off-Road Experience (ORX) course. Learn about ground school, trail techniques, and professional off-roading guidance."
+>
+  <main class="page-content">
+    <h1>Offroading</h1>
+    <h2>The pages below represent the signs that are scattered around the ORX (Off-Road Experience) Course that guests start the day on (including ground school, which we talk about differently).</h2>
+    <div class="offroad--links">
+      {
+        boardData.map((bData) => {
+          return (
+            <BoardLink
+              title={bData.data.title}
+              image={bData.data.linkImage}
+              link={"offroading/" + bData.data.address}
+            />
+          )
+        })
+      }
+    </div>
+    
+    <h2>Offroading while you are visiting us</h2>
+    <h3>We often get questions about where to off-road while you are visiting, or if you are a local, what are some of the ways to find local roads. Below are some of your best resources for that</h3>
+    <h4>New Hampshire</h4>
+    <ul class="offroad--list">
+      <li><a href="http://www.exploringnh.com" target="_blank">Exploring New Hampshire</a> is a site that includes user forums, primarily targeted at offroaders, but also offers things like off-road driving training, safety courses, etc. A great place to join if you are from New England.</li>
+      <li><a href="https://nhroads.com/" target="_blank">NH Roads</a> tries to maintain a database of NH roads, including the "Class 6" roads that many New Hampshire Off-roaders use as their "trails". It's a great starting point to do your research on where to go off-roading.</li>
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  .offroad--links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  h2 {
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    margin: 3rem 0 1.5rem 0;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: var(--clr-accent);
+    margin-top: 2rem;
+    text-transform: uppercase;
+  }
+
+  .offroad--list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .offroad--list li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .offroad--list li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: var(--clr-primary);
+  }
+
+  a {
+    color: var(--clr-accent);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>

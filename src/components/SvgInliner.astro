@@ -1,0 +1,67 @@
+---
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+interface Props {
+  src: string;
+  class?: string;
+}
+
+const { src, class: className } = Astro.props;
+
+let svgContent = '';
+
+try {
+    // Resolve path relative to project root or src
+    // Usually images from data and boardUtils are relative to the assets structure
+    // We expect src to be something like '@/assets/boards/filename.svg' or just 'boards/filename.svg'
+    
+    let filePath = '';
+    // Normalize path. In Astro/Vite, we often use aliases or relative paths.
+    // If src starts with /src, it's absolute from project root.
+    // If it's a relative path from boardUtils, we need to resolve it.
+    
+    // For this project, boardData images are typically just the filename or partial path.
+    // Let's assume boardUtils and our copy have put them in src/assets/
+    
+    const assetsDir = path.resolve(process.cwd(), 'src/assets');
+    
+    // If src is a full metadata object from getImage (unlikely here but possible)
+    const fileName = typeof src === 'string' ? src : (src as any).src;
+    
+    // Map the incoming src to the actual filesystem path in astro/src/assets
+    // If src is "boards/TrailTurnAssist.svg", we build the full path
+    
+    // Robust path resolution:
+    if (fileName.includes('src/assets')) {
+        filePath = path.resolve(process.cwd(), fileName.split('?')[0]);
+    } else {
+        filePath = path.join(assetsDir, fileName.split('?')[0]);
+    }
+
+    const rawSvg = await fs.readFile(filePath, 'utf-8');
+    svgContent = rawSvg.replace(/<\?xml.*?\?>|<\!DOCTYPE.*?>/gi, "");
+} catch (e) {
+    console.error(`Failed to inline SVG: ${src}`, e);
+}
+---
+
+{svgContent ? (
+  <div class={`svg-inliner ${className || ''}`} set:html={svgContent} />
+) : (
+  <slot name="fallback" />
+)}
+
+<style is:global>
+  .svg-inliner svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Ensure the inlined SVGs respect the theme variables */
+  .svg-inliner {
+    color: var(--svg-p-fill);
+    fill: var(--svg-p-fill);
+  }
+</style>

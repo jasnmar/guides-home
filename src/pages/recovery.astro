@@ -1,0 +1,164 @@
+---
+import Layout from "../layouts/layout.astro"
+import RecoveryCard from "../components/RecoveryCard/RecoveryCard.astro"
+
+import arbEssentialsKit from "../assets/recovery/ARBEssentialsKit.webp"
+import arbSoftShackle from "../assets/recovery/ARBSoftShackle.webp"
+import arbTreadPro from "../assets/recovery/ARBTreadPro.webp"
+import fordRecoveryBoards from "../assets/recovery/FordRecoveryBoards.webp"
+import hdRecoveryKit from "../assets/recovery/M-1820-FPORRHD.webp"
+import recoveryStrap from "../assets/recovery/ARBRecoveryStrap.webp"
+import shovel from "../assets/recovery/shovel.webp"
+import warnSoftShackle from "../assets/recovery/WarnSoftShackle.webp"
+import gloves from "../assets/recovery/gloves.webp"
+import mgloves from "../assets/recovery/mgloves.webp"
+import recoveryRope from "../assets/recovery/RecoveryRope.webp"
+import bowShackle from "../assets/recovery/bowShackle.webp"
+import treeSaver from "../assets/recovery/treeSaver.webp"
+---
+
+<Layout 
+  title="Recovery Gear & Techniques" 
+  description="Detailed guide to the off-road recovery gear used at Bronco Off-Roadeo. Learn about recovery kits, boards, kinetic straps, and soft shackles. Expert advice from official Bronco guides."
+>
+  <main class="page-content">
+    <h1>Items We Carry</h1>
+    <h2 class="section-title">Recovery Kits</h2>
+    <div class="recovery--cards">
+      <RecoveryCard 
+        imageInfo={[
+          {altText:"Ford Heavy Duty Recovery Kit", image:hdRecoveryKit.src, link:"https://accessories.ford.com/ford-performance-by-warn-off-road-heavy-duty-recovery-kit"},
+          {altText:"Warn Spydura Soft Shackle", image:warnSoftShackle.src, link:"https://www.warn.com/spydura-soft-shackle-102556"}
+        ]} 
+      >
+        There are a couple of different recovery kits that we carry at Bronco Off-Roadeo. One of the recovery kits that we carry is this <a href="https://accessories.ford.com/ford-performance-by-warn-off-road-heavy-duty-recovery-kit" target="_blank" rel="noopener noreferrer">Heavy Duty Kit from Ford</a>. We add a couple of <a href="https://www.warn.com/spydura-soft-shackle-102556" target="_blank" rel="noopener noreferrer">Warn Soft Shackles</a> to the kits that we carry.
+      </RecoveryCard>
+      
+      <RecoveryCard 
+        imageInfo={[
+          {altText:"ARB Essentials Recovery Kit", image:arbEssentialsKit.src, link:"https://store.arbusa.com/soft-connect-shackle-14-5t-arb2018/"}, 
+          {altText:"ARB Soft Shackle", image:arbSoftShackle.src, link:"https://store.arbusa.com/soft-connect-shackle-14-5t-arb2018/"}
+        ]}
+      >
+        The other recovery kit that we carry is the <a href="https://store.arbusa.com/essentials-recovery-kit-rk11a/" target="_blank" rel="noopener noreferrer">ARB Essentials Recovery Kit</a>. Much like the Ford kits we add <a href="https://store.arbusa.com/soft-connect-shackle-14-5t-arb2018/" target="_blank" rel="noopener noreferrer">ARB Soft Shackles</a> to the ARB Kits as well.
+      </RecoveryCard>
+      
+      <RecoveryCard>
+        Each of the kits that we carry have the same basic equipment. They are
+        comprised of a recovery strap (aka kinetic strap, or snatch strap),
+        some shackles (both soft and "hard"), some gloves, a block and tackle
+        (aka a pulley) and a "tree saver".
+      </RecoveryCard>
+      
+      <RecoveryCard>
+        The Ford kit is specifically designed for a number of Ford Vehicles, including the 6th Gen Bronco (but also the Gen 1 and 2 Ford Bronco, the 2009-2021 F-150 and the 2010-2019 Ford Super Duty). The ARB Kit is designed to meet the needs of "the majority of 4WD vehciles" according to ARB.
+      </RecoveryCard>
+    </div>
+
+    <h2 class="section-title">Recovery Boards</h2>
+    <div class="recovery--cards">
+      <RecoveryCard 
+        imageInfo={[{altText:"ARB Tread Pro Recovery Boards", image:arbTreadPro.src, link:"https://store.arbusa.com/tred-pro-monument-grey-orange-recovery-boards-tredpromgo/"}]}
+      >
+        There are also a couple different recovery boards that we carry. Most
+        of the boards we carry are the <a href="https://store.arbusa.com/tred-pro-monument-grey-orange-recovery-boards-tredpromgo/" target="_blank" rel="noopener noreferrer">ARB Tread Pro Recovery boards</a>.
+      </RecoveryCard>
+      
+      <RecoveryCard 
+        imageInfo={[{altText:"ActionTrax Recovery Boards", image:fordRecoveryBoards.src ,link:"https://accessories.ford.com/off-road-recovery-board-pair"}]}
+      >
+        We also carry <a href="https://accessories.ford.com/off-road-recovery-board-pair" target="_blank" rel="noopener noreferrer">Action Trax Recovery boards</a>.
+      </RecoveryCard>
+    </div>
+
+    <h2 class="section-title">Other Gear</h2>
+    <RecoveryCard imageInfo={[{altText:"Short Handle Shovel", image:shovel.src}]}>
+      The other piece of recovery gear that goes in all of our lead vehicles is a shovel, similar to the one seen below...
+    </RecoveryCard>
+
+    <h1>Gear Details</h1>
+    <div class="recovery--cards">
+      <RecoveryCard title="Gloves" imageInfo={[{altText:"Leather Gloves", image:gloves.src},{altText:"Mechanics Gloves", image:mgloves.src}]}>
+        The recovery kits that we carry all come with gloves, which indicates it's probably a good idea to have some gloves with you if you need to do a recovery. In addition to the pair that are typically in our recovery bags most of the Off-Roadeo Guides carry a pair of gloves on their person. Our opinions on what kind of gloves to carry varies, some of us carry leather, some "mechanix" type gloves. We don't really care what kind of gloves you carry with you, but please carry some with you as part of your recovery gear. You never want to turn a recovery situation into a medical situation because you weren't wearing gloves.
+      </RecoveryCard>
+
+      <RecoveryCard title="Recovery Straps" imageInfo={[{altText:"ARB 30' Recovery Strap", image:recoveryStrap.src}]}>
+        <p>Also known as a snatch strap or kinetic strap. The primary difference in a recovery strap and a tow strap is that recovery straps stretch. Most of them are capable of stretching typically about 20 percent of their overall length.</p>
+        <p>Recovery straps are preferential to tow straps in recovery situations because they stretch. Their ability to stretch reduces "shock loads" compared to a tow strap, but also allows additional energy to be added to a recovery via potential energy being stored in a stretching strap. With a recovery strap, it is possible to add potential energy to a recovery by having the vehicle that is not stuck use a small amount of momentum to pull the stuck vehicle out of the problematic situation.</p>
+        <p>Recovery straps are available in various lengths, but the most common lengths (in the US...) are 20' and 30'.</p>
+      </RecoveryCard>
+      
+      <RecoveryCard title="Recovery Rope" imageInfo={[{altText:"30' Recovery Rope strapped to a Bronco swing gate", image:recoveryRope.src}]}>
+        <p>A Recovery Rope is an (attractive) alternative to a Recovery Strap. There are a couple advantages of a recovery rope over a recovery strap. Recovery ropes are typically capable of stretching more than a recovery strap. Often up to 30 percent of their overall length. Recovery ropes are also, generally, more durable than recovery straps. They are made with a stretchy nylon core, and an outer layer that is intended to protect the stretchy inner core. In addition recovery ropes are typically not stiched, but rather the loops on the ends are woven together, which helps with durability.</p>
+        <p>On the flip side, recovery ropes generally take up a lot more space than recovery straps.</p>
+      </RecoveryCard>
+      
+      <RecoveryCard imageInfo={[{altText:"Screw Pin Bow Shackle", image:bowShackle.src}]} title="Bow Shackles" >
+        A lot of people (incorrectly) call these D-Rings. Technically D-Rings are something else, these are Screw Pin Bow Shackles (there are other types of bow shackles, but these are the most popular sort used in off-road recovery). The most popular size of bow shackle used in off roading is a shackle with a 3/4" pin (sometimes called a 19mm pin). Bow shackles are technically a piece of rigging equipment but they are commonly used in off roading.
+      </RecoveryCard>
+      
+      <RecoveryCard imageInfo={[{altText:"Soft Shackle", image:warnSoftShackle.src}]} title="Soft Shackles">
+        Soft shackles are another great option for connecting to recovery points on your vehicle. Soft shackles are made from a high molecular weight polyethelyene material. They are light weigh and are easy to store with your other off road gear. Like recovery ropes and straps, they come in various lengths. Many of them also come with a protective sleave that is intended to reduce damage to the shackle material when it is being used.
+      </RecoveryCard>
+      
+      <RecoveryCard imageInfo={[{altText:"Tree Saver Strap", image:treeSaver.src}]}title="Tree Saver">
+        Technically Tree savers are typically just tow straps. They are generally fairly short, fairly wide tow straps, but they are typically just tow straps (although some other forms of tree savers also exist). Never wrap a winch line around a tree. It damages the winch line as well as the tree. Use a tow strap instead to spread the load out over the bark area of the tree. Secure the tree saver as low on the tree as practicle for the recovery to reduce the amount of leverage that you are placing on the tree.
+      </RecoveryCard>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+    margin: 4rem 0 2rem 0;
+    font-weight: 800;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .recovery--cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: var(--clr-text);
+    border-left: 12px solid var(--clr-primary);
+    padding-left: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .recovery--cards {
+      grid-template-columns: 1fr;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  a {
+    color: var(--clr-accent);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    filter: brightness(1.2);
+  }
+</style>
