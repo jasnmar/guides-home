@@ -6,7 +6,8 @@ export default defineConfig({
   site: "https://www.offroadeoguides.com",
   output: 'static',
   build: {
-    format: 'file'
+    format: 'file',
+    inlineStylesheets: 'always'
   },
   integrations: [sitemap()],
 });
