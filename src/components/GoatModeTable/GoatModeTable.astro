@@ -1,0 +1,62 @@
+---
+import type { modeData } from "../../data/goatModeData"
+
+interface Props {
+  headerData: Record<string, string>
+  cardData: modeData[]
+}
+
+const { headerData, cardData } = Astro.props
+
+function fixList(list: Array<string>) {
+  return list.join(", ")
+}
+---
+
+<div class="table-container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        {
+          Object.values(headerData).map((headerLabel) => (
+            <th>{headerLabel}</th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        cardData.map((mode) => (
+          <tr>
+            <th>
+              {mode.mode}
+              {mode.sub && <sub>{mode.sub}</sub>}
+            </th>
+            <td>
+              {mode.icon && (
+                <img
+                  alt={mode.mode + " Goat Mode"}
+                  class="goatmodes--icon"
+                  src={mode.icon}
+                />
+              )}
+            </td>
+            <td>{mode.transferCase}</td>
+            <td>{fixList(mode.tcOptions)}</td>
+            <td>{mode.tractionControl}</td>
+            <td>{mode.frontDiffLocker}</td>
+            <td>{fixList(mode.fdLockerOptions)}</td>
+            <td>{mode.rearDiffLocker}</td>
+            <td>{fixList(mode.rdLockerOptions)}</td>
+            <td>{mode.throttle}</td>
+            <td>{mode.steering}</td>
+            <td>{mode.stayBarDisconnect}</td>
+            <td>{fixList(mode.sbDisconnectOptions)}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+
+

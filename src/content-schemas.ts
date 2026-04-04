@@ -1,4 +1,4 @@
-import { z } from "astro:content"
+import { z } from "zod"
 
 export const boardBulletsType = z
   .array(
@@ -38,3 +38,4 @@ export const boardDataSchema = z.object({
 })
 
 export type BoardData = z.infer<typeof boardDataSchema>
+export type BoardBullets = z.infer<typeof boardBulletsType>

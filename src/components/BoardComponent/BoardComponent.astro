@@ -16,8 +16,8 @@ interface Props {
 }
 const { displayType, small, large, image, bullets } = Astro.props
 
-const transform = (str?: string) => 
-  str ? str.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") : "";
+const transform = (str?: string) =>
+  str ? str.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") : ""
 
 const smallHtml = transform(small)
 const largeHtml = transform(large)
@@ -26,29 +26,66 @@ const svgPath = resolveSvgPath(image)
 const resolvedImage = image && !svgPath ? await getImage(image) : null
 ---
 
-<div class={"card " + (displayType === "aside" ? "Aside" : "")}>
-  {displayType === "aside" && <SvgInliner src="boards/Bronco-bucking.svg" class="AsideBronco" />}
-  {small && displayType === "smallLead" && <p class="SmallLeadSmall" set:html={smallHtml} />}
-  {large && <p class={displayType === "aside" ? "asideText" : "SmallLeadLarge"} set:html={largeHtml} />}
+<div class={"card " + (displayType === "aside" ? "aside" : "")}>
   {
-    bullets && (
-      <ul class={displayType === "aside" ? "Aside-UL" : "smallLeadUL"}>
-        {bullets.map((bullet) => {
-          return <BoardBullets data={bullet.data} image={bullet.image} />
-        })}
-      </ul>
+    displayType === "aside" && (
+      <aside>
+        <header>
+          <SvgInliner src="boards/Bronco-bucking.svg" class="asidebronco" />
+        </header>
+        <section>
+          <p class="asideText">{large}</p>
+          {
+        bullets && (
+          <ul class="Aside-UL">
+            {bullets.map((bullet) => {
+              return <BoardBullets data={bullet.data} image={bullet.image} />
+            })}
+          </ul>
+        )
+      }
+        </section>
+      </aside>
     )
   }
-  {svgPath && <SvgInliner src={svgPath} class="card-image" />}
   {
-    resolvedImage && (
-      <Image
-        class="card-image"
-        src={resolvedImage.default}
-        alt={large || ""}
-        widths={[240, 480, 720, 800, 960, 1200]}
-        sizes="(max-width:420px) 240px, (max-width:720px) 400px, 800px"
-      />
+    displayType !== "aside" && (
+      <header>
+        {small && displayType === "smallLead" && (
+          <p class="smallleadsmall" set:html={smallHtml} />
+        )}
+        {large && !(displayType === "aside") && (
+          <p class={"SmallLeadLarge"} set:html={largeHtml} />
+        )}
+      </header>
+    )
+  }
+  {
+    displayType !== "aside" && (
+
+    <section>
+      {
+        bullets && (
+          <ul class="smallLeadUL">
+            {bullets.map((bullet) => {
+              return <BoardBullets data={bullet.data} image={bullet.image} />
+            })}
+          </ul>
+        )
+      }
+      {svgPath && <SvgInliner src={svgPath} class="card-image" />}
+      {
+        resolvedImage && (
+          <Image
+            class="card-image"
+            src={resolvedImage.default}
+            alt={large || ""}
+            widths={[240, 480, 720, 800, 960, 1200]}
+            sizes="(max-width:420px) 240px, (max-width:720px) 400px, 800px"
+          />
+        )
+      }
+    </section>
     )
   }
 </div>
@@ -63,7 +100,7 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
     margin-bottom: 2rem;
     width: 100%;
   }
-  
+
   .card-image {
     width: 100%;
     max-width: 600px;
@@ -72,7 +109,7 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
     margin-top: 1rem;
   }
 
-  .SmallLeadSmall {
+  .smallleadsmall {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0px;
@@ -85,9 +122,9 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
 
   .SmallLeadLarge {
     font-size: 3rem;
-    line-height: .9em;
+    line-height: 0.9em;
     text-transform: uppercase;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     font-weight: bold;
     font-family: var(--ff-primary);
     color: var(--clr-text);
@@ -102,7 +139,7 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
   }
 
   /* Aside (Sidebar) Styles */
-  .Aside {
+  .aside {
     padding: 1.5rem;
     margin-bottom: 2rem;
     width: 100%;
@@ -113,12 +150,13 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
     color: var(--clr-accent); /* Yellow/Orange in React Orientation Aside */
   }
 
-  .AsideBronco {
+  .asidebronco {
     width: 200px; /* Increased to match React Aside sizing */
     margin-bottom: 1.5rem;
     align-self: center;
     /* Red Bronco filter from React Aside.css */
-    filter: invert(19%) sepia(56%) saturate(2907%) hue-rotate(341deg) brightness(95%) contrast(91%);
+    filter: invert(19%) sepia(56%) saturate(2907%) hue-rotate(341deg)
+      brightness(95%) contrast(91%);
   }
 
   .asideText {
@@ -134,6 +172,7 @@ const resolvedImage = image && !svgPath ? await getImage(image) : null
 
   .Aside-UL {
     list-style: none;
+    text-align: left;
     padding: 0;
     margin: 1.5rem 0 0 0;
     width: 100%;
