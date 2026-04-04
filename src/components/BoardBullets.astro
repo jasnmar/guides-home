@@ -59,6 +59,7 @@ const resolvedImage = !svgPath ? await getImage(image) : null
     font-weight: 700;
   }
   .bullet-image-wrapper {
+    max-width: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +68,6 @@ const resolvedImage = !svgPath ? await getImage(image) : null
   }
   .bullet-image {
     width: auto;
-    height: 80px; /* Constrain height for inline bullet icons */
     object-fit: contain;
   }
 </style>

@@ -63,10 +63,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 130px; /* Space for wrapped fixed navbar on mobile */
   line-height: 1.6;
   container-type: inline-size;
   container-name: body;
+  padding-top: 60px; 
 }
 
 body::before {
@@ -86,17 +86,6 @@ body::before {
   background-position: center;
 }
 
-@media (min-width: 480px) {
-  body {
-    padding-top: 100px;
-  }
-}
-
-@media (min-width: 640px) {
-  body {
-    padding-top: 80px;
-  }
-}
 
 h1, h2, h3, h4 {
   font-family: var(--ff-primary);
@@ -130,10 +119,16 @@ blockquote {
   box-shadow: var(--bs-inset);
 }
 
+header {
+  margin:0;
+  width:100%;
+  overflow:hidden;
+}
 main {
   flex: 1;
   width: 100%;
-  margin: 0 auto;
+  container-type: inline-size;
+  container-name: main;
 }
 
 .page-content {
@@ -220,4 +215,66 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 4rem 0;
+}
+
+/* Common Table & GoatMode Styles */
+.table-container {
+  overflow-x: auto;
+  margin: 3rem 0 0;
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--bs);
+  background-color: var(--clr-surface);
+  container-type: inline-size;
+  container-name: table-container;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  border: 1px solid var(--clr-border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  font-family: var(--ff-body);
+  color: var(--clr-text-muted);
+}
+
+.table thead tr {
+  background-color: var(--clr-surface-alt);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.goatmodes--icon {
+  width: 45px;
+  height: auto;
+  border-radius: 0;
+  border: 1px solid var(--clr-border);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.goatmodes--green {
+  color: #a3b18a; /* Soft Forest Green */
+  font-weight: bold;
+}
+
+.goatmodes--red {
+  color: #bc6c25; /* Sandstone/Burnt */
+  font-weight: bold;
 }

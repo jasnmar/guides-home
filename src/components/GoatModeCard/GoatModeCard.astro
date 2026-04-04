@@ -1,0 +1,63 @@
+---
+import type { modeData } from "../../data/goatModeData"
+
+interface Props {
+  headerData: Record<string, string>
+  cardData: modeData
+}
+
+const { headerData, cardData } = Astro.props
+
+function fixList(list: Array<string>) {
+  return list.join(", ")
+}
+---
+
+<div class="goat-card">
+  <header class="goat-card-header">
+    <img src={cardData.icon} alt={cardData.mode} />
+    <h2>{cardData.mode} {cardData.sub ? `(${cardData.sub})` : ""}</h2>
+  </header>
+  <div class="goat-card-data">
+    <div><strong>{headerData.transferCase}</strong></div><div>{cardData.transferCase}</div>
+    <div><strong>{headerData.tcOptions}</strong></div><div>{fixList(cardData.tcOptions)}</div>
+    <div><strong>{headerData.tractionControl}</strong></div><div>{cardData.tractionControl}</div>
+    <div><strong>{headerData.frontDiffLocker}</strong></div><div>{cardData.frontDiffLocker}</div>
+    <div><strong>{headerData.fdLockerOptions}</strong></div><div>{fixList(cardData.fdLockerOptions)}</div>
+    <div><strong>{headerData.rearDiffLocker}</strong></div><div>{cardData.rearDiffLocker}</div>
+    <div><strong>{headerData.rdLockerOptions}</strong></div><div>{fixList(cardData.rdLockerOptions)}</div>
+    <div><strong>{headerData.throttle}</strong></div><div>{cardData.throttle}</div>
+    <div><strong>{headerData.steering}</strong></div><div>{cardData.steering}</div>
+    <div><strong>{headerData.stayBarDisconnect}</strong></div><div>{cardData.stayBarDisconnect}</div>
+    <div><strong>{headerData.sbDisconnectOptions}</strong></div><div>{fixList(cardData.sbDisconnectOptions)}</div>
+    </div>
+  </div>
+
+<style>
+  .goat-card {
+    border: 1px solid var(--clr-primary);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    h2 {
+      margin:0;
+    }
+    img {
+      height: 2rem;
+      /* margin:0; */
+      border-radius: 5px;
+    }
+  }
+
+  .goat-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .goat-card-data {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
+</style>

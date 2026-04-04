@@ -264,7 +264,7 @@
     "linkImage": "crossing.webp",
     "title": "Crossings",
     "subtitle": "Ditch & Log",
-    "index": 4,
+    "index": 5,
     "prevPage": "hillclimb",
     "nextPage": "hilldescent",
     "layouts": [
@@ -447,7 +447,7 @@
     "linkImage": "downhill.webp",
     "title": "Hill Descent",
     "subtitle": "",
-    "index": 3,
+    "index": 4,
     "prevPage": "crossings",
     "nextPage": "rockcrawling",
     "layouts": [
