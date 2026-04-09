@@ -22,7 +22,7 @@ import treeSaver from "../assets/recovery/treeSaver.webp"
   description="Detailed guide to the off-road recovery gear used at Bronco Off-Roadeo. Learn about recovery kits, boards, kinetic straps, and soft shackles. Expert advice from official Bronco guides."
 >
   <main class="page-content">
-    <h1>Items We Carry</h1>
+    <h1 class="page-title">Items We Carry</h1>
     <h2 class="section-title">Recovery Kits</h2>
     <div class="recovery--cards">
       <RecoveryCard 
@@ -127,30 +127,11 @@ import treeSaver from "../assets/recovery/treeSaver.webp"
     margin-bottom: 5rem;
   }
 
-  h1 {
-    font-size: 4rem;
-    color: var(--clr-text);
-    border-left: 12px solid var(--clr-primary);
-    padding-left: 2rem;
-    margin-bottom: 4rem;
-    font-weight: 900;
-    font-family: var(--ff-primary);
-    text-transform: uppercase;
-  }
 
   @media (max-width: 800px) {
     .recovery--cards {
       grid-template-columns: 1fr;
     }
-    h1 {
-      font-size: 3rem;
-    }
-  }
-
-  a {
-    color: var(--clr-accent);
-    font-weight: bold;
-    text-decoration: underline;
   }
 
   a:hover {
