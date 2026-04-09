@@ -24,12 +24,13 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png?v=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap" /></noscript>
     <meta name="generator" content={Astro.generator} />
+    
     <SEO
       title={title}
       description={description}
@@ -44,7 +45,7 @@ const {
       }}
       twitter={{
         card: "summary_large_image",
-        title: `${title} | Off-Roadeo Guides`,
+        title: `${title} | Offroading, Recovery, and Bronco Information`,
         description: description,
         image: ogImage,
       }}
@@ -52,10 +53,8 @@ const {
    
   </head>
   <body>
-    
-      <Navbar />
-    </header>
-      <slot />
+    <Navbar />
+    <slot />
     <Footer />
   </body>
 </html>
