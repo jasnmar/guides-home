@@ -1,55 +1,183 @@
-<nav class="nav--main">
-  <div class="nav--container">
-    <a class="nav--brand" href="/">Off-Roadeo Guides</a>
-    <button 
-      class="nav--toggler"
-      id="nav-toggler"
-      aria-label="Toggle navigation"
-    >
-      <span class="nav--toggler-icon"></span>
-      <span class="nav--toggler-icon"></span>
-      <span class="nav--toggler-icon"></span>
-    </button>
+---
+const currentPage = Astro.url.pathname
+console.log("cp: ", currentPage)
+const isOffroad = currentPage.startsWith("/offroad")
+const testPage = isOffroad ? "/offroad" : currentPage
+const isActive = (href: string) => testPage === href ? "nav--link active" : "nav--link"
 
-    <div class="nav--menu" id="nav-menu">
-      <ul class="nav--list">
-        <li class="nav--item">
-          <a class="nav--link" href="/offroad">Offroading</a>
-        </li>
-        <li class="nav--item">
-          <a class="nav--link" href="/recovery">Recovery</a>
-        </li>
-        <li class="nav--item">
-          <a class="nav--link" href="/goatmodes">GOAT Modes</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+---
 
+<header>
+  <a class="nav--brand" href="/">Off-Roadeo Guides</a>
+  <input
+    type="checkbox"
+    id="nav-toggle"
+    class="nav-toggle"
+    aria-label="Toggle navigation"
+  />
+  <nav>
+    <ul class="nav--list">
+      <li class="nav--item">
+        <a class={isActive('/offroad')} href="/offroad">Offroading</a>
+      </li>
+      <li class="nav--item">
+        <a class={isActive('/recovery')} href="/recovery">Recovery</a>
+      </li>
+      <li class="nav--item">
+        <a class={isActive('/goatmodes')} href="/goatmodes">GOAT Modes</a>
+      </li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+</header>
 <script>
-  const toggler = document.getElementById('nav-toggler');
-  const menu = document.getElementById('nav-menu');
+  const toggler = document.getElementById("nav-toggler")
+  const menu = document.getElementById("nav-menu")
 
-  toggler?.addEventListener('click', () => {
-    toggler.classList.toggle('active');
-    menu?.classList.toggle('show');
-  });
+  toggler?.addEventListener("click", () => {
+    toggler.classList.toggle("active")
+    menu?.classList.toggle("show")
+  })
 </script>
 
 <style>
-  .nav--main {
-    position: fixed;
+  header {
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: var(--clr-bg);
-    border-bottom: 2px solid var(--clr-primary);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    z-index: 10;
-    padding: 0.75rem 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
     container-type: inline-size;
     container-name: nav;
+  }
+
+  header,
+  nav {
+    background-image:
+      url("/Topo.svg"),
+      linear-gradient(rgba(26, 28, 30, 0.9), rgba(26, 28, 30, 0.9));
+    background-repeat: repeat;
+    background-size: 800px;
+    background-position: center;
+    width: 100%;
+  }
+  a {
+    text-transform: uppercase;
+  }
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    scale: 1 0;
+    transition: scale 0.2s ease-in-out;
+    transform-origin: top;
+    @container nav (width > 800px) {
+      all: unset;
+    }
+  }
+  .nav--brand {
+    font-family: var(--ff-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--clr-primary);
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-toggle-label {
+    color: var(--clr-primary);
+    cursor: pointer;
+    border-block: 0.5rem solid #0000;
+    span,
+    span::before,
+    span::after {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 0.25rem;
+      background-color: var(--clr-primary);
+      border-radius: 2px;
+      position: relative;
+    }
+    span::before,
+    span::after {
+      content: "";
+      postion: absolute;
+    }
+    span::before {
+      top: calc(-0.5rem - 2px);
+    }
+    span::after {
+      top: calc(0.5rem - 2px);
+    }
+    @container nav (width > 800px) {
+      display: none;
+    }
+  }
+
+
+  .nav-toggle:checked ~ nav {
+    display: block;
+    scale: 1 1;
+    transform-origin: top;
+    transition: scale 0.2s ease-in-out;
+    & a {
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out 0.2s;
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @container nav (width > 800px) {
+      display:flex;
+      align-items: center;
+      height:100%
+    }
+  }
+  nav ul li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    @container nav (width > 800px) {
+      margin-bottom:0;
+    }
+  }
+
+  nav a {
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    text-decoration: none;
+    transition: opacity 0.1s ease-in-out;
+    opacity: 0;
+    &:hover {
+      color: var(--clr-primary);
+    }
+    @container nav (width > 800px) {
+      opacity: 1;
+    }
+    &.active {
+      color: var(--clr-accent);
+    }
+  }
+
+  /*   
+  .nav--main {
+    outline:1q solid red;
+    background-color: var(--clr-bg);
+    border-bottom: 2px solid var(--clr-primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    padding: 0.75rem 0;
   }
 
   .nav--container {
@@ -82,7 +210,7 @@
     gap: 1.5rem;
   }
 
-  .nav--link {
+  .nav--link  {
     font-family: var(--ff-primary);
     font-weight: 500;
     text-transform: uppercase;
@@ -94,7 +222,7 @@
     letter-spacing: 0.05em;
   }
 
-  .nav--link:hover {
+  .nav--link :hover {
     color: var(--clr-accent);
     background-color: var(--clr-surface-alt);
   }
@@ -155,7 +283,7 @@
       border-bottom: none;
     }
 
-    .nav--link {
+    .nav--link  {
       display: block;
       padding: 1rem 0.5rem;
       width: 100%;
@@ -170,5 +298,5 @@
     .nav--toggler.active .nav--toggler-icon:last-child {
       transform: rotate(-45deg) translate(5px, -5px);
     }
-  }
+  } */
 </style>
