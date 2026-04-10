@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions"
 import { SEO } from "astro-seo"
 import { Schema } from "astro-seo-schema"
 import "../style.css"
@@ -32,17 +33,10 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
-      /></noscript
-    >
+    <ClientRouter />
     <meta name="generator" content={Astro.generator} />
 
     <SEO

@@ -19,8 +19,10 @@ function fixList(list: Array<string>) {
     <h2>{cardData.mode} {cardData.sub ? `(${cardData.sub})` : ""}</h2>
   </header>
   <div class="goat-card-data">
-    <div><strong>{headerData.transferCase}</strong></div><div>{cardData.transferCase}</div>
-    <div><strong>{headerData.tcOptions}</strong></div><div>{fixList(cardData.tcOptions)}</div>
+    <div><strong>{headerData.transferCase}</strong></div>
+    <div>{cardData.transferCase}</div>
+    <div><strong>{headerData.tcOptions}</strong></div>
+    <div>{fixList(cardData.tcOptions)}</div>
     <div><strong>{headerData.tractionControl}</strong></div><div>{cardData.tractionControl}</div>
     <div><strong>{headerData.frontDiffLocker}</strong></div><div>{cardData.frontDiffLocker}</div>
     <div><strong>{headerData.fdLockerOptions}</strong></div><div>{fixList(cardData.fdLockerOptions)}</div>
@@ -36,28 +38,47 @@ function fixList(list: Array<string>) {
 <style>
   .goat-card {
     border: 1px solid var(--clr-primary);
-    padding: 1rem;
+    /* padding: 1rem; */
     margin: 1rem;
-    border-radius: 5px;
     h2 {
       margin:0;
     }
     img {
       height: 2rem;
-      /* margin:0; */
+      margin:0;
       border-radius: 5px;
     }
   }
 
   .goat-card-header {
+    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    border-bottom: 2px solid var(--clr-primary);
+    background-image:linear-gradient(var(--black-30), var(--black-10), var(--black-30))
   }
   .goat-card-data {
+    /* padding: 0.5rem 1rem; */
     display: grid;
     grid-template-columns: auto auto;
-    gap: 1rem;
+    & > * {
+      /* background-color:green; */
+      padding: 0.5rem 1rem;  
+      background-image:linear-gradient(var(--white-10), var(--white-10));
+    }
+    & > *:nth-child(2n - 1) {
+      /* background-color:yellow; */
+    }
+    & > *:nth-child(2n + 1) {
+      /* background-image:linear-gradient(var(--white-20), var(--white-20)); */
+    }
+    & > *:nth-child(4n ) {
+      background-image:linear-gradient(var(--white-30), var(--white-30));
+    }
+    & > *:nth-child(4n + 1 ) {
+      background-image:linear-gradient(var(--white-40), var(--white-40));
+    }
   }
 </style>
