@@ -3,32 +3,34 @@ const currentPage = Astro.url.pathname
 console.log("cp: ", currentPage)
 const isOffroad = currentPage.startsWith("/offroad")
 const testPage = isOffroad ? "/offroad" : currentPage
-const isActive = (href: string) => testPage === href ? "nav--link active" : "nav--link"
-
+const isActive = (href: string) =>
+  testPage === href ? "nav--link active" : "nav--link"
 ---
 
 <header>
-  <a class="nav--brand" href="/">Off-Roadeo Guides</a>
-  <input
-    type="checkbox"
-    id="nav-toggle"
-    class="nav-toggle"
-    aria-label="Toggle navigation"
-  />
-  <nav>
-    <ul class="nav--list">
-      <li class="nav--item">
-        <a class={isActive('/offroad')} href="/offroad">Offroading</a>
-      </li>
-      <li class="nav--item">
-        <a class={isActive('/recovery')} href="/recovery">Recovery</a>
-      </li>
-      <li class="nav--item">
-        <a class={isActive('/goatmodes')} href="/goatmodes">GOAT Modes</a>
-      </li>
-    </ul>
-  </nav>
-  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+    <a class="nav--brand" href="/">Off-Roadeo Guides</a>
+    <input
+      type="checkbox"
+      id="nav-toggle"
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+    />
+    <nav>
+      <ul class="nav--list">
+        <li class="nav--item">
+          <a class={isActive("/offroad")} href="/offroad">Offroading</a>
+        </li>
+        <li class="nav--item">
+          <a class={isActive("/recovery")} href="/recovery">Recovery</a>
+        </li>
+        <li class="nav--item">
+          <a class={isActive("/goatmodes")} href="/goatmodes">GOAT Modes</a>
+        </li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
 </header>
 <script>
   const toggler = document.getElementById("nav-toggler")
@@ -51,6 +53,7 @@ const isActive = (href: string) => testPage === href ? "nav--link active" : "nav
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     container-type: inline-size;
     container-name: nav;
   }
@@ -108,19 +111,18 @@ const isActive = (href: string) => testPage === href ? "nav--link active" : "nav
     span::before,
     span::after {
       content: "";
-      postion: absolute;
+      position: absolute;
     }
     span::before {
       top: calc(-0.5rem - 2px);
     }
     span::after {
-      top: calc(0.5rem - 2px);
+      top: calc(0.5rem + 2px);
     }
     @container nav (width > 800px) {
       display: none;
     }
   }
-
 
   .nav-toggle:checked ~ nav {
     display: block;
@@ -138,16 +140,16 @@ const isActive = (href: string) => testPage === href ? "nav--link active" : "nav
     margin: 0;
     padding: 0;
     @container nav (width > 800px) {
-      display:flex;
+      display: flex;
       align-items: center;
-      height:100%
+      height: 100%;
     }
   }
   nav ul li {
     margin-bottom: 1rem;
     margin-left: 1rem;
     @container nav (width > 800px) {
-      margin-bottom:0;
+      margin-bottom: 0;
     }
   }
 
