@@ -111,13 +111,13 @@ const isActive = (href: string) =>
     span::before,
     span::after {
       content: "";
-      postion: absolute;
+      position: absolute;
     }
     span::before {
       top: calc(-0.5rem - 2px);
     }
     span::after {
-      top: calc(0.5rem - 2px);
+      top: calc(0.5rem + 2px);
     }
     @container nav (width > 800px) {
       display: none;
