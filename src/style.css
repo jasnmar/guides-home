@@ -10,6 +10,33 @@
   --clr-text-muted: #a3a380;
   --clr-border: #3c4144;
 
+  /* Utility Colors */
+  --clr-success: #a3b18a;
+  --clr-warning: #bc6c25;
+  --clr-danger: #bc4747;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+
+  --black-5: oklch(from var(--clr-black) l c h / 0.05);
+  --black-10: oklch(from var(--clr-black) l c h / 0.1);
+  --black-20: oklch(from var(--clr-black) l c h / 0.2);
+  --black-30: oklch(from var(--clr-black) l c h / 0.3);
+  --black-50: oklch(from var(--clr-black) l c h / 0.5);
+  --black-70: oklch(from var(--clr-black) l c h / 0.7);
+  --black-80: oklch(from var(--clr-black) l c h / 0.8);
+  --black-90: oklch(from var(--clr-black) l c h / 0.9);
+  --white-1: oklch(from var(--clr-white) l c h / 0.01);
+  --white-3: oklch(from var(--clr-white) l c h / 0.03);
+  --white-5: oklch(from var(--clr-white) l c h / 0.05);
+  --white-10: oklch(from var(--clr-white) l c h / 0.1);
+  --white-15: oklch(from var(--clr-white) l c h / 0.15);
+  --white-20: oklch(from var(--clr-white) l c h / 0.2);
+  --white-30: oklch(from var(--clr-white) l c h / 0.3);
+  --white-50: oklch(from var(--clr-white) l c h / 0.5);
+  --white-70: oklch(from var(--clr-white) l c h / 0.7);
+  --white-80: oklch(from var(--clr-white) l c h / 0.8);
+  --white-90: oklch(from var(--clr-white) l c h / 0.9);
+
   /* Typography */
   --ff-primary: "Oswald", sans-serif;
   --ff-body: "Inter", sans-serif;
@@ -97,7 +124,6 @@ h1 {
   }
 }
 
-
 h2 {
   font-size: var(--fs-h2);
   font-weight: var(--fw-medium);
@@ -142,11 +168,11 @@ main {
   padding: 2rem;
   box-shadow: var(--bs);
   background-image:
-      url("/Topo.svg"),
-      linear-gradient(rgba(26, 28, 30, 0.9), rgba(26, 28, 30, 0.9));
-    background-repeat: repeat;
-    background-size: 1000px;
-    background-position: center;
+    url("/Topo.svg"),
+    linear-gradient(rgba(26, 28, 30, 0.9), rgba(26, 28, 30, 0.9));
+  background-repeat: repeat;
+  background-size: 1000px;
+  background-position: center;
   @container body (width < 576px) {
     & {
       padding: 1rem;
@@ -173,8 +199,6 @@ main {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
-
-
 
 /* Common Table & GoatMode Styles */
 .table-container {

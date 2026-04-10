@@ -44,17 +44,17 @@ const { next, prev } = Astro.props
 
   .fb-nav-prev {
     left: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
+    background: linear-gradient(to right, var(--black-20), transparent);
   }
 
   .fb-nav-next {
     right: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.2), transparent);
+    background: linear-gradient(to left, var(--black-20), transparent);
   }
 
   .fb-nav-link:hover {
     color: var(--clr-accent);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--white-5);
     opacity: 1;
   }
 
@@ -64,13 +64,5 @@ const { next, prev } = Astro.props
     justify-content: center;
   }
 
-  @media (max-width: 1000px) {
-    .fb-nav-link {
-      width: 40px;
-    }
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
+
 </style>
